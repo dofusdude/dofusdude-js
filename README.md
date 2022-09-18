@@ -2,93 +2,106 @@
 
 dofusdude - JavaScript client for dofusdude-js
 The last API for everything Dofus 🤯
-<h2>Main Features</h2>
-<ul>
-<li>🥷 <b>seamless auto-update</b> load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.</li>
 
-<li>⚡ <b>blazingly fast</b> all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.</li>
+```js
+var dofusdude = require(\"dofusdude-js\");
 
-<li>🩸 <b>Dofus 2 Beta</b> from stable to bleeding edge by replacing /dofus2 with /dofus2beta.</li>
+new dofusdude.AllItemsApi().getItemsAllSearch(
+  \"en\",
+  \"dofus2\",
+  \"nidas\",
+  { filterTypeName: \"hat\" },
+  (err, data, response) => {
+    console.log(data[0]);
+  }
+);
+```
 
-<li>🗣️ <b>multilingual</b> supporting <em>en</em>, <em>fr</em>, <em>es</em>, <em>pt</em> including the dropped languages from the Dofus website <em>de</em> and <em>it</em>.</li>
+### Client SDKs
+- [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save
+- [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save
 
-<li>🧠 <b>search by relevance</b> allowing typos in name and description, handled by language specific text analysis and indexing by the powerful <a href=\"https://www.meilisearch.com\">Meilisearch</a> written in Rust.</li>
+Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue at the Docs Repo.
 
-<li>🕵️ <b>complete</b> actual data from the game including items invisible to the encyclopedia like quest items.</li>
+## Main Features
+- 🥷 **seamless auto-update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.
 
-<li>🖼️ <b>HD images</b> rendering vector graphics into PNGs up to 800x800 px in the background.</li>
+- ⚡ **blazingly fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.
 
-</ul>
+- 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.
 
+- 🗣️ **multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.
 
-<h2>Current state</h2>
-<ul>
-<li>Weapons ✅</li>
-<li>Equipment ✅</li>
-<li>Sets ✅</li>
-<li>Resources ✅</li>
-<li>Consumables ✅</li>
-<li>Pets ✅</li>
-<li>Mounts ✅</li>
-<li>Cosmetics/Ceremonial Items ✅</li>
-<li>Harnesses ✅</li>
-<li>Quest Items ✅</li>
-<li>Almanax ✅</li>
-</ul>
+- 🧠 **search by relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.
 
-<ul>
-<li>Monsters ❌</li>
-<li>Classes ❌</li>
-<li>Spells ❌</li>
-<li>Professions ❌ </li>
-</ul>
+- 🕵️ **complete** actual data from the game including items invisible to the encyclopedia like quest items.
+
+- 🖼️ **HD images** rendering vector graphics into PNGs up to 800x800 px in the background.
 
 
-<h3>Maybes? I don't know what for 🤷</h3>
-<ul>
-<li>Sidekicks ❌</li>
-<li>Haven Bags ❌</li>
-<li>Map ❌</li>
-</ul>
+## Current state
+- Weapons ✅
+- Equipment ✅
+- Sets ✅
+- Resources ✅
+- Consumables ✅
+- Pets ✅
+- Mounts ✅
+- Cosmetics/Ceremonial Items ✅
+- Harnesses ✅
+- Quest Items ✅
+- Almanax ✅
+
+- Monsters ❌
+- Classes ❌
+- Spells ❌
+- Professions ❌
 
 
-<h2>Future</h2>
+### Maybes? I don't know what for 🤷
+- Sidekicks ❌
+- Haven Bags ❌
+- Map ❌
+
+
+## Future
 I want this project to be useful and not just add plain categories no one needs. More and more features will be added to enhance the quality based on the needs of you, the developers.
-<br>Examples:
-<p><em>I need to know where I can drop the all the items I need to craft set X!</em></p>
-<p><em>Please get a detailed always up-to-date spell description so I can calculate the damage for my set builder site!</em></p>
-<p>Nearly everything can be done. But I want to make sure somebody also wants it.
-If you have anything or you are just interested in the project, join the <a href=\"https://discord.gg/3EtHskZD8h\">Discord</a>.</p>
 
-<h3>Versioning</h3>
-<p>Updating an API is a hard problem. This is why we'll keep it simple: 
+Examples:
+_I need to know where I can drop the all the items I need to craft set X!_
+
+_Please get a detailed always up-to-date spell description so I can calculate the damage for my set builder site!_
+
+Nearly everything can be done. But I want to make sure somebody also wants it.
+
+If you have anything or you are just interested in the project, join the [Discord](https://discord.gg/3EtHskZD8h).
+
+### Versioning
+Updating an API is a hard problem. This is why we'll keep it simple:
+
 Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted. Ever.
-</p>
-<p>There is one exception! <b>The API will <em>always</em> choose being up-to-date over everything else</b>. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.
-</p>
-<p>
+
+There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.
+
 We can prevent this specific use case with a nice community but even then, it would be hidden behind a feature flag.
-</p>
 
-<h2>Get started! 🥳</h2>
-<p>Scroll down and try it for yourself!</p>
-<p>If you are ready to use them in your project, think about <a href=\"https://github.com/OpenAPITools/openapi-generator\">generating a client 🧙</a> from the <a href=\"https://raw.githubusercontent.com/dofusdude/api-docs/main/openapi-3.0.yaml\">OpenAPI 3.0 Spec</a> to get started quickly.</p>
+## Get started! 🥳
+Scroll down and try it for yourself!
 
-<p>Awesome Projects using this API:</p>
-<ul>
-<li><a href=\"https://github.com/Kaysoro/KaellyBot\">KaellyBot</a> by Kaysoro</li>
-<li><a href=\"https://dofuscraftlist-dev.netlify.app\">Dofus Craftlist</a> by Lystina</li>
-<li><a href=\"https://almanaxapp.netlify.app\">AlmanaxApp</a> by Lystina</li>
-<li><a href=\"https://luwnarya.fr\">luwnarya.fr</a></li>
-</ul>
+If you are ready to use them in your project, think about [generating a client 🧙](https://github.com/OpenAPITools/openapi-generator) or use one of our pre generated SDKs linked at the top.
 
-My old <a href=\"https://alm.dofusdu.de/swagger\">Almanax API v1</a> is an example for using a <a href=\"https://github.com/dofusdude/almanax-api/tree/main/src/main/java/org/acme/openapi\">generated Client</a> from the OpenAPI Spec.
+Awesome Projects using this API:
+
+- [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro
+- [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina
+- [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina
+- [luwnarya.fr](https://luwnarya.fr)
 
 
 This SDK is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: 0.5.1
-- Package version: 0.5.1
+- API version: 0.5.2
+- Package version: 0.5.2
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
 For more information, please visit [https://discord.gg/3EtHskZD8h](https://discord.gg/3EtHskZD8h)
 
