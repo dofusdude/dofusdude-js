@@ -9,5 +9,7 @@ Name | Type | Description | Notes
 **type** | [**ItemsListEntryTypedType**](ItemsListEntryTypedType.md) |  | [optional] 
 **level** | **Number** |  | [optional] 
 **imageUrls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 
+**hasRecipe** | **Boolean** |  | [optional] 
+**recipe** | [**[RecipeEntry]**](RecipeEntry.md) |  | [optional] 
 
 
