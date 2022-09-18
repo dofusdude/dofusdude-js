@@ -1,4 +1,4 @@
-# DofusdudeApi.ResourcesApi
+# dofusdude.ResourcesApi
 
 All URIs are relative to *https://api.dofusdu.de/dofus2*
 
@@ -21,9 +21,9 @@ Search in all names and descriptions of resource items with a query.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.ResourcesApi();
+let apiInstance = new dofusdude.ResourcesApi();
 let language = "language_example"; // String | a valid language code
 let query = farak; // String | case sensitive search query
 let opts = {
@@ -76,9 +76,9 @@ Retrieve a list of resource items.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.ResourcesApi();
+let apiInstance = new dofusdude.ResourcesApi();
 let language = "language_example"; // String | a valid language code
 let opts = {
   'sortLevel': "sortLevel_example", // String | sort the resulting list by level, default unsorted
@@ -137,9 +137,9 @@ Retrieve a specific resource item with id.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.ResourcesApi();
+let apiInstance = new dofusdude.ResourcesApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 7295; // Number | identifier
 apiInstance.getItemsResourcesSingle(language, ankamaId, (error, data, response) => {

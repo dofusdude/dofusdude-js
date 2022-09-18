@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.EquipmentParentSet();
+    instance = new dofusdude.EquipmentParentSet();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('EquipmentParentSet', function() {
     it('should create an instance of EquipmentParentSet', function() {
       // uncomment below and update the code to test EquipmentParentSet
-      //var instance = new DofusdudeApi.EquipmentParentSet();
-      //expect(instance).to.be.a(DofusdudeApi.EquipmentParentSet);
+      //var instance = new dofusdude.EquipmentParentSet();
+      //expect(instance).to.be.a(dofusdude.EquipmentParentSet);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new DofusdudeApi.EquipmentParentSet();
+      //var instance = new dofusdude.EquipmentParentSet();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new DofusdudeApi.EquipmentParentSet();
+      //var instance = new dofusdude.EquipmentParentSet();
       //expect(instance).to.be();
     });
 

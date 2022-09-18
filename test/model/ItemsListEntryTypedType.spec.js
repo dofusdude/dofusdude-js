@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.ItemsListEntryTypedType();
+    instance = new dofusdude.ItemsListEntryTypedType();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('ItemsListEntryTypedType', function() {
     it('should create an instance of ItemsListEntryTypedType', function() {
       // uncomment below and update the code to test ItemsListEntryTypedType
-      //var instance = new DofusdudeApi.ItemsListEntryTypedType();
-      //expect(instance).to.be.a(DofusdudeApi.ItemsListEntryTypedType);
+      //var instance = new dofusdude.ItemsListEntryTypedType();
+      //expect(instance).to.be.a(dofusdude.ItemsListEntryTypedType);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new DofusdudeApi.ItemsListEntryTypedType();
+      //var instance = new dofusdude.ItemsListEntryTypedType();
       //expect(instance).to.be();
     });
 

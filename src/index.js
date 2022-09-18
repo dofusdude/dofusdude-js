@@ -58,9 +58,9 @@ import SetsApi from './api/SetsApi';
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var DofusdudeApi = require('index'); // See note below*.
-* var xxxSvc = new DofusdudeApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new DofusdudeApi.Yyy(); // Construct a model instance.
+* var dofusdude = require('index'); // See note below*.
+* var xxxSvc = new dofusdude.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new dofusdude.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -72,8 +72,8 @@ import SetsApi from './api/SetsApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new DofusdudeApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new DofusdudeApi.Yyy(); // Construct a model instance.
+* var xxxSvc = new dofusdude.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new dofusdude.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.

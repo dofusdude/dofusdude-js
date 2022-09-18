@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.RecipeEntry();
+    instance = new dofusdude.RecipeEntry();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('RecipeEntry', function() {
     it('should create an instance of RecipeEntry', function() {
       // uncomment below and update the code to test RecipeEntry
-      //var instance = new DofusdudeApi.RecipeEntry();
-      //expect(instance).to.be.a(DofusdudeApi.RecipeEntry);
+      //var instance = new dofusdude.RecipeEntry();
+      //expect(instance).to.be.a(dofusdude.RecipeEntry);
     });
 
     it('should have the property itemAnkamaId (base name: "item_ankama_id")', function() {
       // uncomment below and update the code to test the property itemAnkamaId
-      //var instance = new DofusdudeApi.RecipeEntry();
+      //var instance = new dofusdude.RecipeEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property itemSubtype (base name: "item_subtype")', function() {
       // uncomment below and update the code to test the property itemSubtype
-      //var instance = new DofusdudeApi.RecipeEntry();
+      //var instance = new dofusdude.RecipeEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property quantity (base name: "quantity")', function() {
       // uncomment below and update the code to test the property quantity
-      //var instance = new DofusdudeApi.RecipeEntry();
+      //var instance = new dofusdude.RecipeEntry();
       //expect(instance).to.be();
     });
 

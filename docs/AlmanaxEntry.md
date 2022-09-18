@@ -1,4 +1,4 @@
-# DofusdudeApi.AlmanaxEntry
+# dofusdude.AlmanaxEntry
 
 ## Properties
 

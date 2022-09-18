@@ -1,4 +1,4 @@
-# DofusdudeApi.AllItemsApi
+# dofusdude.AllItemsApi
 
 All URIs are relative to *https://api.dofusdu.de/dofus2*
 
@@ -19,9 +19,9 @@ Search in all names and descriptions of Dofus items (including all subtypes) wit
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.AllItemsApi();
+let apiInstance = new dofusdude.AllItemsApi();
 let language = "language_example"; // String | a valid language code
 let query = hat; // String | case sensitive search query
 let opts = {

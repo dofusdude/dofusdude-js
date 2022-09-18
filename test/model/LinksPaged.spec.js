@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.LinksPaged();
+    instance = new dofusdude.LinksPaged();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('LinksPaged', function() {
     it('should create an instance of LinksPaged', function() {
       // uncomment below and update the code to test LinksPaged
-      //var instance = new DofusdudeApi.LinksPaged();
-      //expect(instance).to.be.a(DofusdudeApi.LinksPaged);
+      //var instance = new dofusdude.LinksPaged();
+      //expect(instance).to.be.a(dofusdude.LinksPaged);
     });
 
     it('should have the property first (base name: "first")', function() {
       // uncomment below and update the code to test the property first
-      //var instance = new DofusdudeApi.LinksPaged();
+      //var instance = new dofusdude.LinksPaged();
       //expect(instance).to.be();
     });
 
     it('should have the property prev (base name: "prev")', function() {
       // uncomment below and update the code to test the property prev
-      //var instance = new DofusdudeApi.LinksPaged();
+      //var instance = new dofusdude.LinksPaged();
       //expect(instance).to.be();
     });
 
     it('should have the property next (base name: "next")', function() {
       // uncomment below and update the code to test the property next
-      //var instance = new DofusdudeApi.LinksPaged();
+      //var instance = new dofusdude.LinksPaged();
       //expect(instance).to.be();
     });
 
     it('should have the property last (base name: "last")', function() {
       // uncomment below and update the code to test the property last
-      //var instance = new DofusdudeApi.LinksPaged();
+      //var instance = new dofusdude.LinksPaged();
       //expect(instance).to.be();
     });
 

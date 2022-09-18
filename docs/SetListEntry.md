@@ -1,4 +1,4 @@
-# DofusdudeApi.SetListEntry
+# dofusdude.SetListEntry
 
 ## Properties
 

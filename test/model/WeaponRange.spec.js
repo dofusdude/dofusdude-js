@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.WeaponRange();
+    instance = new dofusdude.WeaponRange();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('WeaponRange', function() {
     it('should create an instance of WeaponRange', function() {
       // uncomment below and update the code to test WeaponRange
-      //var instance = new DofusdudeApi.WeaponRange();
-      //expect(instance).to.be.a(DofusdudeApi.WeaponRange);
+      //var instance = new dofusdude.WeaponRange();
+      //expect(instance).to.be.a(dofusdude.WeaponRange);
     });
 
     it('should have the property min (base name: "min")', function() {
       // uncomment below and update the code to test the property min
-      //var instance = new DofusdudeApi.WeaponRange();
+      //var instance = new dofusdude.WeaponRange();
       //expect(instance).to.be();
     });
 
     it('should have the property max (base name: "max")', function() {
       // uncomment below and update the code to test the property max
-      //var instance = new DofusdudeApi.WeaponRange();
+      //var instance = new dofusdude.WeaponRange();
       //expect(instance).to.be();
     });
 

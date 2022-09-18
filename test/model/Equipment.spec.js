@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.Equipment();
+    instance = new dofusdude.Equipment();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,103 +50,103 @@
   describe('Equipment', function() {
     it('should create an instance of Equipment', function() {
       // uncomment below and update the code to test Equipment
-      //var instance = new DofusdudeApi.Equipment();
-      //expect(instance).to.be.a(DofusdudeApi.Equipment);
+      //var instance = new dofusdude.Equipment();
+      //expect(instance).to.be.a(dofusdude.Equipment);
     });
 
     it('should have the property ankamaId (base name: "ankama_id")', function() {
       // uncomment below and update the code to test the property ankamaId
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property isWeapon (base name: "is_weapon")', function() {
       // uncomment below and update the code to test the property isWeapon
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property level (base name: "level")', function() {
       // uncomment below and update the code to test the property level
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property pods (base name: "pods")', function() {
       // uncomment below and update the code to test the property pods
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property imageUrls (base name: "image_urls")', function() {
       // uncomment below and update the code to test the property imageUrls
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property hasEffects (base name: "has_effects")', function() {
       // uncomment below and update the code to test the property hasEffects
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property effects (base name: "effects")', function() {
       // uncomment below and update the code to test the property effects
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property hasConditions (base name: "has_conditions")', function() {
       // uncomment below and update the code to test the property hasConditions
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property conditions (base name: "conditions")', function() {
       // uncomment below and update the code to test the property conditions
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property hasRecipe (base name: "has_recipe")', function() {
       // uncomment below and update the code to test the property hasRecipe
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property recipe (base name: "recipe")', function() {
       // uncomment below and update the code to test the property recipe
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property hasParentSet (base name: "has_parent_set")', function() {
       // uncomment below and update the code to test the property hasParentSet
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 
     it('should have the property parentSet (base name: "parent_set")', function() {
       // uncomment below and update the code to test the property parentSet
-      //var instance = new DofusdudeApi.Equipment();
+      //var instance = new dofusdude.Equipment();
       //expect(instance).to.be();
     });
 

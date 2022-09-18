@@ -1,4 +1,4 @@
-# DofusdudeApi.Resource
+# dofusdude.Resource
 
 ## Properties
 

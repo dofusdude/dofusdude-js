@@ -1,4 +1,4 @@
-# DofusdudeApi.MountsListPaged
+# dofusdude.MountsListPaged
 
 ## Properties
 

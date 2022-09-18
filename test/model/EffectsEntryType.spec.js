@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.EffectsEntryType();
+    instance = new dofusdude.EffectsEntryType();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('EffectsEntryType', function() {
     it('should create an instance of EffectsEntryType', function() {
       // uncomment below and update the code to test EffectsEntryType
-      //var instance = new DofusdudeApi.EffectsEntryType();
-      //expect(instance).to.be.a(DofusdudeApi.EffectsEntryType);
+      //var instance = new dofusdude.EffectsEntryType();
+      //expect(instance).to.be.a(dofusdude.EffectsEntryType);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new DofusdudeApi.EffectsEntryType();
+      //var instance = new dofusdude.EffectsEntryType();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new DofusdudeApi.EffectsEntryType();
+      //var instance = new dofusdude.EffectsEntryType();
       //expect(instance).to.be();
     });
 
     it('should have the property isMeta (base name: "is_meta")', function() {
       // uncomment below and update the code to test the property isMeta
-      //var instance = new DofusdudeApi.EffectsEntryType();
+      //var instance = new dofusdude.EffectsEntryType();
       //expect(instance).to.be();
     });
 

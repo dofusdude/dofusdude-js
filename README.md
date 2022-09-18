@@ -1,6 +1,6 @@
-# dofusdude_api
+# dofusdude-js
 
-DofusdudeApi - JavaScript client for dofusdude_api
+dofusdude - JavaScript client for dofusdude-js
 The last API for everything Dofus <span style=\"font-size:1.8rem;\">🤯</span>
 <h2>Main Features</h2>
 <ul>
@@ -105,7 +105,7 @@ To publish the library as a [npm](https://www.npmjs.com/), please follow the pro
 Then install it via:
 
 ```shell
-npm install dofusdude_api --save
+npm install dofusdude-js --save
 ```
 
 Finally, you need to build the module:
@@ -128,7 +128,7 @@ Next, [link](https://docs.npmjs.com/cli/link) it globally in npm with the follow
 npm link
 ```
 
-To use the link you just defined in your project, switch to the directory you want to use your dofusdude_api from, and run:
+To use the link you just defined in your project, switch to the directory you want to use your dofusdude-js from, and run:
 
 ```shell
 npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
@@ -184,10 +184,10 @@ module: {
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
 ```javascript
-var DofusdudeApi = require('dofusdude_api');
+var dofusdude = require('dofusdude-js');
 
 
-var api = new DofusdudeApi.AllItemsApi()
+var api = new dofusdude.AllItemsApi()
 var language = "language_example"; // {String} a valid language code
 var query = hat; // {String} case sensitive search query
 var opts = {
@@ -212,63 +212,63 @@ All URIs are relative to *https://api.dofusdu.de/dofus2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DofusdudeApi.AllItemsApi* | [**getItemsAllSearch**](docs/AllItemsApi.md#getItemsAllSearch) | **GET** /{language}/items/search | Search All Items
-*DofusdudeApi.AlmanaxApi* | [**getAlmanaxDate**](docs/AlmanaxApi.md#getAlmanaxDate) | **GET** /{language}/almanax/{date} | Single Almanax Date
-*DofusdudeApi.AlmanaxApi* | [**getAlmanaxRange**](docs/AlmanaxApi.md#getAlmanaxRange) | **GET** /{language}/almanax | Almanax Range
-*DofusdudeApi.ConsumablesApi* | [**getItemsConsumablesList**](docs/ConsumablesApi.md#getItemsConsumablesList) | **GET** /{language}/items/consumables | List Consumables
-*DofusdudeApi.ConsumablesApi* | [**getItemsConsumablesSearch**](docs/ConsumablesApi.md#getItemsConsumablesSearch) | **GET** /{language}/items/consumables/search | Search Consumables
-*DofusdudeApi.ConsumablesApi* | [**getItemsConsumablesSingle**](docs/ConsumablesApi.md#getItemsConsumablesSingle) | **GET** /{language}/items/consumables/{ankama_id} | Single Consumables
-*DofusdudeApi.CosmeticsApi* | [**getCosmeticsList**](docs/CosmeticsApi.md#getCosmeticsList) | **GET** /{language}/items/cosmetics | List Cosmetics
-*DofusdudeApi.CosmeticsApi* | [**getCosmeticsSearch**](docs/CosmeticsApi.md#getCosmeticsSearch) | **GET** /{language}/items/cosmetics/search | Search Cosmetics
-*DofusdudeApi.CosmeticsApi* | [**getCosmeticsSingle**](docs/CosmeticsApi.md#getCosmeticsSingle) | **GET** /{language}/items/cosmetics/{ankama_id} | Single Cosmetics
-*DofusdudeApi.EquipmentApi* | [**getItemsEquipmentList**](docs/EquipmentApi.md#getItemsEquipmentList) | **GET** /{language}/items/equipment | List Equipment
-*DofusdudeApi.EquipmentApi* | [**getItemsEquipmentSearch**](docs/EquipmentApi.md#getItemsEquipmentSearch) | **GET** /{language}/items/equipment/search | Search Equipment
-*DofusdudeApi.EquipmentApi* | [**getItemsEquipmentSingle**](docs/EquipmentApi.md#getItemsEquipmentSingle) | **GET** /{language}/items/equipment/{ankama_id} | Single Equipment
-*DofusdudeApi.MetaApi* | [**getMetaAlmanaxBonuses**](docs/MetaApi.md#getMetaAlmanaxBonuses) | **GET** /meta/{language}/almanax/bonuses | Available Almanax Bonuses
-*DofusdudeApi.MetaApi* | [**getMetaElements**](docs/MetaApi.md#getMetaElements) | **GET** /meta/elements | Effects and Condition Elements
-*DofusdudeApi.MountsApi* | [**getMountsList**](docs/MountsApi.md#getMountsList) | **GET** /{language}/mounts | List Mounts
-*DofusdudeApi.MountsApi* | [**getMountsSearch**](docs/MountsApi.md#getMountsSearch) | **GET** /{language}/mounts/search | Search Mounts
-*DofusdudeApi.MountsApi* | [**getMountsSingle**](docs/MountsApi.md#getMountsSingle) | **GET** /{language}/mounts/{ankama_id} | Single Mounts
-*DofusdudeApi.QuestItemsApi* | [**getItemQuestSingle**](docs/QuestItemsApi.md#getItemQuestSingle) | **GET** /{language}/items/quest/{ankama_id} | Single Quest Items
-*DofusdudeApi.QuestItemsApi* | [**getItemsQuestList**](docs/QuestItemsApi.md#getItemsQuestList) | **GET** /{language}/items/quest | List Quest Items
-*DofusdudeApi.QuestItemsApi* | [**getItemsQuestSearch**](docs/QuestItemsApi.md#getItemsQuestSearch) | **GET** /{language}/items/quest/search | Search Quest Items
-*DofusdudeApi.ResourcesApi* | [**getItemsResourceSearch**](docs/ResourcesApi.md#getItemsResourceSearch) | **GET** /{language}/items/resources/search | Search Resources
-*DofusdudeApi.ResourcesApi* | [**getItemsResourcesList**](docs/ResourcesApi.md#getItemsResourcesList) | **GET** /{language}/items/resources | List Resources
-*DofusdudeApi.ResourcesApi* | [**getItemsResourcesSingle**](docs/ResourcesApi.md#getItemsResourcesSingle) | **GET** /{language}/items/resources/{ankama_id} | Single Resources
-*DofusdudeApi.SetsApi* | [**getSetsList**](docs/SetsApi.md#getSetsList) | **GET** /{language}/sets | List Sets
-*DofusdudeApi.SetsApi* | [**getSetsSearch**](docs/SetsApi.md#getSetsSearch) | **GET** /{language}/sets/search | Search Sets
-*DofusdudeApi.SetsApi* | [**getSetsSingle**](docs/SetsApi.md#getSetsSingle) | **GET** /{language}/sets/{ankama_id} | Single Sets
+*dofusdude.AllItemsApi* | [**getItemsAllSearch**](docs/AllItemsApi.md#getItemsAllSearch) | **GET** /{language}/items/search | Search All Items
+*dofusdude.AlmanaxApi* | [**getAlmanaxDate**](docs/AlmanaxApi.md#getAlmanaxDate) | **GET** /{language}/almanax/{date} | Single Almanax Date
+*dofusdude.AlmanaxApi* | [**getAlmanaxRange**](docs/AlmanaxApi.md#getAlmanaxRange) | **GET** /{language}/almanax | Almanax Range
+*dofusdude.ConsumablesApi* | [**getItemsConsumablesList**](docs/ConsumablesApi.md#getItemsConsumablesList) | **GET** /{language}/items/consumables | List Consumables
+*dofusdude.ConsumablesApi* | [**getItemsConsumablesSearch**](docs/ConsumablesApi.md#getItemsConsumablesSearch) | **GET** /{language}/items/consumables/search | Search Consumables
+*dofusdude.ConsumablesApi* | [**getItemsConsumablesSingle**](docs/ConsumablesApi.md#getItemsConsumablesSingle) | **GET** /{language}/items/consumables/{ankama_id} | Single Consumables
+*dofusdude.CosmeticsApi* | [**getCosmeticsList**](docs/CosmeticsApi.md#getCosmeticsList) | **GET** /{language}/items/cosmetics | List Cosmetics
+*dofusdude.CosmeticsApi* | [**getCosmeticsSearch**](docs/CosmeticsApi.md#getCosmeticsSearch) | **GET** /{language}/items/cosmetics/search | Search Cosmetics
+*dofusdude.CosmeticsApi* | [**getCosmeticsSingle**](docs/CosmeticsApi.md#getCosmeticsSingle) | **GET** /{language}/items/cosmetics/{ankama_id} | Single Cosmetics
+*dofusdude.EquipmentApi* | [**getItemsEquipmentList**](docs/EquipmentApi.md#getItemsEquipmentList) | **GET** /{language}/items/equipment | List Equipment
+*dofusdude.EquipmentApi* | [**getItemsEquipmentSearch**](docs/EquipmentApi.md#getItemsEquipmentSearch) | **GET** /{language}/items/equipment/search | Search Equipment
+*dofusdude.EquipmentApi* | [**getItemsEquipmentSingle**](docs/EquipmentApi.md#getItemsEquipmentSingle) | **GET** /{language}/items/equipment/{ankama_id} | Single Equipment
+*dofusdude.MetaApi* | [**getMetaAlmanaxBonuses**](docs/MetaApi.md#getMetaAlmanaxBonuses) | **GET** /meta/{language}/almanax/bonuses | Available Almanax Bonuses
+*dofusdude.MetaApi* | [**getMetaElements**](docs/MetaApi.md#getMetaElements) | **GET** /meta/elements | Effects and Condition Elements
+*dofusdude.MountsApi* | [**getMountsList**](docs/MountsApi.md#getMountsList) | **GET** /{language}/mounts | List Mounts
+*dofusdude.MountsApi* | [**getMountsSearch**](docs/MountsApi.md#getMountsSearch) | **GET** /{language}/mounts/search | Search Mounts
+*dofusdude.MountsApi* | [**getMountsSingle**](docs/MountsApi.md#getMountsSingle) | **GET** /{language}/mounts/{ankama_id} | Single Mounts
+*dofusdude.QuestItemsApi* | [**getItemQuestSingle**](docs/QuestItemsApi.md#getItemQuestSingle) | **GET** /{language}/items/quest/{ankama_id} | Single Quest Items
+*dofusdude.QuestItemsApi* | [**getItemsQuestList**](docs/QuestItemsApi.md#getItemsQuestList) | **GET** /{language}/items/quest | List Quest Items
+*dofusdude.QuestItemsApi* | [**getItemsQuestSearch**](docs/QuestItemsApi.md#getItemsQuestSearch) | **GET** /{language}/items/quest/search | Search Quest Items
+*dofusdude.ResourcesApi* | [**getItemsResourceSearch**](docs/ResourcesApi.md#getItemsResourceSearch) | **GET** /{language}/items/resources/search | Search Resources
+*dofusdude.ResourcesApi* | [**getItemsResourcesList**](docs/ResourcesApi.md#getItemsResourcesList) | **GET** /{language}/items/resources | List Resources
+*dofusdude.ResourcesApi* | [**getItemsResourcesSingle**](docs/ResourcesApi.md#getItemsResourcesSingle) | **GET** /{language}/items/resources/{ankama_id} | Single Resources
+*dofusdude.SetsApi* | [**getSetsList**](docs/SetsApi.md#getSetsList) | **GET** /{language}/sets | List Sets
+*dofusdude.SetsApi* | [**getSetsSearch**](docs/SetsApi.md#getSetsSearch) | **GET** /{language}/sets/search | Search Sets
+*dofusdude.SetsApi* | [**getSetsSingle**](docs/SetsApi.md#getSetsSingle) | **GET** /{language}/sets/{ankama_id} | Single Sets
 
 
 ## Documentation for Models
 
- - [DofusdudeApi.AlmanaxEntry](docs/AlmanaxEntry.md)
- - [DofusdudeApi.AlmanaxEntryBonus](docs/AlmanaxEntryBonus.md)
- - [DofusdudeApi.AlmanaxEntryTribute](docs/AlmanaxEntryTribute.md)
- - [DofusdudeApi.AlmanaxEntryTributeItem](docs/AlmanaxEntryTributeItem.md)
- - [DofusdudeApi.ConditionEntry](docs/ConditionEntry.md)
- - [DofusdudeApi.Cosmetic](docs/Cosmetic.md)
- - [DofusdudeApi.EffectsEntry](docs/EffectsEntry.md)
- - [DofusdudeApi.EffectsEntryType](docs/EffectsEntryType.md)
- - [DofusdudeApi.Equipment](docs/Equipment.md)
- - [DofusdudeApi.EquipmentParentSet](docs/EquipmentParentSet.md)
- - [DofusdudeApi.EquipmentSet](docs/EquipmentSet.md)
- - [DofusdudeApi.GetMetaAlmanaxBonuses200ResponseInner](docs/GetMetaAlmanaxBonuses200ResponseInner.md)
- - [DofusdudeApi.ImageUrls](docs/ImageUrls.md)
- - [DofusdudeApi.ItemListEntry](docs/ItemListEntry.md)
- - [DofusdudeApi.ItemsListEntryTyped](docs/ItemsListEntryTyped.md)
- - [DofusdudeApi.ItemsListEntryTypedType](docs/ItemsListEntryTypedType.md)
- - [DofusdudeApi.ItemsListPaged](docs/ItemsListPaged.md)
- - [DofusdudeApi.LinksPaged](docs/LinksPaged.md)
- - [DofusdudeApi.Mount](docs/Mount.md)
- - [DofusdudeApi.MountListEntry](docs/MountListEntry.md)
- - [DofusdudeApi.MountsListPaged](docs/MountsListPaged.md)
- - [DofusdudeApi.RecipeEntry](docs/RecipeEntry.md)
- - [DofusdudeApi.Resource](docs/Resource.md)
- - [DofusdudeApi.SetListEntry](docs/SetListEntry.md)
- - [DofusdudeApi.SetsListPaged](docs/SetsListPaged.md)
- - [DofusdudeApi.Weapon](docs/Weapon.md)
- - [DofusdudeApi.WeaponRange](docs/WeaponRange.md)
+ - [dofusdude.AlmanaxEntry](docs/AlmanaxEntry.md)
+ - [dofusdude.AlmanaxEntryBonus](docs/AlmanaxEntryBonus.md)
+ - [dofusdude.AlmanaxEntryTribute](docs/AlmanaxEntryTribute.md)
+ - [dofusdude.AlmanaxEntryTributeItem](docs/AlmanaxEntryTributeItem.md)
+ - [dofusdude.ConditionEntry](docs/ConditionEntry.md)
+ - [dofusdude.Cosmetic](docs/Cosmetic.md)
+ - [dofusdude.EffectsEntry](docs/EffectsEntry.md)
+ - [dofusdude.EffectsEntryType](docs/EffectsEntryType.md)
+ - [dofusdude.Equipment](docs/Equipment.md)
+ - [dofusdude.EquipmentParentSet](docs/EquipmentParentSet.md)
+ - [dofusdude.EquipmentSet](docs/EquipmentSet.md)
+ - [dofusdude.GetMetaAlmanaxBonuses200ResponseInner](docs/GetMetaAlmanaxBonuses200ResponseInner.md)
+ - [dofusdude.ImageUrls](docs/ImageUrls.md)
+ - [dofusdude.ItemListEntry](docs/ItemListEntry.md)
+ - [dofusdude.ItemsListEntryTyped](docs/ItemsListEntryTyped.md)
+ - [dofusdude.ItemsListEntryTypedType](docs/ItemsListEntryTypedType.md)
+ - [dofusdude.ItemsListPaged](docs/ItemsListPaged.md)
+ - [dofusdude.LinksPaged](docs/LinksPaged.md)
+ - [dofusdude.Mount](docs/Mount.md)
+ - [dofusdude.MountListEntry](docs/MountListEntry.md)
+ - [dofusdude.MountsListPaged](docs/MountsListPaged.md)
+ - [dofusdude.RecipeEntry](docs/RecipeEntry.md)
+ - [dofusdude.Resource](docs/Resource.md)
+ - [dofusdude.SetListEntry](docs/SetListEntry.md)
+ - [dofusdude.SetsListPaged](docs/SetsListPaged.md)
+ - [dofusdude.Weapon](docs/Weapon.md)
+ - [dofusdude.WeaponRange](docs/WeaponRange.md)
 
 
 ## Documentation for Authorization

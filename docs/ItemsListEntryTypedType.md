@@ -1,4 +1,4 @@
-# DofusdudeApi.ItemsListEntryTypedType
+# dofusdude.ItemsListEntryTypedType
 
 ## Properties
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.MountsListPaged();
+    instance = new dofusdude.MountsListPaged();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('MountsListPaged', function() {
     it('should create an instance of MountsListPaged', function() {
       // uncomment below and update the code to test MountsListPaged
-      //var instance = new DofusdudeApi.MountsListPaged();
-      //expect(instance).to.be.a(DofusdudeApi.MountsListPaged);
+      //var instance = new dofusdude.MountsListPaged();
+      //expect(instance).to.be.a(dofusdude.MountsListPaged);
     });
 
     it('should have the property links (base name: "_links")', function() {
       // uncomment below and update the code to test the property links
-      //var instance = new DofusdudeApi.MountsListPaged();
+      //var instance = new dofusdude.MountsListPaged();
       //expect(instance).to.be();
     });
 
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
-      //var instance = new DofusdudeApi.MountsListPaged();
+      //var instance = new dofusdude.MountsListPaged();
       //expect(instance).to.be();
     });
 

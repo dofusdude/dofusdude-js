@@ -1,4 +1,4 @@
-# DofusdudeApi.ImageUrls
+# dofusdude.ImageUrls
 
 ## Properties
 

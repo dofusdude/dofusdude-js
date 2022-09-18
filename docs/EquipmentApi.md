@@ -1,4 +1,4 @@
-# DofusdudeApi.EquipmentApi
+# dofusdude.EquipmentApi
 
 All URIs are relative to *https://api.dofusdu.de/dofus2*
 
@@ -21,9 +21,9 @@ Retrieve a list of equipment items.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.EquipmentApi();
+let apiInstance = new dofusdude.EquipmentApi();
 let language = "language_example"; // String | a valid language code
 let opts = {
   'sortLevel': "sortLevel_example", // String | sort the resulting list by level, default unsorted
@@ -82,9 +82,9 @@ Search in all names and descriptions of equipment items with a query.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.EquipmentApi();
+let apiInstance = new dofusdude.EquipmentApi();
 let language = "language_example"; // String | a valid language code
 let query = nidas; // String | case sensitive search query
 let opts = {
@@ -137,9 +137,9 @@ Retrieve a specific equipment item with id.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.EquipmentApi();
+let apiInstance = new dofusdude.EquipmentApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 26009; // Number | identifier
 apiInstance.getItemsEquipmentSingle(language, ankamaId, (error, data, response) => {

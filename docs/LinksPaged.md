@@ -1,4 +1,4 @@
-# DofusdudeApi.LinksPaged
+# dofusdude.LinksPaged
 
 ## Properties
 

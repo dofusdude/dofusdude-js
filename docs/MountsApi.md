@@ -1,4 +1,4 @@
-# DofusdudeApi.MountsApi
+# dofusdude.MountsApi
 
 All URIs are relative to *https://api.dofusdu.de/dofus2*
 
@@ -21,9 +21,9 @@ Retrieve a list of mounts.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.MountsApi();
+let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
 let opts = {
   'filterFamilyName': "filterFamilyName_example", // String | only results with the translated family name
@@ -74,9 +74,9 @@ Search in all names and descriptions of mounts with a query.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.MountsApi();
+let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
 let query = almond; // String | case sensitive search query
 let opts = {
@@ -125,9 +125,9 @@ Retrieve a specific mount with id.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.MountsApi();
+let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 180; // Number | identifier
 apiInstance.getMountsSingle(language, ankamaId, (error, data, response) => {

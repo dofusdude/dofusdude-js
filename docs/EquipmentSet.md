@@ -1,4 +1,4 @@
-# DofusdudeApi.EquipmentSet
+# dofusdude.EquipmentSet
 
 ## Properties
 

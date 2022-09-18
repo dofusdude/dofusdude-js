@@ -1,4 +1,4 @@
-# DofusdudeApi.ConditionEntry
+# dofusdude.ConditionEntry
 
 ## Properties
 

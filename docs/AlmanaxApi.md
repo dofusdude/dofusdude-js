@@ -1,4 +1,4 @@
-# DofusdudeApi.AlmanaxApi
+# dofusdude.AlmanaxApi
 
 All URIs are relative to *https://api.dofusdu.de/dofus2*
 
@@ -20,9 +20,9 @@ Get a single date. There are not more details in the returned object than the no
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.AlmanaxApi();
+let apiInstance = new dofusdude.AlmanaxApi();
 let language = "language_example"; // String | code
 let date = "date_example"; // String | yyyy-mm-dd
 apiInstance.getAlmanaxDate(language, date, (error, data, response) => {
@@ -67,9 +67,9 @@ Get a range of dates, defaults to today + 6 following days but can specified by 
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.AlmanaxApi();
+let apiInstance = new dofusdude.AlmanaxApi();
 let language = "language_example"; // String | code
 let opts = {
   'filterBonusType': experience-points, // String | ids from meta/{language}/almanax/bonuses

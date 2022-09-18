@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.GetMetaAlmanaxBonuses200ResponseInner();
+    instance = new dofusdude.GetMetaAlmanaxBonuses200ResponseInner();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('GetMetaAlmanaxBonuses200ResponseInner', function() {
     it('should create an instance of GetMetaAlmanaxBonuses200ResponseInner', function() {
       // uncomment below and update the code to test GetMetaAlmanaxBonuses200ResponseInner
-      //var instance = new DofusdudeApi.GetMetaAlmanaxBonuses200ResponseInner();
-      //expect(instance).to.be.a(DofusdudeApi.GetMetaAlmanaxBonuses200ResponseInner);
+      //var instance = new dofusdude.GetMetaAlmanaxBonuses200ResponseInner();
+      //expect(instance).to.be.a(dofusdude.GetMetaAlmanaxBonuses200ResponseInner);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new DofusdudeApi.GetMetaAlmanaxBonuses200ResponseInner();
+      //var instance = new dofusdude.GetMetaAlmanaxBonuses200ResponseInner();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new DofusdudeApi.GetMetaAlmanaxBonuses200ResponseInner();
+      //var instance = new dofusdude.GetMetaAlmanaxBonuses200ResponseInner();
       //expect(instance).to.be();
     });
 

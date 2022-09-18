@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.SetListEntry();
+    instance = new dofusdude.SetListEntry();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('SetListEntry', function() {
     it('should create an instance of SetListEntry', function() {
       // uncomment below and update the code to test SetListEntry
-      //var instance = new DofusdudeApi.SetListEntry();
-      //expect(instance).to.be.a(DofusdudeApi.SetListEntry);
+      //var instance = new dofusdude.SetListEntry();
+      //expect(instance).to.be.a(dofusdude.SetListEntry);
     });
 
     it('should have the property ankamaId (base name: "ankama_id")', function() {
       // uncomment below and update the code to test the property ankamaId
-      //var instance = new DofusdudeApi.SetListEntry();
+      //var instance = new dofusdude.SetListEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new DofusdudeApi.SetListEntry();
+      //var instance = new dofusdude.SetListEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
-      //var instance = new DofusdudeApi.SetListEntry();
+      //var instance = new dofusdude.SetListEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property level (base name: "level")', function() {
       // uncomment below and update the code to test the property level
-      //var instance = new DofusdudeApi.SetListEntry();
+      //var instance = new dofusdude.SetListEntry();
       //expect(instance).to.be();
     });
 

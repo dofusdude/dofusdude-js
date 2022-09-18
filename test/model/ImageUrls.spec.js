@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.ImageUrls();
+    instance = new dofusdude.ImageUrls();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('ImageUrls', function() {
     it('should create an instance of ImageUrls', function() {
       // uncomment below and update the code to test ImageUrls
-      //var instance = new DofusdudeApi.ImageUrls();
-      //expect(instance).to.be.a(DofusdudeApi.ImageUrls);
+      //var instance = new dofusdude.ImageUrls();
+      //expect(instance).to.be.a(dofusdude.ImageUrls);
     });
 
     it('should have the property icon (base name: "icon")', function() {
       // uncomment below and update the code to test the property icon
-      //var instance = new DofusdudeApi.ImageUrls();
+      //var instance = new dofusdude.ImageUrls();
       //expect(instance).to.be();
     });
 
     it('should have the property sd (base name: "sd")', function() {
       // uncomment below and update the code to test the property sd
-      //var instance = new DofusdudeApi.ImageUrls();
+      //var instance = new dofusdude.ImageUrls();
       //expect(instance).to.be();
     });
 
     it('should have the property hq (base name: "hq")', function() {
       // uncomment below and update the code to test the property hq
-      //var instance = new DofusdudeApi.ImageUrls();
+      //var instance = new dofusdude.ImageUrls();
       //expect(instance).to.be();
     });
 
     it('should have the property hd (base name: "hd")', function() {
       // uncomment below and update the code to test the property hd
-      //var instance = new DofusdudeApi.ImageUrls();
+      //var instance = new dofusdude.ImageUrls();
       //expect(instance).to.be();
     });
 

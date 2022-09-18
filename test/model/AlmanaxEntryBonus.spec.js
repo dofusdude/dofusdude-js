@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.AlmanaxEntryBonus();
+    instance = new dofusdude.AlmanaxEntryBonus();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('AlmanaxEntryBonus', function() {
     it('should create an instance of AlmanaxEntryBonus', function() {
       // uncomment below and update the code to test AlmanaxEntryBonus
-      //var instance = new DofusdudeApi.AlmanaxEntryBonus();
-      //expect(instance).to.be.a(DofusdudeApi.AlmanaxEntryBonus);
+      //var instance = new dofusdude.AlmanaxEntryBonus();
+      //expect(instance).to.be.a(dofusdude.AlmanaxEntryBonus);
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new DofusdudeApi.AlmanaxEntryBonus();
+      //var instance = new dofusdude.AlmanaxEntryBonus();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new DofusdudeApi.AlmanaxEntryBonus();
+      //var instance = new dofusdude.AlmanaxEntryBonus();
       //expect(instance).to.be();
     });
 

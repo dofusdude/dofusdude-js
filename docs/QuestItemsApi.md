@@ -1,4 +1,4 @@
-# DofusdudeApi.QuestItemsApi
+# dofusdude.QuestItemsApi
 
 All URIs are relative to *https://api.dofusdu.de/dofus2*
 
@@ -21,9 +21,9 @@ Retrieve a specific quest item with id.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.QuestItemsApi();
+let apiInstance = new dofusdude.QuestItemsApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 25256; // Number | identifier
 apiInstance.getItemQuestSingle(language, ankamaId, (error, data, response) => {
@@ -68,9 +68,9 @@ Retrieve a list of quest items.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.QuestItemsApi();
+let apiInstance = new dofusdude.QuestItemsApi();
 let language = "language_example"; // String | a valid language code
 let opts = {
   'sortLevel': "sortLevel_example", // String | sort the resulting list by level, default unsorted
@@ -129,9 +129,9 @@ Search in all names and descriptions of quest items with a query.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.QuestItemsApi();
+let apiInstance = new dofusdude.QuestItemsApi();
 let language = "language_example"; // String | a valid language code
 let query = sufo; // String | case sensitive search query
 let opts = {

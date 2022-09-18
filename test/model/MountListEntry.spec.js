@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.MountListEntry();
+    instance = new dofusdude.MountListEntry();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('MountListEntry', function() {
     it('should create an instance of MountListEntry', function() {
       // uncomment below and update the code to test MountListEntry
-      //var instance = new DofusdudeApi.MountListEntry();
-      //expect(instance).to.be.a(DofusdudeApi.MountListEntry);
+      //var instance = new dofusdude.MountListEntry();
+      //expect(instance).to.be.a(dofusdude.MountListEntry);
     });
 
     it('should have the property ankamaId (base name: "ankama_id")', function() {
       // uncomment below and update the code to test the property ankamaId
-      //var instance = new DofusdudeApi.MountListEntry();
+      //var instance = new dofusdude.MountListEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new DofusdudeApi.MountListEntry();
+      //var instance = new dofusdude.MountListEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property familyName (base name: "family_name")', function() {
       // uncomment below and update the code to test the property familyName
-      //var instance = new DofusdudeApi.MountListEntry();
+      //var instance = new dofusdude.MountListEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property imageUrls (base name: "image_urls")', function() {
       // uncomment below and update the code to test the property imageUrls
-      //var instance = new DofusdudeApi.MountListEntry();
+      //var instance = new dofusdude.MountListEntry();
       //expect(instance).to.be();
     });
 

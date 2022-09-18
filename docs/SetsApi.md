@@ -1,4 +1,4 @@
-# DofusdudeApi.SetsApi
+# dofusdude.SetsApi
 
 All URIs are relative to *https://api.dofusdu.de/dofus2*
 
@@ -21,9 +21,9 @@ Retrieve a list of sets.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.SetsApi();
+let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
 let opts = {
   'sortLevel': "sortLevel_example", // String | sort the resulting list by level, default unsorted
@@ -78,9 +78,9 @@ Search in all names and descriptions of sets with a query.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.SetsApi();
+let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
 let query = Des; // String | case sensitive search query
 let opts = {
@@ -131,9 +131,9 @@ Retrieve a specific set with id.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.SetsApi();
+let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 499; // Number | identifier
 apiInstance.getSetsSingle(language, ankamaId, (error, data, response) => {

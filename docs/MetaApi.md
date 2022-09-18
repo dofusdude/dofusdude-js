@@ -1,4 +1,4 @@
-# DofusdudeApi.MetaApi
+# dofusdude.MetaApi
 
 All URIs are relative to *https://api.dofusdu.de/dofus2*
 
@@ -20,9 +20,9 @@ Get all the available bonuses and their id for filtering them in the range endpo
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.MetaApi();
+let apiInstance = new dofusdude.MetaApi();
 let language = "language_example"; // String | 
 apiInstance.getMetaAlmanaxBonuses(language, (error, data, response) => {
   if (error) {
@@ -65,9 +65,9 @@ Get the mappings for all specific elements that are linked in the dataset. All n
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.MetaApi();
+let apiInstance = new dofusdude.MetaApi();
 apiInstance.getMetaElements((error, data, response) => {
   if (error) {
     console.error(error);

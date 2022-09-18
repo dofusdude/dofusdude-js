@@ -1,4 +1,4 @@
-# DofusdudeApi.Mount
+# dofusdude.Mount
 
 ## Properties
 

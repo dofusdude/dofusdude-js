@@ -1,4 +1,4 @@
-# DofusdudeApi.SetsListPaged
+# dofusdude.SetsListPaged
 
 ## Properties
 

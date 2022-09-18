@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.Mount();
+    instance = new dofusdude.Mount();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('Mount', function() {
     it('should create an instance of Mount', function() {
       // uncomment below and update the code to test Mount
-      //var instance = new DofusdudeApi.Mount();
-      //expect(instance).to.be.a(DofusdudeApi.Mount);
+      //var instance = new dofusdude.Mount();
+      //expect(instance).to.be.a(dofusdude.Mount);
     });
 
     it('should have the property ankamaId (base name: "ankama_id")', function() {
       // uncomment below and update the code to test the property ankamaId
-      //var instance = new DofusdudeApi.Mount();
+      //var instance = new dofusdude.Mount();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new DofusdudeApi.Mount();
+      //var instance = new dofusdude.Mount();
       //expect(instance).to.be();
     });
 
     it('should have the property familyName (base name: "family_name")', function() {
       // uncomment below and update the code to test the property familyName
-      //var instance = new DofusdudeApi.Mount();
+      //var instance = new dofusdude.Mount();
       //expect(instance).to.be();
     });
 
     it('should have the property imageUrls (base name: "image_urls")', function() {
       // uncomment below and update the code to test the property imageUrls
-      //var instance = new DofusdudeApi.Mount();
+      //var instance = new dofusdude.Mount();
       //expect(instance).to.be();
     });
 
     it('should have the property hasEffects (base name: "has_effects")', function() {
       // uncomment below and update the code to test the property hasEffects
-      //var instance = new DofusdudeApi.Mount();
+      //var instance = new dofusdude.Mount();
       //expect(instance).to.be();
     });
 
     it('should have the property effects (base name: "effects")', function() {
       // uncomment below and update the code to test the property effects
-      //var instance = new DofusdudeApi.Mount();
+      //var instance = new dofusdude.Mount();
       //expect(instance).to.be();
     });
 

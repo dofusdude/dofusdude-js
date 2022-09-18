@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.ItemListEntry();
+    instance = new dofusdude.ItemListEntry();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('ItemListEntry', function() {
     it('should create an instance of ItemListEntry', function() {
       // uncomment below and update the code to test ItemListEntry
-      //var instance = new DofusdudeApi.ItemListEntry();
-      //expect(instance).to.be.a(DofusdudeApi.ItemListEntry);
+      //var instance = new dofusdude.ItemListEntry();
+      //expect(instance).to.be.a(dofusdude.ItemListEntry);
     });
 
     it('should have the property ankamaId (base name: "ankama_id")', function() {
       // uncomment below and update the code to test the property ankamaId
-      //var instance = new DofusdudeApi.ItemListEntry();
+      //var instance = new dofusdude.ItemListEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new DofusdudeApi.ItemListEntry();
+      //var instance = new dofusdude.ItemListEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new DofusdudeApi.ItemListEntry();
+      //var instance = new dofusdude.ItemListEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property level (base name: "level")', function() {
       // uncomment below and update the code to test the property level
-      //var instance = new DofusdudeApi.ItemListEntry();
+      //var instance = new dofusdude.ItemListEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property imageUrls (base name: "image_urls")', function() {
       // uncomment below and update the code to test the property imageUrls
-      //var instance = new DofusdudeApi.ItemListEntry();
+      //var instance = new dofusdude.ItemListEntry();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.SetsListPaged();
+    instance = new dofusdude.SetsListPaged();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('SetsListPaged', function() {
     it('should create an instance of SetsListPaged', function() {
       // uncomment below and update the code to test SetsListPaged
-      //var instance = new DofusdudeApi.SetsListPaged();
-      //expect(instance).to.be.a(DofusdudeApi.SetsListPaged);
+      //var instance = new dofusdude.SetsListPaged();
+      //expect(instance).to.be.a(dofusdude.SetsListPaged);
     });
 
     it('should have the property links (base name: "_links")', function() {
       // uncomment below and update the code to test the property links
-      //var instance = new DofusdudeApi.SetsListPaged();
+      //var instance = new dofusdude.SetsListPaged();
       //expect(instance).to.be();
     });
 
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
-      //var instance = new DofusdudeApi.SetsListPaged();
+      //var instance = new dofusdude.SetsListPaged();
       //expect(instance).to.be();
     });
 

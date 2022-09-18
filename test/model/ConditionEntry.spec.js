@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.ConditionEntry();
+    instance = new dofusdude.ConditionEntry();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('ConditionEntry', function() {
     it('should create an instance of ConditionEntry', function() {
       // uncomment below and update the code to test ConditionEntry
-      //var instance = new DofusdudeApi.ConditionEntry();
-      //expect(instance).to.be.a(DofusdudeApi.ConditionEntry);
+      //var instance = new dofusdude.ConditionEntry();
+      //expect(instance).to.be.a(dofusdude.ConditionEntry);
     });
 
     it('should have the property operator (base name: "operator")', function() {
       // uncomment below and update the code to test the property operator
-      //var instance = new DofusdudeApi.ConditionEntry();
+      //var instance = new dofusdude.ConditionEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property intValue (base name: "int_value")', function() {
       // uncomment below and update the code to test the property intValue
-      //var instance = new DofusdudeApi.ConditionEntry();
+      //var instance = new dofusdude.ConditionEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property element (base name: "element")', function() {
       // uncomment below and update the code to test the property element
-      //var instance = new DofusdudeApi.ConditionEntry();
+      //var instance = new dofusdude.ConditionEntry();
       //expect(instance).to.be();
     });
 

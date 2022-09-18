@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.EffectsEntry();
+    instance = new dofusdude.EffectsEntry();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('EffectsEntry', function() {
     it('should create an instance of EffectsEntry', function() {
       // uncomment below and update the code to test EffectsEntry
-      //var instance = new DofusdudeApi.EffectsEntry();
-      //expect(instance).to.be.a(DofusdudeApi.EffectsEntry);
+      //var instance = new dofusdude.EffectsEntry();
+      //expect(instance).to.be.a(dofusdude.EffectsEntry);
     });
 
     it('should have the property intMinimum (base name: "int_minimum")', function() {
       // uncomment below and update the code to test the property intMinimum
-      //var instance = new DofusdudeApi.EffectsEntry();
+      //var instance = new dofusdude.EffectsEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property intMaximum (base name: "int_maximum")', function() {
       // uncomment below and update the code to test the property intMaximum
-      //var instance = new DofusdudeApi.EffectsEntry();
+      //var instance = new dofusdude.EffectsEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new DofusdudeApi.EffectsEntry();
+      //var instance = new dofusdude.EffectsEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property ignoreIntMin (base name: "ignore_int_min")', function() {
       // uncomment below and update the code to test the property ignoreIntMin
-      //var instance = new DofusdudeApi.EffectsEntry();
+      //var instance = new dofusdude.EffectsEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property ignoreIntMax (base name: "ignore_int_max")', function() {
       // uncomment below and update the code to test the property ignoreIntMax
-      //var instance = new DofusdudeApi.EffectsEntry();
+      //var instance = new dofusdude.EffectsEntry();
       //expect(instance).to.be();
     });
 
     it('should have the property formatted (base name: "formatted")', function() {
       // uncomment below and update the code to test the property formatted
-      //var instance = new DofusdudeApi.EffectsEntry();
+      //var instance = new dofusdude.EffectsEntry();
       //expect(instance).to.be();
     });
 

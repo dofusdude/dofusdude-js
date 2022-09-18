@@ -1,4 +1,4 @@
-# DofusdudeApi.GetMetaAlmanaxBonuses200ResponseInner
+# dofusdude.GetMetaAlmanaxBonuses200ResponseInner
 
 ## Properties
 

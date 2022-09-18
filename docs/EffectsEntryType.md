@@ -1,4 +1,4 @@
-# DofusdudeApi.EffectsEntryType
+# dofusdude.EffectsEntryType
 
 ## Properties
 

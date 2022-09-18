@@ -1,4 +1,4 @@
-# DofusdudeApi.WeaponRange
+# dofusdude.WeaponRange
 
 ## Properties
 

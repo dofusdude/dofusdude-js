@@ -1,4 +1,4 @@
-# DofusdudeApi.Cosmetic
+# dofusdude.Cosmetic
 
 ## Properties
 

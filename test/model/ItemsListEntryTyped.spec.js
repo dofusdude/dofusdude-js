@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DofusdudeApi);
+    factory(root.expect, root.dofusdude);
   }
-}(this, function(expect, DofusdudeApi) {
+}(this, function(expect, dofusdude) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DofusdudeApi.ItemsListEntryTyped();
+    instance = new dofusdude.ItemsListEntryTyped();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('ItemsListEntryTyped', function() {
     it('should create an instance of ItemsListEntryTyped', function() {
       // uncomment below and update the code to test ItemsListEntryTyped
-      //var instance = new DofusdudeApi.ItemsListEntryTyped();
-      //expect(instance).to.be.a(DofusdudeApi.ItemsListEntryTyped);
+      //var instance = new dofusdude.ItemsListEntryTyped();
+      //expect(instance).to.be.a(dofusdude.ItemsListEntryTyped);
     });
 
     it('should have the property ankamaId (base name: "ankama_id")', function() {
       // uncomment below and update the code to test the property ankamaId
-      //var instance = new DofusdudeApi.ItemsListEntryTyped();
+      //var instance = new dofusdude.ItemsListEntryTyped();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new DofusdudeApi.ItemsListEntryTyped();
+      //var instance = new dofusdude.ItemsListEntryTyped();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new DofusdudeApi.ItemsListEntryTyped();
+      //var instance = new dofusdude.ItemsListEntryTyped();
       //expect(instance).to.be();
     });
 
     it('should have the property itemSubtype (base name: "item_subtype")', function() {
       // uncomment below and update the code to test the property itemSubtype
-      //var instance = new DofusdudeApi.ItemsListEntryTyped();
+      //var instance = new dofusdude.ItemsListEntryTyped();
       //expect(instance).to.be();
     });
 
     it('should have the property level (base name: "level")', function() {
       // uncomment below and update the code to test the property level
-      //var instance = new DofusdudeApi.ItemsListEntryTyped();
+      //var instance = new dofusdude.ItemsListEntryTyped();
       //expect(instance).to.be();
     });
 
     it('should have the property imageUrls (base name: "image_urls")', function() {
       // uncomment below and update the code to test the property imageUrls
-      //var instance = new DofusdudeApi.ItemsListEntryTyped();
+      //var instance = new dofusdude.ItemsListEntryTyped();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# DofusdudeApi.AlmanaxEntryBonus
+# dofusdude.AlmanaxEntryBonus
 
 ## Properties
 

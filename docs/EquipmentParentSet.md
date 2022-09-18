@@ -1,4 +1,4 @@
-# DofusdudeApi.EquipmentParentSet
+# dofusdude.EquipmentParentSet
 
 ## Properties
 

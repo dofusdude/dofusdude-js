@@ -1,4 +1,4 @@
-# DofusdudeApi.ConsumablesApi
+# dofusdude.ConsumablesApi
 
 All URIs are relative to *https://api.dofusdu.de/dofus2*
 
@@ -21,9 +21,9 @@ Retrieve a list of consumable items.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.ConsumablesApi();
+let apiInstance = new dofusdude.ConsumablesApi();
 let language = "language_example"; // String | a valid language code
 let opts = {
   'sortLevel': "sortLevel_example", // String | sort the resulting list by level, default unsorted
@@ -82,9 +82,9 @@ Search in all names and descriptions of consumable items with a query.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.ConsumablesApi();
+let apiInstance = new dofusdude.ConsumablesApi();
 let language = "language_example"; // String | a valid language code
 let query = bar; // String | case sensitive search query
 let opts = {
@@ -137,9 +137,9 @@ Retrieve a specific consumable item with id.
 ### Example
 
 ```javascript
-import DofusdudeApi from 'dofusdude_api';
+import dofusdude from 'dofusdude-js';
 
-let apiInstance = new DofusdudeApi.ConsumablesApi();
+let apiInstance = new dofusdude.ConsumablesApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 17206; // Number | identifier
 apiInstance.getItemsConsumablesSingle(language, ankamaId, (error, data, response) => {
