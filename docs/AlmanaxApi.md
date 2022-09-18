@@ -1,11 +1,11 @@
 # dofusdude.AlmanaxApi
 
-All URIs are relative to *https://api.dofusdu.de/dofus2*
+All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAlmanaxDate**](AlmanaxApi.md#getAlmanaxDate) | **GET** /{language}/almanax/{date} | Single Almanax Date
-[**getAlmanaxRange**](AlmanaxApi.md#getAlmanaxRange) | **GET** /{language}/almanax | Almanax Range
+[**getAlmanaxDate**](AlmanaxApi.md#getAlmanaxDate) | **GET** /dofus2/{language}/almanax/{date} | Single Almanax Date
+[**getAlmanaxRange**](AlmanaxApi.md#getAlmanaxRange) | **GET** /dofus2/{language}/almanax | Almanax Range
 
 
 

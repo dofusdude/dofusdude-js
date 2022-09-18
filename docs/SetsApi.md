@@ -1,18 +1,18 @@
 # dofusdude.SetsApi
 
-All URIs are relative to *https://api.dofusdu.de/dofus2*
+All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getSetsList**](SetsApi.md#getSetsList) | **GET** /{language}/sets | List Sets
-[**getSetsSearch**](SetsApi.md#getSetsSearch) | **GET** /{language}/sets/search | Search Sets
-[**getSetsSingle**](SetsApi.md#getSetsSingle) | **GET** /{language}/sets/{ankama_id} | Single Sets
+[**getSetsList**](SetsApi.md#getSetsList) | **GET** /{game}/{language}/sets | List Sets
+[**getSetsSearch**](SetsApi.md#getSetsSearch) | **GET** /{game}/{language}/sets/search | Search Sets
+[**getSetsSingle**](SetsApi.md#getSetsSingle) | **GET** /{game}/{language}/sets/{ankama_id} | Single Sets
 
 
 
 ## getSetsList
 
-> SetsListPaged getSetsList(language, opts)
+> SetsListPaged getSetsList(language, game, opts)
 
 List Sets
 
@@ -25,6 +25,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
+let game = dofus2; // String | 
 let opts = {
   'sortLevel': "sortLevel_example", // String | sort the resulting list by level, default unsorted
   'filterMinHighestEquipmentLevel': 56, // Number | only results where the equipment with the highest level is above or equal to this value
@@ -32,7 +33,7 @@ let opts = {
   'pageSize': 56, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
   'pageNumber': 56 // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
 };
-apiInstance.getSetsList(language, opts, (error, data, response) => {
+apiInstance.getSetsList(language, game, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -47,6 +48,7 @@ apiInstance.getSetsList(language, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
+ **game** | **String**|  | 
  **sortLevel** | **String**| sort the resulting list by level, default unsorted | [optional] 
  **filterMinHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is above or equal to this value | [optional] 
  **filterMaxHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is below or equal to this value | [optional] 
@@ -69,7 +71,7 @@ No authorization required
 
 ## getSetsSearch
 
-> [SetListEntry] getSetsSearch(language, query, opts)
+> [SetListEntry] getSetsSearch(language, game, query, opts)
 
 Search Sets
 
@@ -82,12 +84,13 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
+let game = dofus2; // String | 
 let query = Des; // String | case sensitive search query
 let opts = {
   'filterMinHighestEquipmentLevel': 56, // Number | only results where the equipment with the highest level is above or equal to this value
   'filterMaxHighestEquipmentLevel': 56 // Number | only results where the equipment with the highest level is below or equal to this value
 };
-apiInstance.getSetsSearch(language, query, opts, (error, data, response) => {
+apiInstance.getSetsSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -102,6 +105,7 @@ apiInstance.getSetsSearch(language, query, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
+ **game** | **String**|  | 
  **query** | **String**| case sensitive search query | 
  **filterMinHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is above or equal to this value | [optional] 
  **filterMaxHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is below or equal to this value | [optional] 
@@ -122,7 +126,7 @@ No authorization required
 
 ## getSetsSingle
 
-> EquipmentSet getSetsSingle(language, ankamaId)
+> EquipmentSet getSetsSingle(language, ankamaId, game)
 
 Single Sets
 
@@ -136,7 +140,8 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 499; // Number | identifier
-apiInstance.getSetsSingle(language, ankamaId, (error, data, response) => {
+let game = dofus2; // String | 
+apiInstance.getSetsSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -152,6 +157,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
  **ankamaId** | **Number**| identifier | 
+ **game** | **String**|  | 
 
 ### Return type
 

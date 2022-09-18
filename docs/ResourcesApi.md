@@ -1,18 +1,18 @@
 # dofusdude.ResourcesApi
 
-All URIs are relative to *https://api.dofusdu.de/dofus2*
+All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getItemsResourceSearch**](ResourcesApi.md#getItemsResourceSearch) | **GET** /{language}/items/resources/search | Search Resources
-[**getItemsResourcesList**](ResourcesApi.md#getItemsResourcesList) | **GET** /{language}/items/resources | List Resources
-[**getItemsResourcesSingle**](ResourcesApi.md#getItemsResourcesSingle) | **GET** /{language}/items/resources/{ankama_id} | Single Resources
+[**getItemsResourceSearch**](ResourcesApi.md#getItemsResourceSearch) | **GET** /{game}/{language}/items/resources/search | Search Resources
+[**getItemsResourcesList**](ResourcesApi.md#getItemsResourcesList) | **GET** /{game}/{language}/items/resources | List Resources
+[**getItemsResourcesSingle**](ResourcesApi.md#getItemsResourcesSingle) | **GET** /{game}/{language}/items/resources/{ankama_id} | Single Resources
 
 
 
 ## getItemsResourceSearch
 
-> [ItemListEntry] getItemsResourceSearch(language, query, opts)
+> [ItemListEntry] getItemsResourceSearch(language, game, query, opts)
 
 Search Resources
 
@@ -25,13 +25,14 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.ResourcesApi();
 let language = "language_example"; // String | a valid language code
+let game = dofus2; // String | 
 let query = farak; // String | case sensitive search query
 let opts = {
   'filterTypeName': "filterTypeName_example", // String | only results with the translated type name
   'filterMinLevel': 56, // Number | only results which level is equal or above this value
   'filterMaxLevel': 56 // Number | only results which level is equal or below this value
 };
-apiInstance.getItemsResourceSearch(language, query, opts, (error, data, response) => {
+apiInstance.getItemsResourceSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -46,6 +47,7 @@ apiInstance.getItemsResourceSearch(language, query, opts, (error, data, response
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
+ **game** | **String**|  | 
  **query** | **String**| case sensitive search query | 
  **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
@@ -67,7 +69,7 @@ No authorization required
 
 ## getItemsResourcesList
 
-> ItemsListPaged getItemsResourcesList(language, opts)
+> ItemsListPaged getItemsResourcesList(language, game, opts)
 
 List Resources
 
@@ -80,6 +82,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.ResourcesApi();
 let language = "language_example"; // String | a valid language code
+let game = dofus2; // String | 
 let opts = {
   'sortLevel': "sortLevel_example", // String | sort the resulting list by level, default unsorted
   'filterTypeName': "filterTypeName_example", // String | only results with the translated type name
@@ -89,7 +92,7 @@ let opts = {
   'pageNumber': 56, // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
   'fieldsItem': recipe // String | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
 };
-apiInstance.getItemsResourcesList(language, opts, (error, data, response) => {
+apiInstance.getItemsResourcesList(language, game, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -104,6 +107,7 @@ apiInstance.getItemsResourcesList(language, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
+ **game** | **String**|  | 
  **sortLevel** | **String**| sort the resulting list by level, default unsorted | [optional] 
  **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
@@ -128,7 +132,7 @@ No authorization required
 
 ## getItemsResourcesSingle
 
-> Resource getItemsResourcesSingle(language, ankamaId)
+> Resource getItemsResourcesSingle(language, ankamaId, game)
 
 Single Resources
 
@@ -142,7 +146,8 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.ResourcesApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 7295; // Number | identifier
-apiInstance.getItemsResourcesSingle(language, ankamaId, (error, data, response) => {
+let game = dofus2; // String | 
+apiInstance.getItemsResourcesSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -158,6 +163,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
  **ankamaId** | **Number**| identifier | 
+ **game** | **String**|  | 
 
 ### Return type
 

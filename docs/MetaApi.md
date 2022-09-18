@@ -1,11 +1,11 @@
 # dofusdude.MetaApi
 
-All URIs are relative to *https://api.dofusdu.de/dofus2*
+All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getMetaAlmanaxBonuses**](MetaApi.md#getMetaAlmanaxBonuses) | **GET** /meta/{language}/almanax/bonuses | Available Almanax Bonuses
-[**getMetaElements**](MetaApi.md#getMetaElements) | **GET** /meta/elements | Effects and Condition Elements
+[**getMetaAlmanaxBonuses**](MetaApi.md#getMetaAlmanaxBonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses
+[**getMetaElements**](MetaApi.md#getMetaElements) | **GET** /dofus2/meta/elements | Effects and Condition Elements
 
 
 

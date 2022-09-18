@@ -1,8 +1,8 @@
 /**
- * Dofusdude API
- * The last API for everything Dofus <span style=\"font-size:1.8rem;\">🤯</span> <h2>Main Features</h2> <ul> <li><span style=\"font-size:1.8rem;\">🥷</span> <b>seamless auto-update</b> load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.</li>  <li><span style=\"font-size:1.8rem;\">⚡</span> <b>blazingly fast</b> all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in <span style=\"font-size:1.8rem;\">🇩🇪</span>.</li>  <li><span style=\"font-size:1.8rem;\">🩸</span> <b>Dofus 2 Beta</b> from stable to bleeding edge by replacing /dofus2 with /dofus2beta.</li>  <li><span style=\"font-size:1.8rem;\">🗣️</span> <b>multilingual</b> supporting <em>en</em>, <em>fr</em>, <em>es</em>, <em>pt</em> including the dropped languages from the Dofus website <em>de</em> and <em>it</em>.</li>  <li><span style=\"font-size:1.8rem;\">🧠</span> <b>search by relevance</b> allowing typos in name and description, handled by language specific text analysis and indexing by the powerful <a href=\"https://www.meilisearch.com\">Meilisearch</a> written in Rust.</li>  <li><span style=\"font-size:1.8rem;\">🕵️</span> <b>complete</b> actual data from the game including items invisible to the encyclopedia like quest items.</li>  <li><span style=\"font-size:1.8rem;\">🖼️</span> <b>HD images</b> rendering vector graphics into PNGs up to 800x800 px in the background.</li>  </ul>   <h2>Current state</h2> <div style=\"display:flex;justify-content:space-around;flex-wrap:wrap\"> <ul style=\"font-size:1.6rem;\"> <li>Weapons ✅</li> <li>Equipment ✅</li> <li>Sets ✅</li> <li>Resources ✅</li> <li>Consumables ✅</li> <li>Pets ✅</li> <li>Mounts ✅</li> <li>Cosmetics/Ceremonial Items ✅</li> <li>Harnesses ✅</li> <li>Quest Items ✅</li> <li>Almanax ✅</li> </ul>  <ul style=\"font-size:1.6rem;\"> <li>Monsters ❌</li> <li>Classes ❌</li> <li>Spells ❌</li> <li>Professions ❌ </li> </ul> </div>   <h3>Maybes? I don't know what for <span style=\"font-size:1.8rem;\">🤷</span></h3> <ul> <li>Sidekicks ❌</li> <li>Haven Bags ❌</li> <li>Map ❌</li> </ul>   <h2>Future</h2> I want this project to be useful and not just add plain categories no one needs. More and more features will be added to enhance the quality based on the needs of you, the developers. <br>Examples: <p><em>I need to know where I can drop the all the items I need to craft set X!</em></p> <p><em>Please get a detailed always up-to-date spell description so I can calculate the damage for my set builder site!</em></p> <p>Nearly everything can be done. But I want to make sure somebody also wants it. If you have anything or you are just interested in the project, join the <a href=\"https://discord.gg/3EtHskZD8h\">Discord</a>.</p>  <h3>Versioning</h3> <p>Updating an API is a hard problem. This is why we'll keep it simple:  Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted. Ever. </p> <p>There is one exception! <b>The API will <em>always</em> choose being up-to-date over everything else</b>. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too. </p> <p> We can prevent this specific use case with a nice community but even then, it would be hidden behind a feature flag. </p>  <h2>Get started! 🥳</h2> <p>Scroll down and try it for yourself!</p> <p>If you are ready to use them in your project, think about <a href=\"https://github.com/OpenAPITools/openapi-generator\">generating a client <span style=\"font-size:1.8rem;\">🧙</span></a> from the <a href=\"https://raw.githubusercontent.com/dofusdude/api-docs/main/openapi-3.0.yaml\">OpenAPI 3.0 Spec</a> to get started quickly.</p>  <p>Awesome Projects using this API:</p> <ul> <li><a href=\"https://github.com/Kaysoro/KaellyBot\">KaellyBot</a> by Kaysoro</li> <li><a href=\"https://dofuscraftlist-dev.netlify.app\">Dofus Craftlist</a> by Lystina</li> <li><a href=\"https://almanaxapp.netlify.app\">AlmanaxApp</a> by Lystina</li> <li><a href=\"https://luwnarya.fr\">luwnarya.fr</a></li> </ul>  My old <a href=\"https://alm.dofusdu.de/swagger\">Almanax API v1</a> is an example for using a <a href=\"https://github.com/dofusdude/almanax-api/tree/main/src/main/java/org/acme/openapi\">generated Client</a> from the OpenAPI Spec.  
+ * Dofusdude
+ * The last API for everything Dofus 🤯 <h2>Main Features</h2> <ul> <li>🥷 <b>seamless auto-update</b> load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.</li>  <li>⚡ <b>blazingly fast</b> all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.</li>  <li>🩸 <b>Dofus 2 Beta</b> from stable to bleeding edge by replacing /dofus2 with /dofus2beta.</li>  <li>🗣️ <b>multilingual</b> supporting <em>en</em>, <em>fr</em>, <em>es</em>, <em>pt</em> including the dropped languages from the Dofus website <em>de</em> and <em>it</em>.</li>  <li>🧠 <b>search by relevance</b> allowing typos in name and description, handled by language specific text analysis and indexing by the powerful <a href=\"https://www.meilisearch.com\">Meilisearch</a> written in Rust.</li>  <li>🕵️ <b>complete</b> actual data from the game including items invisible to the encyclopedia like quest items.</li>  <li>🖼️ <b>HD images</b> rendering vector graphics into PNGs up to 800x800 px in the background.</li>  </ul>   <h2>Current state</h2> <ul> <li>Weapons ✅</li> <li>Equipment ✅</li> <li>Sets ✅</li> <li>Resources ✅</li> <li>Consumables ✅</li> <li>Pets ✅</li> <li>Mounts ✅</li> <li>Cosmetics/Ceremonial Items ✅</li> <li>Harnesses ✅</li> <li>Quest Items ✅</li> <li>Almanax ✅</li> </ul>  <ul> <li>Monsters ❌</li> <li>Classes ❌</li> <li>Spells ❌</li> <li>Professions ❌ </li> </ul>   <h3>Maybes? I don't know what for 🤷</h3> <ul> <li>Sidekicks ❌</li> <li>Haven Bags ❌</li> <li>Map ❌</li> </ul>   <h2>Future</h2> I want this project to be useful and not just add plain categories no one needs. More and more features will be added to enhance the quality based on the needs of you, the developers. <br>Examples: <p><em>I need to know where I can drop the all the items I need to craft set X!</em></p> <p><em>Please get a detailed always up-to-date spell description so I can calculate the damage for my set builder site!</em></p> <p>Nearly everything can be done. But I want to make sure somebody also wants it. If you have anything or you are just interested in the project, join the <a href=\"https://discord.gg/3EtHskZD8h\">Discord</a>.</p>  <h3>Versioning</h3> <p>Updating an API is a hard problem. This is why we'll keep it simple:  Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted. Ever. </p> <p>There is one exception! <b>The API will <em>always</em> choose being up-to-date over everything else</b>. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too. </p> <p> We can prevent this specific use case with a nice community but even then, it would be hidden behind a feature flag. </p>  <h2>Get started! 🥳</h2> <p>Scroll down and try it for yourself!</p> <p>If you are ready to use them in your project, think about <a href=\"https://github.com/OpenAPITools/openapi-generator\">generating a client 🧙</a> from the <a href=\"https://raw.githubusercontent.com/dofusdude/api-docs/main/openapi-3.0.yaml\">OpenAPI 3.0 Spec</a> to get started quickly.</p>  <p>Awesome Projects using this API:</p> <ul> <li><a href=\"https://github.com/Kaysoro/KaellyBot\">KaellyBot</a> by Kaysoro</li> <li><a href=\"https://dofuscraftlist-dev.netlify.app\">Dofus Craftlist</a> by Lystina</li> <li><a href=\"https://almanaxapp.netlify.app\">AlmanaxApp</a> by Lystina</li> <li><a href=\"https://luwnarya.fr\">luwnarya.fr</a></li> </ul>  My old <a href=\"https://alm.dofusdu.de/swagger\">Almanax API v1</a> is an example for using a <a href=\"https://github.com/dofusdude/almanax-api/tree/main/src/main/java/org/acme/openapi\">generated Client</a> from the OpenAPI Spec.  
  *
- * The version of the OpenAPI document: 0.5
+ * The version of the OpenAPI document: 0.5.1
  * Contact: stelzo@steado.de
  *
  * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
@@ -20,7 +20,7 @@ import MountsListPaged from '../model/MountsListPaged';
 /**
 * Mounts service.
 * @module api/MountsApi
-* @version 0.5
+* @version 0.5.1
 */
 export default class MountsApi {
 
@@ -48,6 +48,7 @@ export default class MountsApi {
      * List Mounts
      * Retrieve a list of mounts.
      * @param {module:model/String} language a valid language code
+     * @param {module:model/String} game 
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterFamilyName only results with the translated family name
      * @param {Number} opts.pageSize size of the results from the list. -1 disables pagination and gets all in one response.
@@ -55,16 +56,21 @@ export default class MountsApi {
      * @param {module:api/MountsApi~getMountsListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/MountsListPaged}
      */
-    getMountsList(language, opts, callback) {
+    getMountsList(language, game, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'language' is set
       if (language === undefined || language === null) {
         throw new Error("Missing the required parameter 'language' when calling getMountsList");
       }
+      // verify the required parameter 'game' is set
+      if (game === undefined || game === null) {
+        throw new Error("Missing the required parameter 'game' when calling getMountsList");
+      }
 
       let pathParams = {
-        'language': language
+        'language': language,
+        'game': game
       };
       let queryParams = {
         'filter[family_name]': opts['filterFamilyName'],
@@ -81,7 +87,7 @@ export default class MountsApi {
       let accepts = ['application/json'];
       let returnType = MountsListPaged;
       return this.apiClient.callApi(
-        '/{language}/mounts', 'GET',
+        '/{game}/{language}/mounts', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -99,18 +105,23 @@ export default class MountsApi {
      * Search Mounts
      * Search in all names and descriptions of mounts with a query.
      * @param {module:model/String} language a valid language code
+     * @param {module:model/String} game 
      * @param {String} query case sensitive search query
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterFamilyName only results with the translated family name
      * @param {module:api/MountsApi~getMountsSearchCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/MountListEntry>}
      */
-    getMountsSearch(language, query, opts, callback) {
+    getMountsSearch(language, game, query, opts, callback) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'language' is set
       if (language === undefined || language === null) {
         throw new Error("Missing the required parameter 'language' when calling getMountsSearch");
+      }
+      // verify the required parameter 'game' is set
+      if (game === undefined || game === null) {
+        throw new Error("Missing the required parameter 'game' when calling getMountsSearch");
       }
       // verify the required parameter 'query' is set
       if (query === undefined || query === null) {
@@ -118,7 +129,8 @@ export default class MountsApi {
       }
 
       let pathParams = {
-        'language': language
+        'language': language,
+        'game': game
       };
       let queryParams = {
         'query': query,
@@ -134,7 +146,7 @@ export default class MountsApi {
       let accepts = ['application/json'];
       let returnType = [MountListEntry];
       return this.apiClient.callApi(
-        '/{language}/mounts/search', 'GET',
+        '/{game}/{language}/mounts/search', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -153,10 +165,11 @@ export default class MountsApi {
      * Retrieve a specific mount with id.
      * @param {module:model/String} language a valid language code
      * @param {Number} ankamaId identifier
+     * @param {module:model/String} game 
      * @param {module:api/MountsApi~getMountsSingleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Mount}
      */
-    getMountsSingle(language, ankamaId, callback) {
+    getMountsSingle(language, ankamaId, game, callback) {
       let postBody = null;
       // verify the required parameter 'language' is set
       if (language === undefined || language === null) {
@@ -166,10 +179,15 @@ export default class MountsApi {
       if (ankamaId === undefined || ankamaId === null) {
         throw new Error("Missing the required parameter 'ankamaId' when calling getMountsSingle");
       }
+      // verify the required parameter 'game' is set
+      if (game === undefined || game === null) {
+        throw new Error("Missing the required parameter 'game' when calling getMountsSingle");
+      }
 
       let pathParams = {
         'language': language,
-        'ankama_id': ankamaId
+        'ankama_id': ankamaId,
+        'game': game
       };
       let queryParams = {
       };
@@ -183,7 +201,7 @@ export default class MountsApi {
       let accepts = ['application/json'];
       let returnType = Mount;
       return this.apiClient.callApi(
-        '/{language}/mounts/{ankama_id}', 'GET',
+        '/{game}/{language}/mounts/{ankama_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

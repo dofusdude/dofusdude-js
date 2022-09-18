@@ -1,18 +1,18 @@
 # dofusdude.ConsumablesApi
 
-All URIs are relative to *https://api.dofusdu.de/dofus2*
+All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getItemsConsumablesList**](ConsumablesApi.md#getItemsConsumablesList) | **GET** /{language}/items/consumables | List Consumables
-[**getItemsConsumablesSearch**](ConsumablesApi.md#getItemsConsumablesSearch) | **GET** /{language}/items/consumables/search | Search Consumables
-[**getItemsConsumablesSingle**](ConsumablesApi.md#getItemsConsumablesSingle) | **GET** /{language}/items/consumables/{ankama_id} | Single Consumables
+[**getItemsConsumablesList**](ConsumablesApi.md#getItemsConsumablesList) | **GET** /{game}/{language}/items/consumables | List Consumables
+[**getItemsConsumablesSearch**](ConsumablesApi.md#getItemsConsumablesSearch) | **GET** /{game}/{language}/items/consumables/search | Search Consumables
+[**getItemsConsumablesSingle**](ConsumablesApi.md#getItemsConsumablesSingle) | **GET** /{game}/{language}/items/consumables/{ankama_id} | Single Consumables
 
 
 
 ## getItemsConsumablesList
 
-> ItemsListPaged getItemsConsumablesList(language, opts)
+> ItemsListPaged getItemsConsumablesList(language, game, opts)
 
 List Consumables
 
@@ -25,6 +25,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.ConsumablesApi();
 let language = "language_example"; // String | a valid language code
+let game = dofus2; // String | 
 let opts = {
   'sortLevel': "sortLevel_example", // String | sort the resulting list by level, default unsorted
   'filterTypeName': "filterTypeName_example", // String | only results with the translated type name
@@ -34,7 +35,7 @@ let opts = {
   'pageNumber': 56, // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
   'fieldsItem': recipe // String | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
 };
-apiInstance.getItemsConsumablesList(language, opts, (error, data, response) => {
+apiInstance.getItemsConsumablesList(language, game, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -49,6 +50,7 @@ apiInstance.getItemsConsumablesList(language, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
+ **game** | **String**|  | 
  **sortLevel** | **String**| sort the resulting list by level, default unsorted | [optional] 
  **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
@@ -73,7 +75,7 @@ No authorization required
 
 ## getItemsConsumablesSearch
 
-> [ItemListEntry] getItemsConsumablesSearch(language, query, opts)
+> [ItemListEntry] getItemsConsumablesSearch(language, game, query, opts)
 
 Search Consumables
 
@@ -86,13 +88,14 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.ConsumablesApi();
 let language = "language_example"; // String | a valid language code
+let game = dofus2; // String | 
 let query = bar; // String | case sensitive search query
 let opts = {
   'filterTypeName': beer, // String | only results with the translated type name
   'filterMinLevel': 56, // Number | only results which level is equal or above this value
   'filterMaxLevel': 56 // Number | only results which level is equal or below this value
 };
-apiInstance.getItemsConsumablesSearch(language, query, opts, (error, data, response) => {
+apiInstance.getItemsConsumablesSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -107,6 +110,7 @@ apiInstance.getItemsConsumablesSearch(language, query, opts, (error, data, respo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
+ **game** | **String**|  | 
  **query** | **String**| case sensitive search query | 
  **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
@@ -128,7 +132,7 @@ No authorization required
 
 ## getItemsConsumablesSingle
 
-> Resource getItemsConsumablesSingle(language, ankamaId)
+> Resource getItemsConsumablesSingle(language, ankamaId, game)
 
 Single Consumables
 
@@ -142,7 +146,8 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.ConsumablesApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 17206; // Number | identifier
-apiInstance.getItemsConsumablesSingle(language, ankamaId, (error, data, response) => {
+let game = dofus2; // String | 
+apiInstance.getItemsConsumablesSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -158,6 +163,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
  **ankamaId** | **Number**| identifier | 
+ **game** | **String**|  | 
 
 ### Return type
 
