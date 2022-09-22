@@ -12,9 +12,7 @@ Name | Type | Description | Notes
 **level** | **Number** |  | [optional] 
 **pods** | **Number** |  | [optional] 
 **imageUrls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 
-**hasEffects** | **Boolean** |  | [optional] 
 **effects** | [**[EffectsEntry]**](EffectsEntry.md) |  | [optional] 
-**hasConditions** | **Boolean** |  | [optional] 
 **conditions** | [**[ConditionEntry]**](ConditionEntry.md) |  | [optional] 
 **criticalHitProbability** | **Number** |  | [optional] 
 **criticalHitBonus** | **Number** |  | [optional] 
@@ -22,9 +20,7 @@ Name | Type | Description | Notes
 **maxCastPerTurn** | **Number** |  | [optional] 
 **apCost** | **Number** |  | [optional] 
 **range** | [**WeaponRange**](WeaponRange.md) |  | [optional] 
-**hasRecipe** | **Boolean** |  | [optional] 
 **recipe** | [**[RecipeEntry]**](RecipeEntry.md) |  | [optional] 
-**hasParentSet** | **Boolean** |  | [optional] 
 **parentSet** | [**EquipmentParentSet**](EquipmentParentSet.md) |  | [optional] 
 
 
