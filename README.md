@@ -5,13 +5,13 @@ The last API for everything Dofus 🤯
 
 ### JS Quickstart
 ```js
-var dofusdude = require(\"dofusdude-js\");
+var dofusdude = require("dofusdude-js");
 
 new dofusdude.AllItemsApi().getItemsAllSearch(
-  \"en\",
-  \"dofus2\",
-  \"nidas\",
-  { filterTypeName: \"hat\" },
+  "en",
+  "dofus2",
+  "nidas",
+  { filterTypeName: "hat" },
   (err, data, response) => {
     console.log(data[0]);
   }
