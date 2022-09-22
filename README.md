@@ -21,6 +21,7 @@ new dofusdude.AllItemsApi().getItemsAllSearch(
 ### Client SDKs
 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save
 - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save
+- [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo
 
 Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue at the Docs Repo.
 
