@@ -27,9 +27,9 @@ let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
 let game = dofus2; // String | 
 let opts = {
-  'filterFamilyName': "filterFamilyName_example", // String | only results with the translated family name
-  'pageSize': 56, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
-  'pageNumber': 56 // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
+  'filterFamilyName': Dragoturkey, // String | only results with the translated family name
+  'pageSize': 10, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
+  'pageNumber': 1 // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
 };
 apiInstance.getMountsList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -79,11 +79,11 @@ Search in all names and descriptions of mounts with a query.
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MountsApi();
-let language = "language_example"; // String | a valid language code
+let language = fr; // String | a valid language code
 let game = dofus2; // String | 
-let query = almond; // String | case sensitive search query
+let query = Dorée; // String | case sensitive search query
 let opts = {
-  'filterFamilyName': rhineetle // String | only results with the translated family name
+  'filterFamilyName': Dragodinde // String | only results with the translated family name
 };
 apiInstance.getMountsSearch(language, game, query, opts, (error, data, response) => {
   if (error) {

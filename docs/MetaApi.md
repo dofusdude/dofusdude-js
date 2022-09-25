@@ -23,7 +23,7 @@ Get all the available bonuses and their id for filtering them in the range endpo
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
-let language = "language_example"; // String | 
+let language = fr; // String | 
 apiInstance.getMetaAlmanaxBonuses(language, (error, data, response) => {
   if (error) {
     console.error(error);

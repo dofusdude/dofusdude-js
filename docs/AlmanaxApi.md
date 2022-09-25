@@ -23,8 +23,8 @@ Get a single date. There are not more details in the returned object than the no
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.AlmanaxApi();
-let language = "language_example"; // String | code
-let date = "date_example"; // String | yyyy-mm-dd
+let language = fr; // String | code
+let date = Tue Jul 14 00:00:00 UTC 2020; // Date | yyyy-mm-dd
 apiInstance.getAlmanaxDate(language, date, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -40,7 +40,7 @@ apiInstance.getAlmanaxDate(language, date, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| code | 
- **date** | **String**| yyyy-mm-dd | 
+ **date** | **Date**| yyyy-mm-dd | 
 
 ### Return type
 
@@ -70,13 +70,13 @@ Get a range of dates, defaults to today + 6 following days but can specified by 
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.AlmanaxApi();
-let language = "language_example"; // String | code
+let language = fr; // String | code
 let opts = {
   'filterBonusType': experience-points, // String | ids from meta/{language}/almanax/bonuses
-  'rangeFrom': "rangeFrom_example", // String | yyyy-mm-dd
-  'rangeTo': "rangeTo_example", // String | yyyy-mm-dd
-  'rangeSize': 56, // Number | size of the returned range
-  'timezone': "'Europe/Paris'" // String | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
+  'rangeFrom': Thu Sep 15 00:00:00 UTC 2016, // Date | yyyy-mm-dd
+  'rangeTo': Wed Sep 28 00:00:00 UTC 2016, // Date | yyyy-mm-dd
+  'rangeSize': -1, // Number | size of the returned range
+  'timezone': Europe/Paris // String | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
 };
 apiInstance.getAlmanaxRange(language, opts, (error, data, response) => {
   if (error) {
@@ -94,8 +94,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| code | 
  **filterBonusType** | **String**| ids from meta/{language}/almanax/bonuses | [optional] 
- **rangeFrom** | **String**| yyyy-mm-dd | [optional] 
- **rangeTo** | **String**| yyyy-mm-dd | [optional] 
+ **rangeFrom** | **Date**| yyyy-mm-dd | [optional] 
+ **rangeTo** | **Date**| yyyy-mm-dd | [optional] 
  **rangeSize** | **Number**| size of the returned range | [optional] 
  **timezone** | **String**| determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location. | [optional] [default to &#39;Europe/Paris&#39;]
 

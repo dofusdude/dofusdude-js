@@ -27,11 +27,11 @@ let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
 let game = dofus2; // String | 
 let opts = {
-  'sortLevel': "sortLevel_example", // String | sort the resulting list by level, default unsorted
-  'filterMinHighestEquipmentLevel': 56, // Number | only results where the equipment with the highest level is above or equal to this value
-  'filterMaxHighestEquipmentLevel': 56, // Number | only results where the equipment with the highest level is below or equal to this value
-  'pageSize': 56, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
-  'pageNumber': 56 // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
+  'sortLevel': asc, // String | sort the resulting list by level, default unsorted
+  'filterMinHighestEquipmentLevel': 190, // Number | only results where the equipment with the highest level is above or equal to this value
+  'filterMaxHighestEquipmentLevel': 200, // Number | only results where the equipment with the highest level is below or equal to this value
+  'pageSize': 20, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
+  'pageNumber': 1 // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
 };
 apiInstance.getSetsList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -87,8 +87,8 @@ let language = "language_example"; // String | a valid language code
 let game = dofus2; // String | 
 let query = Des; // String | case sensitive search query
 let opts = {
-  'filterMinHighestEquipmentLevel': 56, // Number | only results where the equipment with the highest level is above or equal to this value
-  'filterMaxHighestEquipmentLevel': 56 // Number | only results where the equipment with the highest level is below or equal to this value
+  'filterMinHighestEquipmentLevel': 195, // Number | only results where the equipment with the highest level is above or equal to this value
+  'filterMaxHighestEquipmentLevel': 200 // Number | only results where the equipment with the highest level is below or equal to this value
 };
 apiInstance.getSetsSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
