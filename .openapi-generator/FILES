@@ -12,6 +12,7 @@ docs/AlmanaxEntryTributeItem.md
 docs/AlmanaxWebhook.md
 docs/AlmanaxWebhookDailySettings.md
 docs/ConditionEntry.md
+docs/ConditionEntryElement.md
 docs/ConsumablesApi.md
 docs/Cosmetic.md
 docs/CosmeticsApi.md
@@ -77,6 +78,7 @@ src/model/AlmanaxEntryTributeItem.js
 src/model/AlmanaxWebhook.js
 src/model/AlmanaxWebhookDailySettings.js
 src/model/ConditionEntry.js
+src/model/ConditionEntryElement.js
 src/model/Cosmetic.js
 src/model/CreateAlmanaxWebhook.js
 src/model/CreateAlmanaxWebhookDailySettings.js
@@ -128,6 +130,7 @@ test/model/AlmanaxEntryTributeItem.spec.js
 test/model/AlmanaxWebhook.spec.js
 test/model/AlmanaxWebhookDailySettings.spec.js
 test/model/ConditionEntry.spec.js
+test/model/ConditionEntryElement.spec.js
 test/model/Cosmetic.spec.js
 test/model/CreateAlmanaxWebhook.spec.js
 test/model/CreateAlmanaxWebhookDailySettings.spec.js

@@ -139,7 +139,8 @@ let language = fr; // String | a valid language code
 let game = dofus2; // String | 
 let query = Dorée; // String | case sensitive search query
 let opts = {
-  'filterFamilyName': Dragodinde // String | only results with the translated family name
+  'filterFamilyName': Dragodinde, // String | only results with the translated family name
+  'limit': 8 // Number | maximum number of returned results
 };
 apiInstance.getMountsSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -159,6 +160,7 @@ Name | Type | Description  | Notes
  **game** | **String**|  | 
  **query** | **String**| case sensitive search query | 
  **filterFamilyName** | **String**| only results with the translated family name | [optional] 
+ **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
 
 ### Return type
 

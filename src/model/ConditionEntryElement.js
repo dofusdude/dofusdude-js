@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The RssWebhook model module.
- * @module model/RssWebhook
+ * The ConditionEntryElement model module.
+ * @module model/ConditionEntryElement
  * @version 0.7.1
  */
-class RssWebhook {
+class ConditionEntryElement {
     /**
-     * Constructs a new <code>RssWebhook</code>.
-     * @alias module:model/RssWebhook
+     * Constructs a new <code>ConditionEntryElement</code>.
+     * @alias module:model/ConditionEntryElement
      */
     constructor() { 
         
-        RssWebhook.initialize(this);
+        ConditionEntryElement.initialize(this);
     }
 
     /**
@@ -37,72 +37,38 @@ class RssWebhook {
     }
 
     /**
-     * Constructs a <code>RssWebhook</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ConditionEntryElement</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/RssWebhook} obj Optional instance to populate.
-     * @return {module:model/RssWebhook} The populated <code>RssWebhook</code> instance.
+     * @param {module:model/ConditionEntryElement} obj Optional instance to populate.
+     * @return {module:model/ConditionEntryElement} The populated <code>ConditionEntryElement</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new RssWebhook();
+            obj = obj || new ConditionEntryElement();
 
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
             if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
             }
-            if (data.hasOwnProperty('whitelist')) {
-                obj['whitelist'] = ApiClient.convertToType(data['whitelist'], ['String']);
-            }
-            if (data.hasOwnProperty('blacklist')) {
-                obj['blacklist'] = ApiClient.convertToType(data['blacklist'], ['String']);
-            }
-            if (data.hasOwnProperty('subscriptions')) {
-                obj['subscriptions'] = ApiClient.convertToType(data['subscriptions'], ['String']);
-            }
-            if (data.hasOwnProperty('format')) {
-                obj['format'] = ApiClient.convertToType(data['format'], 'String');
-            }
-            if (data.hasOwnProperty('preview_length')) {
-                obj['preview_length'] = ApiClient.convertToType(data['preview_length'], 'Number');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
-            }
-            if (data.hasOwnProperty('last_fired_at')) {
-                obj['last_fired_at'] = ApiClient.convertToType(data['last_fired_at'], 'Date');
-            }
-            if (data.hasOwnProperty('updated_at')) {
-                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            if (data.hasOwnProperty('is_meta')) {
+                obj['is_meta'] = ApiClient.convertToType(data['is_meta'], 'Boolean');
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>RssWebhook</code>.
+     * Validates the JSON data with respect to <code>ConditionEntryElement</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RssWebhook</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConditionEntryElement</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['whitelist'])) {
-            throw new Error("Expected the field `whitelist` to be an array in the JSON data but got " + data['whitelist']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['blacklist'])) {
-            throw new Error("Expected the field `blacklist` to be an array in the JSON data but got " + data['blacklist']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['subscriptions'])) {
-            throw new Error("Expected the field `subscriptions` to be an array in the JSON data but got " + data['subscriptions']);
-        }
-        // ensure the json data is a string
-        if (data['format'] && !(typeof data['format'] === 'string' || data['format'] instanceof String)) {
-            throw new Error("Expected the field `format` to be a primitive type in the JSON string but got " + data['format']);
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
 
         return true;
@@ -114,69 +80,25 @@ class RssWebhook {
 
 
 /**
- * @member {String} id
+ * @member {String} name
  */
-RssWebhook.prototype['id'] = undefined;
+ConditionEntryElement.prototype['name'] = undefined;
 
 /**
- * @member {Array.<String>} whitelist
+ * @member {Number} id
  */
-RssWebhook.prototype['whitelist'] = undefined;
+ConditionEntryElement.prototype['id'] = undefined;
 
 /**
- * @member {Array.<String>} blacklist
+ * true if a type is generated from the Api instead of Ankama. In that case, always prefer showing the templated string and omit everything else. The \"name\" field will have an english description of the meta type. An example for such effects are class sets effects.
+ * @member {Boolean} is_meta
  */
-RssWebhook.prototype['blacklist'] = undefined;
-
-/**
- * @member {Array.<String>} subscriptions
- */
-RssWebhook.prototype['subscriptions'] = undefined;
-
-/**
- * @member {module:model/RssWebhook.FormatEnum} format
- */
-RssWebhook.prototype['format'] = undefined;
-
-/**
- * @member {Number} preview_length
- */
-RssWebhook.prototype['preview_length'] = undefined;
-
-/**
- * @member {Date} created_at
- */
-RssWebhook.prototype['created_at'] = undefined;
-
-/**
- * @member {Date} last_fired_at
- */
-RssWebhook.prototype['last_fired_at'] = undefined;
-
-/**
- * @member {Date} updated_at
- */
-RssWebhook.prototype['updated_at'] = undefined;
+ConditionEntryElement.prototype['is_meta'] = undefined;
 
 
 
 
 
-/**
- * Allowed values for the <code>format</code> property.
- * @enum {String}
- * @readonly
- */
-RssWebhook['FormatEnum'] = {
 
-    /**
-     * value: "discord"
-     * @const
-     */
-    "discord": "discord"
-};
-
-
-
-export default RssWebhook;
+export default ConditionEntryElement;
 

@@ -148,7 +148,8 @@ let game = dofus2; // String |
 let query = Des; // String | case sensitive search query
 let opts = {
   'filterMinHighestEquipmentLevel': 195, // Number | only results where the equipment with the highest level is above or equal to this value
-  'filterMaxHighestEquipmentLevel': 200 // Number | only results where the equipment with the highest level is below or equal to this value
+  'filterMaxHighestEquipmentLevel': 200, // Number | only results where the equipment with the highest level is below or equal to this value
+  'limit': 8 // Number | maximum number of returned results
 };
 apiInstance.getSetsSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -169,6 +170,7 @@ Name | Type | Description  | Notes
  **query** | **String**| case sensitive search query | 
  **filterMinHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is above or equal to this value | [optional] 
  **filterMaxHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is below or equal to this value | [optional] 
+ **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
 
 ### Return type
 

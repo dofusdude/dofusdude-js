@@ -153,7 +153,8 @@ let query = nidas; // String | case sensitive search query
 let opts = {
   'filterTypeName': boots, // String | only results with the translated type name
   'filterMinLevel': 150, // Number | only results which level is equal or above this value
-  'filterMaxLevel': 200 // Number | only results which level is equal or below this value
+  'filterMaxLevel': 200, // Number | only results which level is equal or below this value
+  'limit': 8 // Number | maximum number of returned results
 };
 apiInstance.getItemsEquipmentSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -175,6 +176,7 @@ Name | Type | Description  | Notes
  **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
+ **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
 
 ### Return type
 
