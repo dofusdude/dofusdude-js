@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new dofusdude.EffectsEntry();
+    instance = new dofusdude.CosmeticType();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,46 +47,22 @@
       object[property] = value;
   }
 
-  describe('EffectsEntry', function() {
-    it('should create an instance of EffectsEntry', function() {
-      // uncomment below and update the code to test EffectsEntry
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be.a(dofusdude.EffectsEntry);
+  describe('CosmeticType', function() {
+    it('should create an instance of CosmeticType', function() {
+      // uncomment below and update the code to test CosmeticType
+      //var instance = new dofusdude.CosmeticType();
+      //expect(instance).to.be.a(dofusdude.CosmeticType);
     });
 
-    it('should have the property intMinimum (base name: "int_minimum")', function() {
-      // uncomment below and update the code to test the property intMinimum
-      //var instance = new dofusdude.EffectsEntry();
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new dofusdude.CosmeticType();
       //expect(instance).to.be();
     });
 
-    it('should have the property intMaximum (base name: "int_maximum")', function() {
-      // uncomment below and update the code to test the property intMaximum
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property ignoreIntMin (base name: "ignore_int_min")', function() {
-      // uncomment below and update the code to test the property ignoreIntMin
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property ignoreIntMax (base name: "ignore_int_max")', function() {
-      // uncomment below and update the code to test the property ignoreIntMax
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property formatted (base name: "formatted")', function() {
-      // uncomment below and update the code to test the property formatted
-      //var instance = new dofusdude.EffectsEntry();
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new dofusdude.CosmeticType();
       //expect(instance).to.be();
     });
 

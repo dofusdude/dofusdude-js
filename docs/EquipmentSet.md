@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **equipmentIds** | **[Number]** |  | [optional] 
 **effects** | **[[EffectsEntry]]** |  | [optional] 
-**level** | **Number** |  | [optional] 
+**highestEquipmentLevel** | **Number** |  | [optional] 
 
 

@@ -11,85 +11,85 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.dofusdude);
-  }
-}(this, function(expect, dofusdude) {
-  'use strict';
+import ApiClient from '../ApiClient';
 
-  var instance;
+/**
+ * The CosmeticType model module.
+ * @module model/CosmeticType
+ * @version 0.7.2
+ */
+class CosmeticType {
+    /**
+     * Constructs a new <code>CosmeticType</code>.
+     * @alias module:model/CosmeticType
+     */
+    constructor() { 
+        
+        CosmeticType.initialize(this);
+    }
 
-  beforeEach(function() {
-    instance = new dofusdude.EffectsEntry();
-  });
+    /**
+     * Initializes the fields of this object.
+     * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+     * Only for internal use.
+     */
+    static initialize(obj) { 
+    }
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+    /**
+     * Constructs a <code>CosmeticType</code> from a plain JavaScript object, optionally creating a new instance.
+     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @param {module:model/CosmeticType} obj Optional instance to populate.
+     * @return {module:model/CosmeticType} The populated <code>CosmeticType</code> instance.
+     */
+    static constructFromObject(data, obj) {
+        if (data) {
+            obj = obj || new CosmeticType();
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+            }
+        }
+        return obj;
+    }
 
-  describe('EffectsEntry', function() {
-    it('should create an instance of EffectsEntry', function() {
-      // uncomment below and update the code to test EffectsEntry
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be.a(dofusdude.EffectsEntry);
-    });
+    /**
+     * Validates the JSON data with respect to <code>CosmeticType</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CosmeticType</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
 
-    it('should have the property intMinimum (base name: "int_minimum")', function() {
-      // uncomment below and update the code to test the property intMinimum
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be();
-    });
+        return true;
+    }
 
-    it('should have the property intMaximum (base name: "int_maximum")', function() {
-      // uncomment below and update the code to test the property intMaximum
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be();
-    });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be();
-    });
+}
 
-    it('should have the property ignoreIntMin (base name: "ignore_int_min")', function() {
-      // uncomment below and update the code to test the property ignoreIntMin
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be();
-    });
 
-    it('should have the property ignoreIntMax (base name: "ignore_int_max")', function() {
-      // uncomment below and update the code to test the property ignoreIntMax
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be();
-    });
 
-    it('should have the property formatted (base name: "formatted")', function() {
-      // uncomment below and update the code to test the property formatted
-      //var instance = new dofusdude.EffectsEntry();
-      //expect(instance).to.be();
-    });
+/**
+ * @member {String} name
+ */
+CosmeticType.prototype['name'] = undefined;
 
-  });
+/**
+ * @member {Number} id
+ */
+CosmeticType.prototype['id'] = undefined;
 
-}));
+
+
+
+
+
+export default CosmeticType;
+

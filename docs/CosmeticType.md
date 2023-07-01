@@ -1,4 +1,4 @@
-# dofusdude.ItemsListEntryTypedType
+# dofusdude.CosmeticType
 
 ## Properties
 
