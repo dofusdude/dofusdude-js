@@ -11,118 +11,63 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD.
+    define(['expect.js', process.cwd()+'/src/index'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+  } else {
+    // Browser globals (root is window)
+    factory(root.expect, root.dofusdude);
+  }
+}(this, function(expect, dofusdude) {
+  'use strict';
 
-/**
- * The ImageUrls model module.
- * @module model/ImageUrls
- * @version 0.8.0
- */
-class ImageUrls {
-    /**
-     * Constructs a new <code>ImageUrls</code>.
-     * All images except icon are rendered in the background which can take some time (up to hours if all data is completely generated from scratch). Because of this, they can be null if they are not yet rendered.
-     * @alias module:model/ImageUrls
-     */
-    constructor() { 
-        
-        ImageUrls.initialize(this);
-    }
+  var instance;
 
-    /**
-     * Initializes the fields of this object.
-     * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
-     * Only for internal use.
-     */
-    static initialize(obj) { 
-    }
+  beforeEach(function() {
+    instance = new dofusdude.GameApi();
+  });
 
-    /**
-     * Constructs a <code>ImageUrls</code> from a plain JavaScript object, optionally creating a new instance.
-     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ImageUrls} obj Optional instance to populate.
-     * @return {module:model/ImageUrls} The populated <code>ImageUrls</code> instance.
-     */
-    static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ImageUrls();
+  var getProperty = function(object, getter, property) {
+    // Use getter method if present; otherwise, get the property directly.
+    if (typeof object[getter] === 'function')
+      return object[getter]();
+    else
+      return object[property];
+  }
 
-            if (data.hasOwnProperty('icon')) {
-                obj['icon'] = ApiClient.convertToType(data['icon'], 'String');
-            }
-            if (data.hasOwnProperty('sd')) {
-                obj['sd'] = ApiClient.convertToType(data['sd'], 'String');
-            }
-            if (data.hasOwnProperty('hq')) {
-                obj['hq'] = ApiClient.convertToType(data['hq'], 'String');
-            }
-            if (data.hasOwnProperty('hd')) {
-                obj['hd'] = ApiClient.convertToType(data['hd'], 'String');
-            }
-        }
-        return obj;
-    }
+  var setProperty = function(object, setter, property, value) {
+    // Use setter method if present; otherwise, set the property directly.
+    if (typeof object[setter] === 'function')
+      object[setter](value);
+    else
+      object[property] = value;
+  }
 
-    /**
-     * Validates the JSON data with respect to <code>ImageUrls</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ImageUrls</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['icon'] && !(typeof data['icon'] === 'string' || data['icon'] instanceof String)) {
-            throw new Error("Expected the field `icon` to be a primitive type in the JSON string but got " + data['icon']);
-        }
-        // ensure the json data is a string
-        if (data['sd'] && !(typeof data['sd'] === 'string' || data['sd'] instanceof String)) {
-            throw new Error("Expected the field `sd` to be a primitive type in the JSON string but got " + data['sd']);
-        }
-        // ensure the json data is a string
-        if (data['hq'] && !(typeof data['hq'] === 'string' || data['hq'] instanceof String)) {
-            throw new Error("Expected the field `hq` to be a primitive type in the JSON string but got " + data['hq']);
-        }
-        // ensure the json data is a string
-        if (data['hd'] && !(typeof data['hd'] === 'string' || data['hd'] instanceof String)) {
-            throw new Error("Expected the field `hd` to be a primitive type in the JSON string but got " + data['hd']);
-        }
+  describe('GameApi', function() {
+    describe('getGameSearch', function() {
+      it('should call getGameSearch successfully', function(done) {
+        //uncomment below and update the code to test getGameSearch
+        //instance.getGameSearch(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getItemsAllSearch', function() {
+      it('should call getItemsAllSearch successfully', function(done) {
+        //uncomment below and update the code to test getItemsAllSearch
+        //instance.getItemsAllSearch(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+  });
 
-        return true;
-    }
-
-
-}
-
-
-
-/**
- * 60x60 px, always available
- * @member {String} icon
- */
-ImageUrls.prototype['icon'] = undefined;
-
-/**
- * 200x200 px
- * @member {String} sd
- */
-ImageUrls.prototype['sd'] = undefined;
-
-/**
- * 400x400 px
- * @member {String} hq
- */
-ImageUrls.prototype['hq'] = undefined;
-
-/**
- * 800x800 px
- * @member {String} hd
- */
-ImageUrls.prototype['hd'] = undefined;
-
-
-
-
-
-
-export default ImageUrls;
-
+}));

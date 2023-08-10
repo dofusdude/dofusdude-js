@@ -3,7 +3,6 @@
 .openapi-generator-ignore
 .travis.yml
 README.md
-docs/AllItemsApi.md
 docs/AlmanaxApi.md
 docs/AlmanaxEntry.md
 docs/AlmanaxEntryBonus.md
@@ -28,6 +27,8 @@ docs/Equipment.md
 docs/EquipmentApi.md
 docs/EquipmentParentSet.md
 docs/EquipmentSet.md
+docs/GameApi.md
+docs/GetGameSearch200ResponseInner.md
 docs/GetMetaAlmanaxBonuses200ResponseInner.md
 docs/GetMetaWebhooksTwitter200Response.md
 docs/ImageUrls.md
@@ -60,11 +61,11 @@ git_push.sh
 mocha.opts
 package.json
 src/ApiClient.js
-src/api/AllItemsApi.js
 src/api/AlmanaxApi.js
 src/api/ConsumablesApi.js
 src/api/CosmeticsApi.js
 src/api/EquipmentApi.js
+src/api/GameApi.js
 src/api/MetaApi.js
 src/api/MountsApi.js
 src/api/QuestItemsApi.js
@@ -92,6 +93,7 @@ src/model/EffectsEntryType.js
 src/model/Equipment.js
 src/model/EquipmentParentSet.js
 src/model/EquipmentSet.js
+src/model/GetGameSearch200ResponseInner.js
 src/model/GetMetaAlmanaxBonuses200ResponseInner.js
 src/model/GetMetaWebhooksTwitter200Response.js
 src/model/ImageUrls.js
@@ -114,11 +116,11 @@ src/model/SetsListPaged.js
 src/model/TwitterWebhook.js
 src/model/Weapon.js
 src/model/WeaponRange.js
-test/api/AllItemsApi.spec.js
 test/api/AlmanaxApi.spec.js
 test/api/ConsumablesApi.spec.js
 test/api/CosmeticsApi.spec.js
 test/api/EquipmentApi.spec.js
+test/api/GameApi.spec.js
 test/api/MetaApi.spec.js
 test/api/MountsApi.spec.js
 test/api/QuestItemsApi.spec.js
@@ -145,6 +147,7 @@ test/model/EffectsEntryType.spec.js
 test/model/Equipment.spec.js
 test/model/EquipmentParentSet.spec.js
 test/model/EquipmentSet.spec.js
+test/model/GetGameSearch200ResponseInner.spec.js
 test/model/GetMetaAlmanaxBonuses200ResponseInner.spec.js
 test/model/GetMetaWebhooksTwitter200Response.spec.js
 test/model/ImageUrls.spec.js

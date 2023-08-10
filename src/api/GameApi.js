@@ -13,18 +13,19 @@
 
 
 import ApiClient from "../ApiClient";
-import GetMetaAlmanaxBonuses200ResponseInner from '../model/GetMetaAlmanaxBonuses200ResponseInner';
+import GetGameSearch200ResponseInner from '../model/GetGameSearch200ResponseInner';
+import ItemsListEntryTyped from '../model/ItemsListEntryTyped';
 
 /**
-* Meta service.
-* @module api/MetaApi
+* Game service.
+* @module api/GameApi
 * @version 0.8.0
 */
-export default class MetaApi {
+export default class GameApi {
 
     /**
-    * Constructs a new MetaApi. 
-    * @alias module:api/MetaApi
+    * Constructs a new GameApi. 
+    * @alias module:api/GameApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
@@ -35,68 +36,51 @@ export default class MetaApi {
 
 
     /**
-     * Callback function to receive the result of the getGameSearchTypes operation.
-     * @callback module:api/MetaApi~getGameSearchTypesCallback
+     * Callback function to receive the result of the getGameSearch operation.
+     * @callback module:api/GameApi~getGameSearchCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
+     * @param {Array.<module:model/GetGameSearch200ResponseInner>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Available Game Search Types
-     * Get all types for /{game}/{lang}/search available for filtering. All names are english for comparing them inside applications. Order is fixed so you can compare indices instead of strings.
-     * @param {module:api/MetaApi~getGameSearchTypesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * Game Search
+     * Search in all names and descriptions of all supported types in the game. For the list of supported types see the endpoint /dofus2/meta/search/types.
+     * @param {module:model/String} language a valid language code
+     * @param {module:model/String} game 
+     * @param {String} query search query
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/String>} [filterType] only results with all specific type
+     * @param {Number} [limit = 8)] maximum number of returned results
+     * @param {Array.<module:model/String>} [fieldsItem] adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed.
+     * @param {module:api/GameApi~getGameSearchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/GetGameSearch200ResponseInner>}
      */
-    getGameSearchTypes(callback) {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ['String'];
-      return this.apiClient.callApi(
-        '/dofus2/meta/search/types', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getMetaAlmanaxBonuses operation.
-     * @callback module:api/MetaApi~getMetaAlmanaxBonusesCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/GetMetaAlmanaxBonuses200ResponseInner>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Available Almanax Bonuses
-     * Get all the available bonuses and their id for filtering them in the range endpoint.
-     * @param {module:model/String} language 
-     * @param {module:api/MetaApi~getMetaAlmanaxBonusesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/GetMetaAlmanaxBonuses200ResponseInner>}
-     */
-    getMetaAlmanaxBonuses(language, callback) {
+    getGameSearch(language, game, query, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'language' is set
       if (language === undefined || language === null) {
-        throw new Error("Missing the required parameter 'language' when calling getMetaAlmanaxBonuses");
+        throw new Error("Missing the required parameter 'language' when calling getGameSearch");
+      }
+      // verify the required parameter 'game' is set
+      if (game === undefined || game === null) {
+        throw new Error("Missing the required parameter 'game' when calling getGameSearch");
+      }
+      // verify the required parameter 'query' is set
+      if (query === undefined || query === null) {
+        throw new Error("Missing the required parameter 'query' when calling getGameSearch");
       }
 
       let pathParams = {
-        'language': language
+        'language': language,
+        'game': game
       };
       let queryParams = {
+        'query': query,
+        'filter[type]': this.apiClient.buildCollectionParam(opts['filterType'], 'csv'),
+        'limit': opts['limit'],
+        'fields[item]': this.apiClient.buildCollectionParam(opts['fieldsItem'], 'csv')
       };
       let headerParams = {
       };
@@ -106,34 +90,62 @@ export default class MetaApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [GetMetaAlmanaxBonuses200ResponseInner];
+      let returnType = [GetGameSearch200ResponseInner];
       return this.apiClient.callApi(
-        '/dofus2/meta/{language}/almanax/bonuses', 'GET',
+        '/{game}/{language}/search', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the getMetaElements operation.
-     * @callback module:api/MetaApi~getMetaElementsCallback
+     * Callback function to receive the result of the getItemsAllSearch operation.
+     * @callback module:api/GameApi~getItemsAllSearchCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
+     * @param {Array.<module:model/ItemsListEntryTyped>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Effects and Condition Elements
-     * Get the mappings for all specific elements that are linked in the dataset. All names are english. Translations are not needed because of a global unique id which is the index inside the array. Future elements will get a higher id.
-     * @param {module:api/MetaApi~getMetaElementsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * Search All Items
+     * Search in all names and descriptions of Dofus items (including all subtypes) with a query.
+     * @param {module:model/String} language a valid language code
+     * @param {module:model/String} game 
+     * @param {String} query case sensitive search query
+     * @param {Object} opts Optional parameters
+     * @param {String} [filterTypeName] only results with the translated type name across all item_subtypes
+     * @param {Number} [filterMinLevel] only results which level is equal or above this value
+     * @param {Number} [filterMaxLevel] only results which level is equal or below this value
+     * @param {Number} [limit = 8)] maximum number of returned results
+     * @param {module:api/GameApi~getItemsAllSearchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ItemsListEntryTyped>}
      */
-    getMetaElements(callback) {
+    getItemsAllSearch(language, game, query, opts, callback) {
+      opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'language' is set
+      if (language === undefined || language === null) {
+        throw new Error("Missing the required parameter 'language' when calling getItemsAllSearch");
+      }
+      // verify the required parameter 'game' is set
+      if (game === undefined || game === null) {
+        throw new Error("Missing the required parameter 'game' when calling getItemsAllSearch");
+      }
+      // verify the required parameter 'query' is set
+      if (query === undefined || query === null) {
+        throw new Error("Missing the required parameter 'query' when calling getItemsAllSearch");
+      }
 
       let pathParams = {
+        'language': language,
+        'game': game
       };
       let queryParams = {
+        'query': query,
+        'filter[type_name]': opts['filterTypeName'],
+        'filter[min_level]': opts['filterMinLevel'],
+        'filter[max_level]': opts['filterMaxLevel'],
+        'limit': opts['limit']
       };
       let headerParams = {
       };
@@ -143,9 +155,9 @@ export default class MetaApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ['String'];
+      let returnType = [ItemsListEntryTyped];
       return this.apiClient.callApi(
-        '/dofus2/meta/elements', 'GET',
+        '/{game}/{language}/items/search', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
