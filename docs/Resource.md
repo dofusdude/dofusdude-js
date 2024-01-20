@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **imageUrls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 
 **effects** | [**[EffectsEntry]**](EffectsEntry.md) |  | [optional] 
 **conditions** | [**[ConditionEntry]**](ConditionEntry.md) |  | [optional] 
+**conditionTree** | [**ConditionTreeNode**](ConditionTreeNode.md) |  | [optional] 
 **recipe** | [**[RecipeEntry]**](RecipeEntry.md) |  | [optional] 
 
 
