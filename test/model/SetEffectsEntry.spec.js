@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new dofusdude.SetsListPaged();
+    instance = new dofusdude.SetEffectsEntry();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,52 @@
       object[property] = value;
   }
 
-  describe('SetsListPaged', function() {
-    it('should create an instance of SetsListPaged', function() {
-      // uncomment below and update the code to test SetsListPaged
-      //var instance = new dofusdude.SetsListPaged();
-      //expect(instance).to.be.a(dofusdude.SetsListPaged);
+  describe('SetEffectsEntry', function() {
+    it('should create an instance of SetEffectsEntry', function() {
+      // uncomment below and update the code to test SetEffectsEntry
+      //var instance = new dofusdude.SetEffectsEntry();
+      //expect(instance).to.be.a(dofusdude.SetEffectsEntry);
     });
 
-    it('should have the property links (base name: "_links")', function() {
-      // uncomment below and update the code to test the property links
-      //var instance = new dofusdude.SetsListPaged();
+    it('should have the property intMinimum (base name: "int_minimum")', function() {
+      // uncomment below and update the code to test the property intMinimum
+      //var instance = new dofusdude.SetEffectsEntry();
       //expect(instance).to.be();
     });
 
-    it('should have the property items (base name: "items")', function() {
-      // uncomment below and update the code to test the property items
-      //var instance = new dofusdude.SetsListPaged();
+    it('should have the property intMaximum (base name: "int_maximum")', function() {
+      // uncomment below and update the code to test the property intMaximum
+      //var instance = new dofusdude.SetEffectsEntry();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instance = new dofusdude.SetEffectsEntry();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ignoreIntMin (base name: "ignore_int_min")', function() {
+      // uncomment below and update the code to test the property ignoreIntMin
+      //var instance = new dofusdude.SetEffectsEntry();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ignoreIntMax (base name: "ignore_int_max")', function() {
+      // uncomment below and update the code to test the property ignoreIntMax
+      //var instance = new dofusdude.SetEffectsEntry();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property formatted (base name: "formatted")', function() {
+      // uncomment below and update the code to test the property formatted
+      //var instance = new dofusdude.SetEffectsEntry();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property itemCombination (base name: "item_combination")', function() {
+      // uncomment below and update the code to test the property itemCombination
+      //var instance = new dofusdude.SetEffectsEntry();
       //expect(instance).to.be();
     });
 

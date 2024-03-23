@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **conditions** | [**[ConditionEntry]**](ConditionEntry.md) |  | [optional] 
 **conditionTree** | [**ConditionTreeNode**](ConditionTreeNode.md) |  | [optional] 
 **recipe** | [**[RecipeEntry]**](RecipeEntry.md) |  | [optional] 
-**parentSet** | [**EquipmentParentSet**](EquipmentParentSet.md) |  | [optional] 
+**parentSet** | [**ItemListEntryParentSet**](ItemListEntryParentSet.md) |  | [optional] 
 
 

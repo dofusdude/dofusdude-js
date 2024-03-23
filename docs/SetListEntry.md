@@ -8,5 +8,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **items** | **Number** | amount | [optional] 
 **level** | **Number** |  | [optional] 
+**effects** | **[[SetEffectsEntry]]** |  | [optional] 
+**equipmentIds** | **[Number]** |  | [optional] 
 
 

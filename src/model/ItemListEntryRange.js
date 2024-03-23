@@ -11,61 +11,81 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.dofusdude);
-  }
-}(this, function(expect, dofusdude) {
-  'use strict';
+import ApiClient from '../ApiClient';
 
-  var instance;
+/**
+ * The ItemListEntryRange model module.
+ * @module model/ItemListEntryRange
+ * @version 0.8.3
+ */
+class ItemListEntryRange {
+    /**
+     * Constructs a new <code>ItemListEntryRange</code>.
+     * @alias module:model/ItemListEntryRange
+     */
+    constructor() { 
+        
+        ItemListEntryRange.initialize(this);
+    }
 
-  beforeEach(function() {
-    instance = new dofusdude.SetsListPaged();
-  });
+    /**
+     * Initializes the fields of this object.
+     * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+     * Only for internal use.
+     */
+    static initialize(obj) { 
+    }
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+    /**
+     * Constructs a <code>ItemListEntryRange</code> from a plain JavaScript object, optionally creating a new instance.
+     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @param {module:model/ItemListEntryRange} obj Optional instance to populate.
+     * @return {module:model/ItemListEntryRange} The populated <code>ItemListEntryRange</code> instance.
+     */
+    static constructFromObject(data, obj) {
+        if (data) {
+            obj = obj || new ItemListEntryRange();
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
+            if (data.hasOwnProperty('min')) {
+                obj['min'] = ApiClient.convertToType(data['min'], 'Number');
+            }
+            if (data.hasOwnProperty('max')) {
+                obj['max'] = ApiClient.convertToType(data['max'], 'Number');
+            }
+        }
+        return obj;
+    }
 
-  describe('SetsListPaged', function() {
-    it('should create an instance of SetsListPaged', function() {
-      // uncomment below and update the code to test SetsListPaged
-      //var instance = new dofusdude.SetsListPaged();
-      //expect(instance).to.be.a(dofusdude.SetsListPaged);
-    });
+    /**
+     * Validates the JSON data with respect to <code>ItemListEntryRange</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ItemListEntryRange</code>.
+     */
+    static validateJSON(data) {
 
-    it('should have the property links (base name: "_links")', function() {
-      // uncomment below and update the code to test the property links
-      //var instance = new dofusdude.SetsListPaged();
-      //expect(instance).to.be();
-    });
+        return true;
+    }
 
-    it('should have the property items (base name: "items")', function() {
-      // uncomment below and update the code to test the property items
-      //var instance = new dofusdude.SetsListPaged();
-      //expect(instance).to.be();
-    });
 
-  });
+}
 
-}));
+
+
+/**
+ * @member {Number} min
+ */
+ItemListEntryRange.prototype['min'] = undefined;
+
+/**
+ * @member {Number} max
+ */
+ItemListEntryRange.prototype['max'] = undefined;
+
+
+
+
+
+
+export default ItemListEntryRange;
+

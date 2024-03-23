@@ -1,10 +1,10 @@
-# dofusdude.EquipmentParentSet
+# dofusdude.ItemListEntryRange
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Number** |  | [optional] 
-**name** | **String** |  | [optional] 
+**min** | **Number** |  | [optional] 
+**max** | **Number** |  | [optional] 
 
 

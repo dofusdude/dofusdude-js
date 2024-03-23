@@ -12,20 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
+import SetEffectsEntryType from './SetEffectsEntryType';
 
 /**
- * The AlmanaxWebhookDailySettings model module.
- * @module model/AlmanaxWebhookDailySettings
+ * The SetEffectsEntry model module.
+ * @module model/SetEffectsEntry
  * @version 0.8.3
  */
-class AlmanaxWebhookDailySettings {
+class SetEffectsEntry {
     /**
-     * Constructs a new <code>AlmanaxWebhookDailySettings</code>.
-     * @alias module:model/AlmanaxWebhookDailySettings
+     * Constructs a new <code>SetEffectsEntry</code>.
+     * @alias module:model/SetEffectsEntry
      */
     constructor() { 
         
-        AlmanaxWebhookDailySettings.initialize(this);
+        SetEffectsEntry.initialize(this);
     }
 
     /**
@@ -37,35 +38,54 @@ class AlmanaxWebhookDailySettings {
     }
 
     /**
-     * Constructs a <code>AlmanaxWebhookDailySettings</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>SetEffectsEntry</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/AlmanaxWebhookDailySettings} obj Optional instance to populate.
-     * @return {module:model/AlmanaxWebhookDailySettings} The populated <code>AlmanaxWebhookDailySettings</code> instance.
+     * @param {module:model/SetEffectsEntry} obj Optional instance to populate.
+     * @return {module:model/SetEffectsEntry} The populated <code>SetEffectsEntry</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new AlmanaxWebhookDailySettings();
+            obj = obj || new SetEffectsEntry();
 
-            if (data.hasOwnProperty('timezone')) {
-                obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
+            if (data.hasOwnProperty('int_minimum')) {
+                obj['int_minimum'] = ApiClient.convertToType(data['int_minimum'], 'Number');
             }
-            if (data.hasOwnProperty('midnight_offset')) {
-                obj['midnight_offset'] = ApiClient.convertToType(data['midnight_offset'], 'Number');
+            if (data.hasOwnProperty('int_maximum')) {
+                obj['int_maximum'] = ApiClient.convertToType(data['int_maximum'], 'Number');
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = SetEffectsEntryType.constructFromObject(data['type']);
+            }
+            if (data.hasOwnProperty('ignore_int_min')) {
+                obj['ignore_int_min'] = ApiClient.convertToType(data['ignore_int_min'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ignore_int_max')) {
+                obj['ignore_int_max'] = ApiClient.convertToType(data['ignore_int_max'], 'Boolean');
+            }
+            if (data.hasOwnProperty('formatted')) {
+                obj['formatted'] = ApiClient.convertToType(data['formatted'], 'String');
+            }
+            if (data.hasOwnProperty('item_combination')) {
+                obj['item_combination'] = ApiClient.convertToType(data['item_combination'], 'Number');
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>AlmanaxWebhookDailySettings</code>.
+     * Validates the JSON data with respect to <code>SetEffectsEntry</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AlmanaxWebhookDailySettings</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SetEffectsEntry</code>.
      */
     static validateJSON(data) {
+        // validate the optional field `type`
+        if (data['type']) { // data not null
+          SetEffectsEntryType.validateJSON(data['type']);
+        }
         // ensure the json data is a string
-        if (data['timezone'] && !(typeof data['timezone'] === 'string' || data['timezone'] instanceof String)) {
-            throw new Error("Expected the field `timezone` to be a primitive type in the JSON string but got " + data['timezone']);
+        if (data['formatted'] && !(typeof data['formatted'] === 'string' || data['formatted'] instanceof String)) {
+            throw new Error("Expected the field `formatted` to be a primitive type in the JSON string but got " + data['formatted']);
         }
 
         return true;
@@ -77,23 +97,50 @@ class AlmanaxWebhookDailySettings {
 
 
 /**
- * Timezone of your community to determine midnight.
- * @member {String} timezone
- * @default 'Europe/Paris'
+ * minimum int value, can be a single if ignore_int_max and no ignore_int_min
+ * @member {Number} int_minimum
  */
-AlmanaxWebhookDailySettings.prototype['timezone'] = 'Europe/Paris';
+SetEffectsEntry.prototype['int_minimum'] = undefined;
 
 /**
- * Hours added to midnight at the selected timezone. 8 = 8:00 in the morning.
- * @member {Number} midnight_offset
- * @default 0
+ * maximum int value, if not ignore_int_max and not ignore_int_min, the effect has a range value
+ * @member {Number} int_maximum
  */
-AlmanaxWebhookDailySettings.prototype['midnight_offset'] = 0;
+SetEffectsEntry.prototype['int_maximum'] = undefined;
+
+/**
+ * @member {module:model/SetEffectsEntryType} type
+ */
+SetEffectsEntry.prototype['type'] = undefined;
+
+/**
+ * ignore the int min field because the actual value is a string. For readability the templated field is the only important field in this case. 
+ * @member {Boolean} ignore_int_min
+ */
+SetEffectsEntry.prototype['ignore_int_min'] = undefined;
+
+/**
+ * ignore the int max field, if ignore_int_min is true, int min is a single value
+ * @member {Boolean} ignore_int_max
+ */
+SetEffectsEntry.prototype['ignore_int_max'] = undefined;
+
+/**
+ * all fields from above encoded in a single string
+ * @member {String} formatted
+ */
+SetEffectsEntry.prototype['formatted'] = undefined;
+
+/**
+ * how many items it needs to trigger this effect with the given set
+ * @member {Number} item_combination
+ */
+SetEffectsEntry.prototype['item_combination'] = undefined;
 
 
 
 
 
 
-export default AlmanaxWebhookDailySettings;
+export default SetEffectsEntry;
 

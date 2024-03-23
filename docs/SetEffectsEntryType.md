@@ -1,4 +1,4 @@
-# dofusdude.EffectsEntryType
+# dofusdude.SetEffectsEntryType
 
 ## Properties
 

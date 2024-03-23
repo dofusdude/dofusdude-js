@@ -22,6 +22,6 @@ Name | Type | Description | Notes
 **apCost** | **Number** |  | [optional] 
 **range** | [**WeaponRange**](WeaponRange.md) |  | [optional] 
 **recipe** | [**[RecipeEntry]**](RecipeEntry.md) |  | [optional] 
-**parentSet** | [**EquipmentParentSet**](EquipmentParentSet.md) |  | [optional] 
+**parentSet** | [**ItemListEntryParentSet**](ItemListEntryParentSet.md) |  | [optional] 
 
 

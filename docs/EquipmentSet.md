@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ankamaId** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
 **equipmentIds** | **[Number]** |  | [optional] 
-**effects** | **[[EffectsEntry]]** |  | [optional] 
+**effects** | **[[SetEffectsEntry]]** |  | [optional] 
 **highestEquipmentLevel** | **Number** |  | [optional] 
 
 

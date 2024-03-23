@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **familyName** | **String** |  | [optional] 
 **imageUrls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 
+**effects** | [**[EffectsEntry]**](EffectsEntry.md) |  | [optional] 
 
 

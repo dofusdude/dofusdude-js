@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new dofusdude.SetsListPaged();
+    instance = new dofusdude.ItemListEntryRange();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('SetsListPaged', function() {
-    it('should create an instance of SetsListPaged', function() {
-      // uncomment below and update the code to test SetsListPaged
-      //var instance = new dofusdude.SetsListPaged();
-      //expect(instance).to.be.a(dofusdude.SetsListPaged);
+  describe('ItemListEntryRange', function() {
+    it('should create an instance of ItemListEntryRange', function() {
+      // uncomment below and update the code to test ItemListEntryRange
+      //var instance = new dofusdude.ItemListEntryRange();
+      //expect(instance).to.be.a(dofusdude.ItemListEntryRange);
     });
 
-    it('should have the property links (base name: "_links")', function() {
-      // uncomment below and update the code to test the property links
-      //var instance = new dofusdude.SetsListPaged();
+    it('should have the property min (base name: "min")', function() {
+      // uncomment below and update the code to test the property min
+      //var instance = new dofusdude.ItemListEntryRange();
       //expect(instance).to.be();
     });
 
-    it('should have the property items (base name: "items")', function() {
-      // uncomment below and update the code to test the property items
-      //var instance = new dofusdude.SetsListPaged();
+    it('should have the property max (base name: "max")', function() {
+      // uncomment below and update the code to test the property max
+      //var instance = new dofusdude.ItemListEntryRange();
       //expect(instance).to.be();
     });
 
