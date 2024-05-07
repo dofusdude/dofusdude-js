@@ -24,12 +24,12 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.GameApi();
 let language = "language_example"; // String | a valid language code
-let game = dofus2; // String | 
-let query = paztek; // String | search query
+let game = "dofus2"; // String | 
+let query = "paztek"; // String | search query
 let opts = {
-  'filterType': ["items-equipment"], // [String] | only results with all specific type
+  'filterType': ["null"], // [String] | only results with all specific type
   'limit': 8, // Number | maximum number of returned results
-  'fieldsItem': ["level"] // [String] | adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed.
+  'fieldsItem': ["null"] // [String] | adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed.
 };
 apiInstance.getGameSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -80,11 +80,11 @@ Search in all names and descriptions of Dofus items (including all subtypes) wit
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.GameApi();
-let language = fr; // String | a valid language code
-let game = dofus2; // String | 
-let query = atcham; // String | case sensitive search query
+let language = "fr"; // String | a valid language code
+let game = "dofus2"; // String | 
+let query = "atcham"; // String | case sensitive search query
 let opts = {
-  'filterTypeName': Bottes, // String | only results with the translated type name across all item_subtypes
+  'filterTypeName': "Bottes", // String | only results with the translated type name across all item_subtypes
   'filterMinLevel': 190, // Number | only results which level is equal or above this value
   'filterMaxLevel': 200, // Number | only results which level is equal or below this value
   'limit': 8 // Number | maximum number of returned results

@@ -66,7 +66,7 @@ Get all the available bonuses and their id for filtering them in the range endpo
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
-let language = fr; // String | 
+let language = "fr"; // String | 
 apiInstance.getMetaAlmanaxBonuses(language, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -111,8 +111,8 @@ Search all the available bonuses and their id for filtering them in the range en
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
-let language = fr; // String | a valid language code
-let query = abond; // String | case sensitive search query
+let language = "fr"; // String | a valid language code
+let query = "abond"; // String | case sensitive search query
 let opts = {
   'limit': 56 // Number | maximum number of returned results
 };

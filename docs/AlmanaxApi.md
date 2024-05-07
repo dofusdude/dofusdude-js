@@ -23,8 +23,8 @@ Get a single date. There are not more details in the returned object than the no
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.AlmanaxApi();
-let language = fr; // String | code
-let date = Tue Jul 14 00:00:00 UTC 2020; // Date | yyyy-mm-dd
+let language = "fr"; // String | code
+let date = new Date("Tue Jul 14 00:00:00 UTC 2020"); // Date | yyyy-mm-dd
 apiInstance.getAlmanaxDate(language, date, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -70,13 +70,13 @@ Get a range of dates, defaults to today + 6 following days but can specified by 
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.AlmanaxApi();
-let language = fr; // String | code
+let language = "fr"; // String | code
 let opts = {
-  'filterBonusType': experience-points, // String | ids from meta/{language}/almanax/bonuses
-  'rangeFrom': Thu Sep 15 00:00:00 UTC 2016, // Date | yyyy-mm-dd
-  'rangeTo': Wed Sep 28 00:00:00 UTC 2016, // Date | yyyy-mm-dd
+  'filterBonusType': "experience-points", // String | ids from meta/{language}/almanax/bonuses
+  'rangeFrom': new Date("Thu Sep 15 00:00:00 UTC 2016"), // Date | yyyy-mm-dd
+  'rangeTo': new Date("Wed Sep 28 00:00:00 UTC 2016"), // Date | yyyy-mm-dd
   'rangeSize': -1, // Number | size of the returned range
-  'timezone': Europe/Paris // String | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
+  'timezone': "Europe/Paris" // String | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
 };
 apiInstance.getAlmanaxRange(language, opts, (error, data, response) => {
   if (error) {

@@ -26,9 +26,9 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
-let game = dofus2; // String | 
+let game = "dofus2"; // String | 
 let opts = {
-  'filterFamilyName': Dragoturkey, // String | only results with the translated family name
+  'filterFamilyName': "Dragoturkey", // String | only results with the translated family name
   'acceptEncoding': "acceptEncoding_example" // String | optional compression for saving bandwidth
 };
 apiInstance.getAllMountsList(language, game, opts, (error, data, response) => {
@@ -79,12 +79,12 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
-let game = dofus2; // String | 
+let game = "dofus2"; // String | 
 let opts = {
-  'filterFamilyName': Dragoturkey, // String | only results with the translated family name
+  'filterFamilyName': "Dragoturkey", // String | only results with the translated family name
   'pageSize': 10, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
   'pageNumber': 1, // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-  'fieldsMount': ["effects"] // [String] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+  'fieldsMount': ["null"] // [String] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
 };
 apiInstance.getMountsList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -135,11 +135,11 @@ Search in all names and descriptions of mounts with a query.
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MountsApi();
-let language = fr; // String | a valid language code
-let game = dofus2; // String | 
-let query = Dorée; // String | case sensitive search query
+let language = "fr"; // String | a valid language code
+let game = "dofus2"; // String | 
+let query = "Dorée"; // String | case sensitive search query
 let opts = {
-  'filterFamilyName': Dragodinde, // String | only results with the translated family name
+  'filterFamilyName': "Dragodinde", // String | only results with the translated family name
   'limit': 8 // Number | maximum number of returned results
 };
 apiInstance.getMountsSearch(language, game, query, opts, (error, data, response) => {
@@ -192,7 +192,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 180; // Number | identifier
-let game = dofus2; // String | 
+let game = "dofus2"; // String | 
 apiInstance.getMountsSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
     console.error(error);
