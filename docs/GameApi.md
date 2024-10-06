@@ -29,7 +29,8 @@ let query = "paztek"; // String | search query
 let opts = {
   'filterType': ["null"], // [String] | only results with all specific type
   'limit': 8, // Number | maximum number of returned results
-  'fieldsItem': ["null"] // [String] | adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed.
+  'fieldsItem': ["null"], // [String] | adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed.
+  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[type]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getGameSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -51,6 +52,7 @@ Name | Type | Description  | Notes
  **filterType** | [**[String]**](String.md)| only results with all specific type | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
  **fieldsItem** | [**[String]**](String.md)| adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed. | [optional] 
+ **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[type]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
@@ -87,7 +89,8 @@ let opts = {
   'filterTypeName': "Bottes", // String | only results with the translated type name across all item_subtypes
   'filterMinLevel': 190, // Number | only results which level is equal or above this value
   'filterMaxLevel': 200, // Number | only results which level is equal or below this value
-  'limit': 8 // Number | maximum number of returned results
+  'limit': 8, // Number | maximum number of returned results
+  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getItemsAllSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -110,6 +113,7 @@ Name | Type | Description  | Notes
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
+ **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 

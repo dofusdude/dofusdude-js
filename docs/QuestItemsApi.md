@@ -142,7 +142,8 @@ let opts = {
   'filterMaxLevel': 50, // Number | only results which level is equal or below this value
   'pageSize': 5, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
   'pageNumber': 1, // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-  'fieldsItem': ["null"] // [String] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+  'fieldsItem': ["null"], // [String] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getItemsQuestList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -167,6 +168,7 @@ Name | Type | Description  | Notes
  **pageSize** | **Number**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] 
  **pageNumber** | **Number**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] 
  **fieldsItem** | [**[String]**](String.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] 
+ **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
@@ -203,7 +205,8 @@ let opts = {
   'filterTypeName': "Justicieros", // String | only results with the translated type name
   'filterMinLevel': 60, // Number | only results which level is equal or above this value
   'filterMaxLevel': 70, // Number | only results which level is equal or below this value
-  'limit': 8 // Number | maximum number of returned results
+  'limit': 8, // Number | maximum number of returned results
+  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getItemsQuestSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -226,6 +229,7 @@ Name | Type | Description  | Notes
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
+ **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 

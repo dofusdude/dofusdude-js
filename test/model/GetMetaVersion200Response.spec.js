@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new dofusdude.ConditionTreeRelation();
+    instance = new dofusdude.GetMetaVersion200Response();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,28 @@
       object[property] = value;
   }
 
-  describe('ConditionTreeRelation', function() {
-    it('should create an instance of ConditionTreeRelation', function() {
-      // uncomment below and update the code to test ConditionTreeRelation
-      //var instance = new dofusdude.ConditionTreeRelation();
-      //expect(instance).to.be.a(dofusdude.ConditionTreeRelation);
+  describe('GetMetaVersion200Response', function() {
+    it('should create an instance of GetMetaVersion200Response', function() {
+      // uncomment below and update the code to test GetMetaVersion200Response
+      //var instance = new dofusdude.GetMetaVersion200Response();
+      //expect(instance).to.be.a(dofusdude.GetMetaVersion200Response);
     });
 
-    it('should have the property isOperand (base name: "is_operand")', function() {
-      // uncomment below and update the code to test the property isOperand
-      //var instance = new dofusdude.ConditionTreeRelation();
+    it('should have the property version (base name: "version")', function() {
+      // uncomment below and update the code to test the property version
+      //var instance = new dofusdude.GetMetaVersion200Response();
       //expect(instance).to.be();
     });
 
-    it('should have the property relation (base name: "relation")', function() {
-      // uncomment below and update the code to test the property relation
-      //var instance = new dofusdude.ConditionTreeRelation();
+    it('should have the property release (base name: "release")', function() {
+      // uncomment below and update the code to test the property release
+      //var instance = new dofusdude.GetMetaVersion200Response();
       //expect(instance).to.be();
     });
 
-    it('should have the property children (base name: "children")', function() {
-      // uncomment below and update the code to test the property children
-      //var instance = new dofusdude.ConditionTreeRelation();
+    it('should have the property updateStamp (base name: "update_stamp")', function() {
+      // uncomment below and update the code to test the property updateStamp
+      //var instance = new dofusdude.GetMetaVersion200Response();
       //expect(instance).to.be();
     });
 

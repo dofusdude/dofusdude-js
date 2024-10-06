@@ -30,6 +30,7 @@ docs/EquipmentSet.md
 docs/GameApi.md
 docs/GetGameSearch200ResponseInner.md
 docs/GetMetaAlmanaxBonuses200ResponseInner.md
+docs/GetMetaVersion200Response.md
 docs/GetMetaWebhooksTwitter200Response.md
 docs/ImageUrls.md
 docs/ItemListEntry.md
@@ -99,6 +100,7 @@ src/model/Equipment.js
 src/model/EquipmentSet.js
 src/model/GetGameSearch200ResponseInner.js
 src/model/GetMetaAlmanaxBonuses200ResponseInner.js
+src/model/GetMetaVersion200Response.js
 src/model/GetMetaWebhooksTwitter200Response.js
 src/model/ImageUrls.js
 src/model/ItemListEntry.js
@@ -157,6 +159,7 @@ test/model/Equipment.spec.js
 test/model/EquipmentSet.spec.js
 test/model/GetGameSearch200ResponseInner.spec.js
 test/model/GetMetaAlmanaxBonuses200ResponseInner.spec.js
+test/model/GetMetaVersion200Response.spec.js
 test/model/GetMetaWebhooksTwitter200Response.spec.js
 test/model/ImageUrls.spec.js
 test/model/ItemListEntry.spec.js

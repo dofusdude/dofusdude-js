@@ -12,21 +12,20 @@
  */
 
 import ApiClient from '../ApiClient';
-import GetMetaAlmanaxBonuses200ResponseInner from './GetMetaAlmanaxBonuses200ResponseInner';
 
 /**
- * The AlmanaxEntryBonus model module.
- * @module model/AlmanaxEntryBonus
+ * The GetMetaVersion200Response model module.
+ * @module model/GetMetaVersion200Response
  * @version 0.9.1
  */
-class AlmanaxEntryBonus {
+class GetMetaVersion200Response {
     /**
-     * Constructs a new <code>AlmanaxEntryBonus</code>.
-     * @alias module:model/AlmanaxEntryBonus
+     * Constructs a new <code>GetMetaVersion200Response</code>.
+     * @alias module:model/GetMetaVersion200Response
      */
     constructor() { 
         
-        AlmanaxEntryBonus.initialize(this);
+        GetMetaVersion200Response.initialize(this);
     }
 
     /**
@@ -38,39 +37,46 @@ class AlmanaxEntryBonus {
     }
 
     /**
-     * Constructs a <code>AlmanaxEntryBonus</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>GetMetaVersion200Response</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/AlmanaxEntryBonus} obj Optional instance to populate.
-     * @return {module:model/AlmanaxEntryBonus} The populated <code>AlmanaxEntryBonus</code> instance.
+     * @param {module:model/GetMetaVersion200Response} obj Optional instance to populate.
+     * @return {module:model/GetMetaVersion200Response} The populated <code>GetMetaVersion200Response</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new AlmanaxEntryBonus();
+            obj = obj || new GetMetaVersion200Response();
 
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            if (data.hasOwnProperty('version')) {
+                obj['version'] = ApiClient.convertToType(data['version'], 'String');
             }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = GetMetaAlmanaxBonuses200ResponseInner.constructFromObject(data['type']);
+            if (data.hasOwnProperty('release')) {
+                obj['release'] = ApiClient.convertToType(data['release'], 'String');
+            }
+            if (data.hasOwnProperty('update_stamp')) {
+                obj['update_stamp'] = ApiClient.convertToType(data['update_stamp'], 'String');
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>AlmanaxEntryBonus</code>.
+     * Validates the JSON data with respect to <code>GetMetaVersion200Response</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AlmanaxEntryBonus</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GetMetaVersion200Response</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        if (data['version'] && !(typeof data['version'] === 'string' || data['version'] instanceof String)) {
+            throw new Error("Expected the field `version` to be a primitive type in the JSON string but got " + data['version']);
         }
-        // validate the optional field `type`
-        if (data['type']) { // data not null
-          GetMetaAlmanaxBonuses200ResponseInner.validateJSON(data['type']);
+        // ensure the json data is a string
+        if (data['release'] && !(typeof data['release'] === 'string' || data['release'] instanceof String)) {
+            throw new Error("Expected the field `release` to be a primitive type in the JSON string but got " + data['release']);
+        }
+        // ensure the json data is a string
+        if (data['update_stamp'] && !(typeof data['update_stamp'] === 'string' || data['update_stamp'] instanceof String)) {
+            throw new Error("Expected the field `update_stamp` to be a primitive type in the JSON string but got " + data['update_stamp']);
         }
 
         return true;
@@ -82,19 +88,24 @@ class AlmanaxEntryBonus {
 
 
 /**
- * @member {String} description
+ * @member {String} version
  */
-AlmanaxEntryBonus.prototype['description'] = undefined;
+GetMetaVersion200Response.prototype['version'] = undefined;
 
 /**
- * @member {module:model/GetMetaAlmanaxBonuses200ResponseInner} type
+ * @member {String} release
  */
-AlmanaxEntryBonus.prototype['type'] = undefined;
+GetMetaVersion200Response.prototype['release'] = undefined;
+
+/**
+ * @member {String} update_stamp
+ */
+GetMetaVersion200Response.prototype['update_stamp'] = undefined;
 
 
 
 
 
 
-export default AlmanaxEntryBonus;
+export default GetMetaVersion200Response;
 
