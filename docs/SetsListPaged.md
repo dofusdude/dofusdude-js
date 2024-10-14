@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **links** | [**LinksPaged**](LinksPaged.md) |  | [optional] 
-**items** | [**[SetListEntry]**](SetListEntry.md) |  | [optional] 
+**sets** | [**[SetListEntry]**](SetListEntry.md) |  | [optional] 
 
 
