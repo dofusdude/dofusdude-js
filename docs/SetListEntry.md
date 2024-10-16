@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **level** | **Number** |  | [optional] 
 **effects** | **[[SetEffectsEntry]]** |  | [optional] 
 **equipmentIds** | **[Number]** |  | [optional] 
+**isCosmetic** | **Boolean** |  | [optional] 
 
 

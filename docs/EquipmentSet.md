@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **equipmentIds** | **[Number]** |  | [optional] 
 **effects** | **[[SetEffectsEntry]]** |  | [optional] 
 **highestEquipmentLevel** | **Number** |  | [optional] 
+**isCosmetic** | **Boolean** |  | [optional] 
 
 

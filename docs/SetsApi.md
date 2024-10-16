@@ -31,7 +31,8 @@ let opts = {
   'sortLevel': "asc", // String | sort the resulting list by level, default unsorted
   'filterMinHighestEquipmentLevel': 190, // Number | only results where the equipment with the highest level is above or equal to this value
   'filterMaxHighestEquipmentLevel': 200, // Number | only results where the equipment with the highest level is below or equal to this value
-  'acceptEncoding': "acceptEncoding_example" // String | optional compression for saving bandwidth
+  'acceptEncoding': "acceptEncoding_example", // String | optional compression for saving bandwidth
+  'filterIsCosmetic': true // Boolean | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
 };
 apiInstance.getAllSetsList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -53,6 +54,7 @@ Name | Type | Description  | Notes
  **filterMinHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is above or equal to this value | [optional] 
  **filterMaxHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is below or equal to this value | [optional] 
  **acceptEncoding** | **String**| optional compression for saving bandwidth | [optional] 
+ **filterIsCosmetic** | **Boolean**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
 
 ### Return type
 
@@ -90,7 +92,8 @@ let opts = {
   'filterMaxHighestEquipmentLevel': 200, // Number | only results where the equipment with the highest level is below or equal to this value
   'pageSize': 20, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
   'pageNumber': 1, // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-  'fieldsSet': ["null"] // [String] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+  'fieldsSet': ["null"], // [String] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+  'filterIsCosmetic': true // Boolean | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
 };
 apiInstance.getSetsList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -114,6 +117,7 @@ Name | Type | Description  | Notes
  **pageSize** | **Number**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] 
  **pageNumber** | **Number**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] 
  **fieldsSet** | [**[String]**](String.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] 
+ **filterIsCosmetic** | **Boolean**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
 
 ### Return type
 
@@ -149,7 +153,8 @@ let query = "Des"; // String | case sensitive search query
 let opts = {
   'filterMinHighestEquipmentLevel': 195, // Number | only results where the equipment with the highest level is above or equal to this value
   'filterMaxHighestEquipmentLevel': 200, // Number | only results where the equipment with the highest level is below or equal to this value
-  'limit': 8 // Number | maximum number of returned results
+  'limit': 8, // Number | maximum number of returned results
+  'filterIsCosmetic': true // Boolean | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
 };
 apiInstance.getSetsSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -171,6 +176,7 @@ Name | Type | Description  | Notes
  **filterMinHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is above or equal to this value | [optional] 
  **filterMaxHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is below or equal to this value | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
+ **filterIsCosmetic** | **Boolean**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
 
 ### Return type
 

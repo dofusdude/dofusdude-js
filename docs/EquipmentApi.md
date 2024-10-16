@@ -32,7 +32,8 @@ let opts = {
   'filterTypeName': "Sword", // String | only results with the translated type name
   'filterMinLevel': 10, // Number | only results which level is equal or above this value
   'filterMaxLevel': 60, // Number | only results which level is equal or below this value
-  'acceptEncoding': "acceptEncoding_example" // String | optional compression for saving bandwidth
+  'acceptEncoding': "acceptEncoding_example", // String | optional compression for saving bandwidth
+  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getAllItemsEquipmentList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -55,6 +56,7 @@ Name | Type | Description  | Notes
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
  **acceptEncoding** | **String**| optional compression for saving bandwidth | [optional] 
+ **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
