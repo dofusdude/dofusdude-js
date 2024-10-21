@@ -200,7 +200,7 @@ No authorization required
 
 ## getCosmeticsSingle
 
-> Cosmetic getCosmeticsSingle(language, ankamaId, game)
+> Equipment getCosmeticsSingle(language, ankamaId, game)
 
 Single Cosmetics
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Cosmetic**](Cosmetic.md)
+[**Equipment**](Equipment.md)
 
 ### Authorization
 

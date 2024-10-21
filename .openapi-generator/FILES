@@ -15,8 +15,6 @@ docs/ConditionTreeLeaf.md
 docs/ConditionTreeNode.md
 docs/ConditionTreeRelation.md
 docs/ConsumablesApi.md
-docs/Cosmetic.md
-docs/CosmeticType.md
 docs/CosmeticsApi.md
 docs/CreateAlmanaxWebhook.md
 docs/CreateAlmanaxWebhookDailySettings.md
@@ -51,6 +49,7 @@ docs/PutTwitterWebhook.md
 docs/QuestItemsApi.md
 docs/RecipeEntry.md
 docs/Resource.md
+docs/ResourceType.md
 docs/ResourcesApi.md
 docs/RssWebhook.md
 docs/SetEffectsEntry.md
@@ -88,8 +87,6 @@ src/model/ConditionEntry.js
 src/model/ConditionTreeLeaf.js
 src/model/ConditionTreeNode.js
 src/model/ConditionTreeRelation.js
-src/model/Cosmetic.js
-src/model/CosmeticType.js
 src/model/CreateAlmanaxWebhook.js
 src/model/CreateAlmanaxWebhookDailySettings.js
 src/model/CreateAlmanaxWebhookMentionsValueInner.js
@@ -118,6 +115,7 @@ src/model/PutRSSWebhook.js
 src/model/PutTwitterWebhook.js
 src/model/RecipeEntry.js
 src/model/Resource.js
+src/model/ResourceType.js
 src/model/RssWebhook.js
 src/model/SetEffectsEntry.js
 src/model/SetEffectsEntryType.js
@@ -147,8 +145,6 @@ test/model/ConditionEntry.spec.js
 test/model/ConditionTreeLeaf.spec.js
 test/model/ConditionTreeNode.spec.js
 test/model/ConditionTreeRelation.spec.js
-test/model/Cosmetic.spec.js
-test/model/CosmeticType.spec.js
 test/model/CreateAlmanaxWebhook.spec.js
 test/model/CreateAlmanaxWebhookDailySettings.spec.js
 test/model/CreateAlmanaxWebhookMentionsValueInner.spec.js
@@ -177,6 +173,7 @@ test/model/PutRSSWebhook.spec.js
 test/model/PutTwitterWebhook.spec.js
 test/model/RecipeEntry.spec.js
 test/model/Resource.spec.js
+test/model/ResourceType.spec.js
 test/model/RssWebhook.spec.js
 test/model/SetEffectsEntry.spec.js
 test/model/SetEffectsEntryType.spec.js
