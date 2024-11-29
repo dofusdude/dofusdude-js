@@ -4,16 +4,16 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAllSetsList**](SetsApi.md#getAllSetsList) | **GET** /{game}/{language}/sets/all | List All Sets
-[**getSetsList**](SetsApi.md#getSetsList) | **GET** /{game}/{language}/sets | List Sets
-[**getSetsSearch**](SetsApi.md#getSetsSearch) | **GET** /{game}/{language}/sets/search | Search Sets
-[**getSetsSingle**](SetsApi.md#getSetsSingle) | **GET** /{game}/{language}/sets/{ankama_id} | Single Sets
+[**getAllSetsList**](SetsApi.md#getAllSetsList) | **GET** /{game}/v1/{language}/sets/all | List All Sets
+[**getSetsList**](SetsApi.md#getSetsList) | **GET** /{game}/v1/{language}/sets | List Sets
+[**getSetsSearch**](SetsApi.md#getSetsSearch) | **GET** /{game}/v1/{language}/sets/search | Search Sets
+[**getSetsSingle**](SetsApi.md#getSetsSingle) | **GET** /{game}/v1/{language}/sets/{ankama_id} | Single Sets
 
 
 
 ## getAllSetsList
 
-> SetsListPaged getAllSetsList(language, game, opts)
+> ListSets getAllSetsList(language, game, opts)
 
 List All Sets
 
@@ -26,13 +26,14 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let opts = {
   'sortLevel': "asc", // String | sort the resulting list by level, default unsorted
   'filterMinHighestEquipmentLevel': 190, // Number | only results where the equipment with the highest level is above or equal to this value
   'filterMaxHighestEquipmentLevel': 200, // Number | only results where the equipment with the highest level is below or equal to this value
   'acceptEncoding': "acceptEncoding_example", // String | optional compression for saving bandwidth
-  'filterIsCosmetic': true // Boolean | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+  'filterContainsCosmeticsOnly': true, // Boolean | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+  'filterContainsCosmetics': true // Boolean | filter sets based on if they got cosmetic items in it.
 };
 apiInstance.getAllSetsList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -49,16 +50,17 @@ apiInstance.getAllSetsList(language, game, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **sortLevel** | **String**| sort the resulting list by level, default unsorted | [optional] 
  **filterMinHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is above or equal to this value | [optional] 
  **filterMaxHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is below or equal to this value | [optional] 
  **acceptEncoding** | **String**| optional compression for saving bandwidth | [optional] 
- **filterIsCosmetic** | **Boolean**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
+ **filterContainsCosmeticsOnly** | **Boolean**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
+ **filterContainsCosmetics** | **Boolean**| filter sets based on if they got cosmetic items in it. | [optional] 
 
 ### Return type
 
-[**SetsListPaged**](SetsListPaged.md)
+[**ListSets**](ListSets.md)
 
 ### Authorization
 
@@ -72,7 +74,7 @@ No authorization required
 
 ## getSetsList
 
-> SetsListPaged getSetsList(language, game, opts)
+> ListSets getSetsList(language, game, opts)
 
 List Sets
 
@@ -85,7 +87,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let opts = {
   'sortLevel': "asc", // String | sort the resulting list by level, default unsorted
   'filterMinHighestEquipmentLevel': 190, // Number | only results where the equipment with the highest level is above or equal to this value
@@ -93,7 +95,8 @@ let opts = {
   'pageSize': 20, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
   'pageNumber': 1, // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
   'fieldsSet': ["null"], // [String] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
-  'filterIsCosmetic': true // Boolean | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+  'filterContainsCosmeticsOnly': true, // Boolean | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+  'filterContainsCosmetics': true // Boolean | filter sets based on if they got cosmetic items in it.
 };
 apiInstance.getSetsList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -110,18 +113,19 @@ apiInstance.getSetsList(language, game, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **sortLevel** | **String**| sort the resulting list by level, default unsorted | [optional] 
  **filterMinHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is above or equal to this value | [optional] 
  **filterMaxHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is below or equal to this value | [optional] 
  **pageSize** | **Number**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] 
  **pageNumber** | **Number**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] 
  **fieldsSet** | [**[String]**](String.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] 
- **filterIsCosmetic** | **Boolean**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
+ **filterContainsCosmeticsOnly** | **Boolean**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
+ **filterContainsCosmetics** | **Boolean**| filter sets based on if they got cosmetic items in it. | [optional] 
 
 ### Return type
 
-[**SetsListPaged**](SetsListPaged.md)
+[**ListSets**](ListSets.md)
 
 ### Authorization
 
@@ -135,7 +139,7 @@ No authorization required
 
 ## getSetsSearch
 
-> [SetListEntry] getSetsSearch(language, game, query, opts)
+> [ListSet] getSetsSearch(language, game, query, opts)
 
 Search Sets
 
@@ -148,7 +152,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let query = "Des"; // String | case sensitive search query
 let opts = {
   'filterMinHighestEquipmentLevel': 195, // Number | only results where the equipment with the highest level is above or equal to this value
@@ -171,7 +175,7 @@ apiInstance.getSetsSearch(language, game, query, opts, (error, data, response) =
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **query** | **String**| case sensitive search query | 
  **filterMinHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is above or equal to this value | [optional] 
  **filterMaxHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is below or equal to this value | [optional] 
@@ -180,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[SetListEntry]**](SetListEntry.md)
+[**[ListSet]**](ListSet.md)
 
 ### Authorization
 
@@ -194,7 +198,7 @@ No authorization required
 
 ## getSetsSingle
 
-> EquipmentSet getSetsSingle(language, ankamaId, game)
+> Set getSetsSingle(language, ankamaId, game)
 
 Single Sets
 
@@ -208,7 +212,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 499; // Number | identifier
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 apiInstance.getSetsSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -225,11 +229,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
  **ankamaId** | **Number**| identifier | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
 
 ### Return type
 
-[**EquipmentSet**](EquipmentSet.md)
+[**Set**](Set.md)
 
 ### Authorization
 

@@ -4,18 +4,18 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getGameSearch**](GameApi.md#getGameSearch) | **GET** /{game}/{language}/search | Game Search
-[**getItemsAllSearch**](GameApi.md#getItemsAllSearch) | **GET** /{game}/{language}/items/search | Search All Items
+[**getGameSearch**](GameApi.md#getGameSearch) | **GET** /{game}/v1/{language}/search | Game Search
+[**getItemsAllSearch**](GameApi.md#getItemsAllSearch) | **GET** /{game}/v1/{language}/items/search | Search All Items
 
 
 
 ## getGameSearch
 
-> [GetGameSearch200ResponseInner] getGameSearch(language, game, query, opts)
+> [GameSearch] getGameSearch(language, game, query, opts)
 
 Game Search
 
-Search in all names and descriptions of all supported types in the game. For the list of supported types see the endpoint /dofus2/meta/search/types.
+Search in all names and descriptions of all supported types in the game. For the list of supported types see the endpoint /dofus3/meta/search/types.
 
 ### Example
 
@@ -24,13 +24,13 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.GameApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let query = "paztek"; // String | search query
 let opts = {
-  'filterType': ["null"], // [String] | only results with all specific type
+  'filterSearchIndex': ["null"], // [String] | only results with all specific type
   'limit': 8, // Number | maximum number of returned results
   'fieldsItem': ["null"], // [String] | adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed.
-  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[type]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+  'filterTypeNameId': ["null"] // [String] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[type]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getGameSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -47,16 +47,16 @@ apiInstance.getGameSearch(language, game, query, opts, (error, data, response) =
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **query** | **String**| search query | 
- **filterType** | [**[String]**](String.md)| only results with all specific type | [optional] 
+ **filterSearchIndex** | [**[String]**](String.md)| only results with all specific type | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
  **fieldsItem** | [**[String]**](String.md)| adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed. | [optional] 
- **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[type]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filterTypeNameId** | [**[String]**](String.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[type]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
-[**[GetGameSearch200ResponseInner]**](GetGameSearch200ResponseInner.md)
+[**[GameSearch]**](GameSearch.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 
 ## getItemsAllSearch
 
-> [ItemsListEntryTyped] getItemsAllSearch(language, game, query, opts)
+> [ListItemGeneral] getItemsAllSearch(language, game, query, opts)
 
 Search All Items
 
@@ -83,14 +83,13 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.GameApi();
 let language = "fr"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let query = "atcham"; // String | case sensitive search query
 let opts = {
-  'filterTypeName': "Bottes", // String | only results with the translated type name across all item_subtypes
   'filterMinLevel': 190, // Number | only results which level is equal or above this value
   'filterMaxLevel': 200, // Number | only results which level is equal or below this value
   'limit': 8, // Number | maximum number of returned results
-  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+  'filterTypeNameId': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getItemsAllSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -107,17 +106,16 @@ apiInstance.getItemsAllSearch(language, game, query, opts, (error, data, respons
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **query** | **String**| case sensitive search query | 
- **filterTypeName** | **String**| only results with the translated type name across all item_subtypes | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
- **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filterTypeNameId** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
-[**[ItemsListEntryTyped]**](ItemsListEntryTyped.md)
+[**[ListItemGeneral]**](ListItemGeneral.md)
 
 ### Authorization
 

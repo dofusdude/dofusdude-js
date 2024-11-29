@@ -36,7 +36,7 @@ Delete a Webhook from the service.
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.WebhooksApi();
-let id = "id_example"; // String | 
+let id = "id_example"; // String | the ID returned from the API when creating the webhook
 apiInstance.deleteWebhooksAlmanaxId(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -51,7 +51,7 @@ apiInstance.deleteWebhooksAlmanaxId(id, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -81,7 +81,7 @@ Delete a Webhook from the service.
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.WebhooksApi();
-let id = "id_example"; // String | 
+let id = "id_example"; // String | the ID returned from the API when creating the webhook
 apiInstance.deleteWebhooksRssId(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -96,7 +96,7 @@ apiInstance.deleteWebhooksRssId(id, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -126,7 +126,7 @@ Delete a Webhook from the service.
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.WebhooksApi();
-let id = "id_example"; // String | 
+let id = "id_example"; // String | the ID returned from the API when creating the webhook
 apiInstance.deleteWebhooksTwitterId(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -141,7 +141,7 @@ apiInstance.deleteWebhooksTwitterId(id, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -294,7 +294,7 @@ Retrieve details about an existing Almanax Webhook with a given uuid.
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.WebhooksApi();
-let id = "id_example"; // String | 
+let id = "id_example"; // String | the ID returned from the API when creating the webhook
 apiInstance.getWebhooksAlmanaxId(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -309,7 +309,7 @@ apiInstance.getWebhooksAlmanaxId(id, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -339,7 +339,7 @@ Retrieve details about an existing RSS Webhook with a given uuid.
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.WebhooksApi();
-let id = "id_example"; // String | 
+let id = "id_example"; // String | the ID returned from the API when creating the webhook
 apiInstance.getWebhooksRssId(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -354,7 +354,7 @@ apiInstance.getWebhooksRssId(id, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -384,7 +384,7 @@ Retrieve details about an existing Twitter Webhook with a given uuid.
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.WebhooksApi();
-let id = "id_example"; // String | 
+let id = "id_example"; // String | the ID returned from the API when creating the webhook
 apiInstance.getWebhooksTwitterId(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -399,7 +399,7 @@ apiInstance.getWebhooksTwitterId(id, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -430,7 +430,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.WebhooksApi();
 let opts = {
-  'createAlmanaxWebhook': {"bonus_whitelist":null,"bonus_blacklist":null,"subscriptions":["dofus2_fr"],"format":"discord","callback":"https://discord.com/api/webhooks/XYZ","daily_settings":{"timezone":"Europe/Paris","midnight_offset":0},"iso_date":false,"mentions":{"kolossium-experience":[{"discord_id":1234,"is_role":true,"ping_days_before":null}]},"intervals":["daily"],"weekly_weekday":"sunday"} // CreateAlmanaxWebhook | 
+  'createAlmanaxWebhook': {"bonus_whitelist":null,"bonus_blacklist":null,"subscriptions":["dofus3_fr"],"format":"discord","callback":"https://discord.com/api/webhooks/XYZ","daily_settings":{"timezone":"Europe/Paris","midnight_offset":0},"iso_date":false,"mentions":{"kolossium-experience":[{"discord_id":1234,"is_role":true,"ping_days_before":null}]},"intervals":["daily"],"weekly_weekday":"sunday"} // CreateAlmanaxWebhook | 
 };
 apiInstance.postWebhooksAlmanax(opts, (error, data, response) => {
   if (error) {
@@ -477,7 +477,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.WebhooksApi();
 let opts = {
-  'createRSSWebhook': {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus2-en-official-news"],"format":"discord","preview_length":2000,"callback":"https://discord.com/api/webhooks/XYZ"} // CreateRSSWebhook | 
+  'createRSSWebhook': {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus3-en-official-news"],"format":"discord","preview_length":2000,"callback":"https://discord.com/api/webhooks/XYZ"} // CreateRSSWebhook | 
 };
 apiInstance.postWebhooksRss(opts, (error, data, response) => {
   if (error) {
@@ -570,7 +570,7 @@ Update the details of an Almanax Webhook. All fields are optional and arrays wil
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.WebhooksApi();
-let id = "id_example"; // String | 
+let id = "id_example"; // String | the ID returned from the API when creating the webhook
 let opts = {
   'putAlmanaxWebhook': {"bonus_whitelist":[],"bonus_blacklist":null,"subscriptions":null,"daily_settings":{"timezone":"Europe/Paris","midnight_offset":0},"iso_date":false,"mentions":{"kolossium-experience":[{"discord_id":1234,"is_role":true,"ping_days_before":null}]},"intervals":["daily"],"weekly_weekday":"sunday"} // PutAlmanaxWebhook | 
 };
@@ -588,7 +588,7 @@ apiInstance.putWebhooksAlmanaxId(id, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**| the ID returned from the API when creating the webhook | 
  **putAlmanaxWebhook** | [**PutAlmanaxWebhook**](PutAlmanaxWebhook.md)|  | [optional] 
 
 ### Return type
@@ -619,7 +619,7 @@ Update the details of a RSS Webhook. All fields are optional and arrays will be 
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.WebhooksApi();
-let id = "id_example"; // String | 
+let id = "id_example"; // String | the ID returned from the API when creating the webhook
 let opts = {
   'putRSSWebhook': {"whitelist":null,"blacklist":null,"subscriptions":null,"preview_length":60} // PutRSSWebhook | 
 };
@@ -637,7 +637,7 @@ apiInstance.putWebhooksRssId(id, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**| the ID returned from the API when creating the webhook | 
  **putRSSWebhook** | [**PutRSSWebhook**](PutRSSWebhook.md)|  | [optional] 
 
 ### Return type
@@ -668,9 +668,9 @@ Update the details of a Twitter Webhook. All fields are optional and arrays will
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.WebhooksApi();
-let id = "id_example"; // String | 
+let id = "id_example"; // String | the ID returned from the API when creating the webhook
 let opts = {
-  'putTwitterWebhook': {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus2-en-official-changelog"],"preview_length":null} // PutTwitterWebhook | 
+  'putTwitterWebhook': {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus3-en-official-changelog"],"preview_length":null} // PutTwitterWebhook | 
 };
 apiInstance.putWebhooksTwitterId(id, opts, (error, data, response) => {
   if (error) {
@@ -686,7 +686,7 @@ apiInstance.putWebhooksTwitterId(id, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**| the ID returned from the API when creating the webhook | 
  **putTwitterWebhook** | [**PutTwitterWebhook**](PutTwitterWebhook.md)|  | [optional] 
 
 ### Return type

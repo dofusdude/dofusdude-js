@@ -4,16 +4,16 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAllItemsEquipmentList**](EquipmentApi.md#getAllItemsEquipmentList) | **GET** /{game}/{language}/items/equipment/all | List All Equipment
-[**getItemsEquipmentList**](EquipmentApi.md#getItemsEquipmentList) | **GET** /{game}/{language}/items/equipment | List Equipment
-[**getItemsEquipmentSearch**](EquipmentApi.md#getItemsEquipmentSearch) | **GET** /{game}/{language}/items/equipment/search | Search Equipment
-[**getItemsEquipmentSingle**](EquipmentApi.md#getItemsEquipmentSingle) | **GET** /{game}/{language}/items/equipment/{ankama_id} | Single Equipment
+[**getAllItemsEquipmentList**](EquipmentApi.md#getAllItemsEquipmentList) | **GET** /{game}/v1/{language}/items/equipment/all | List All Equipment
+[**getItemsEquipmentList**](EquipmentApi.md#getItemsEquipmentList) | **GET** /{game}/v1/{language}/items/equipment | List Equipment
+[**getItemsEquipmentSearch**](EquipmentApi.md#getItemsEquipmentSearch) | **GET** /{game}/v1/{language}/items/equipment/search | Search Equipment
+[**getItemsEquipmentSingle**](EquipmentApi.md#getItemsEquipmentSingle) | **GET** /{game}/v1/{language}/items/equipment/{ankama_id} | Single Equipment
 
 
 
 ## getAllItemsEquipmentList
 
-> ItemsListPaged getAllItemsEquipmentList(language, game, opts)
+> ListItems getAllItemsEquipmentList(language, game, opts)
 
 List All Equipment
 
@@ -26,14 +26,13 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.EquipmentApi();
 let language = "en"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let opts = {
   'sortLevel': "desc", // String | sort the resulting list by level, default unsorted
-  'filterTypeName': "Sword", // String | only results with the translated type name
   'filterMinLevel': 10, // Number | only results which level is equal or above this value
   'filterMaxLevel': 60, // Number | only results which level is equal or below this value
   'acceptEncoding': "acceptEncoding_example", // String | optional compression for saving bandwidth
-  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+  'filterTypeNameId': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getAllItemsEquipmentList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -50,17 +49,16 @@ apiInstance.getAllItemsEquipmentList(language, game, opts, (error, data, respons
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **sortLevel** | **String**| sort the resulting list by level, default unsorted | [optional] 
- **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
  **acceptEncoding** | **String**| optional compression for saving bandwidth | [optional] 
- **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filterTypeNameId** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
-[**ItemsListPaged**](ItemsListPaged.md)
+[**ListItems**](ListItems.md)
 
 ### Authorization
 
@@ -74,7 +72,7 @@ No authorization required
 
 ## getItemsEquipmentList
 
-> ItemsListPaged getItemsEquipmentList(language, game, opts)
+> ListItems getItemsEquipmentList(language, game, opts)
 
 List Equipment
 
@@ -87,16 +85,15 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.EquipmentApi();
 let language = "en"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let opts = {
   'sortLevel': "desc", // String | sort the resulting list by level, default unsorted
-  'filterTypeName': "Sword", // String | only results with the translated type name
   'filterMinLevel': 10, // Number | only results which level is equal or above this value
   'filterMaxLevel': 60, // Number | only results which level is equal or below this value
   'pageSize': 5, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
   'pageNumber': 1, // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
   'fieldsItem': ["null"], // [String] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
-  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+  'filterTypeNameId': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getItemsEquipmentList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -113,19 +110,18 @@ apiInstance.getItemsEquipmentList(language, game, opts, (error, data, response) 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **sortLevel** | **String**| sort the resulting list by level, default unsorted | [optional] 
- **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
  **pageSize** | **Number**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] 
  **pageNumber** | **Number**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] 
  **fieldsItem** | [**[String]**](String.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] 
- **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filterTypeNameId** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
-[**ItemsListPaged**](ItemsListPaged.md)
+[**ListItems**](ListItems.md)
 
 ### Authorization
 
@@ -139,7 +135,7 @@ No authorization required
 
 ## getItemsEquipmentSearch
 
-> [ItemListEntry] getItemsEquipmentSearch(language, game, query, opts)
+> [ListItem] getItemsEquipmentSearch(language, game, query, opts)
 
 Search Equipment
 
@@ -152,14 +148,13 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.EquipmentApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let query = "nidas"; // String | case sensitive search query
 let opts = {
-  'filterTypeName': "boots", // String | only results with the translated type name
   'filterMinLevel': 150, // Number | only results which level is equal or above this value
   'filterMaxLevel': 200, // Number | only results which level is equal or below this value
   'limit': 8, // Number | maximum number of returned results
-  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+  'filterTypeNameId': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getItemsEquipmentSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -176,17 +171,16 @@ apiInstance.getItemsEquipmentSearch(language, game, query, opts, (error, data, r
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **query** | **String**| case sensitive search query | 
- **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
- **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filterTypeNameId** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
-[**[ItemListEntry]**](ItemListEntry.md)
+[**[ListItem]**](ListItem.md)
 
 ### Authorization
 
@@ -214,7 +208,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.EquipmentApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 26009; // Number | identifier
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 apiInstance.getItemsEquipmentSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -231,7 +225,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
  **ankamaId** | **Number**| identifier | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
 
 ### Return type
 

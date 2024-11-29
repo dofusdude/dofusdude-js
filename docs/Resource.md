@@ -7,13 +7,12 @@ Name | Type | Description | Notes
 **ankamaId** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**type** | [**ResourceType**](ResourceType.md) |  | [optional] 
+**type** | [**TranslatedId**](TranslatedId.md) |  | [optional] 
 **level** | **Number** |  | [optional] 
 **pods** | **Number** |  | [optional] 
-**imageUrls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 
-**effects** | [**[EffectsEntry]**](EffectsEntry.md) |  | [optional] 
-**conditions** | [**[ConditionEntry]**](ConditionEntry.md) |  | [optional] 
-**conditionTree** | [**ConditionTreeNode**](ConditionTreeNode.md) |  | [optional] 
-**recipe** | [**[RecipeEntry]**](RecipeEntry.md) |  | [optional] 
+**imageUrls** | [**Images**](Images.md) |  | [optional] 
+**effects** | [**[Effect]**](Effect.md) |  | [optional] 
+**conditions** | [**ConditionNode**](ConditionNode.md) |  | [optional] 
+**recipe** | [**[Recipe]**](Recipe.md) |  | [optional] 
 
 

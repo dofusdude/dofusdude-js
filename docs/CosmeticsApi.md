@@ -4,16 +4,16 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAllCosmeticsList**](CosmeticsApi.md#getAllCosmeticsList) | **GET** /{game}/{language}/items/cosmetics/all | List All Cosmetics
-[**getCosmeticsList**](CosmeticsApi.md#getCosmeticsList) | **GET** /{game}/{language}/items/cosmetics | List Cosmetics
-[**getCosmeticsSearch**](CosmeticsApi.md#getCosmeticsSearch) | **GET** /{game}/{language}/items/cosmetics/search | Search Cosmetics
-[**getCosmeticsSingle**](CosmeticsApi.md#getCosmeticsSingle) | **GET** /{game}/{language}/items/cosmetics/{ankama_id} | Single Cosmetics
+[**getAllCosmeticsList**](CosmeticsApi.md#getAllCosmeticsList) | **GET** /{game}/v1/{language}/items/cosmetics/all | List All Cosmetics
+[**getCosmeticsList**](CosmeticsApi.md#getCosmeticsList) | **GET** /{game}/v1/{language}/items/cosmetics | List Cosmetics
+[**getCosmeticsSearch**](CosmeticsApi.md#getCosmeticsSearch) | **GET** /{game}/v1/{language}/items/cosmetics/search | Search Cosmetics
+[**getCosmeticsSingle**](CosmeticsApi.md#getCosmeticsSingle) | **GET** /{game}/v1/{language}/items/cosmetics/{ankama_id} | Single Cosmetics
 
 
 
 ## getAllCosmeticsList
 
-> ItemsListPaged getAllCosmeticsList(language, game, opts)
+> ListItems getAllCosmeticsList(language, game, opts)
 
 List All Cosmetics
 
@@ -26,14 +26,13 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.CosmeticsApi();
 let language = "fr"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let opts = {
   'sortLevel': "asc", // String | sort the resulting list by level, default unsorted
-  'filterTypeName': "Chapeau d'apparat", // String | only results with the translated type name
   'filterMinLevel': 1, // Number | only results which level is equal or above this value
   'filterMaxLevel': 5, // Number | only results which level is equal or below this value
   'acceptEncoding': "acceptEncoding_example", // String | optional compression for saving bandwidth
-  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+  'filterTypeNameId': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getAllCosmeticsList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -50,17 +49,16 @@ apiInstance.getAllCosmeticsList(language, game, opts, (error, data, response) =>
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **sortLevel** | **String**| sort the resulting list by level, default unsorted | [optional] 
- **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
  **acceptEncoding** | **String**| optional compression for saving bandwidth | [optional] 
- **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filterTypeNameId** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
-[**ItemsListPaged**](ItemsListPaged.md)
+[**ListItems**](ListItems.md)
 
 ### Authorization
 
@@ -74,7 +72,7 @@ No authorization required
 
 ## getCosmeticsList
 
-> ItemsListPaged getCosmeticsList(language, game, opts)
+> ListItems getCosmeticsList(language, game, opts)
 
 List Cosmetics
 
@@ -87,16 +85,15 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.CosmeticsApi();
 let language = "fr"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let opts = {
   'sortLevel': "asc", // String | sort the resulting list by level, default unsorted
-  'filterTypeName': "Chapeau d'apparat", // String | only results with the translated type name
   'filterMinLevel': 1, // Number | only results which level is equal or above this value
   'filterMaxLevel': 5, // Number | only results which level is equal or below this value
   'pageSize': 5, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
   'pageNumber': 1, // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
   'fieldsItem': ["null"], // [String] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
-  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+  'filterTypeNameId': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getCosmeticsList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -113,19 +110,18 @@ apiInstance.getCosmeticsList(language, game, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **sortLevel** | **String**| sort the resulting list by level, default unsorted | [optional] 
- **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
  **pageSize** | **Number**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] 
  **pageNumber** | **Number**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] 
  **fieldsItem** | [**[String]**](String.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] 
- **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filterTypeNameId** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
-[**ItemsListPaged**](ItemsListPaged.md)
+[**ListItems**](ListItems.md)
 
 ### Authorization
 
@@ -139,7 +135,7 @@ No authorization required
 
 ## getCosmeticsSearch
 
-> [ItemListEntry] getCosmeticsSearch(language, game, query, opts)
+> [ListItem] getCosmeticsSearch(language, game, query, opts)
 
 Search Cosmetics
 
@@ -152,14 +148,13 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.CosmeticsApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let query = "nedora"; // String | case sensitive search query
 let opts = {
-  'filterTypeName': "Wings", // String | only results with the translated type name
   'filterMinLevel': 1, // Number | only results which level is equal or above this value
   'filterMaxLevel': 2, // Number | only results which level is equal or below this value
   'limit': 8, // Number | maximum number of returned results
-  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+  'filterTypeNameId': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getCosmeticsSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -176,17 +171,16 @@ apiInstance.getCosmeticsSearch(language, game, query, opts, (error, data, respon
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **query** | **String**| case sensitive search query | 
- **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
- **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filterTypeNameId** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
-[**[ItemListEntry]**](ItemListEntry.md)
+[**[ListItem]**](ListItem.md)
 
 ### Authorization
 
@@ -214,7 +208,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.CosmeticsApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 24132; // Number | identifier
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 apiInstance.getCosmeticsSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -231,7 +225,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
  **ankamaId** | **Number**| identifier | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
 
 ### Return type
 

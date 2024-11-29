@@ -4,16 +4,16 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAllMountsList**](MountsApi.md#getAllMountsList) | **GET** /{game}/{language}/mounts/all | List All Mounts
-[**getMountsList**](MountsApi.md#getMountsList) | **GET** /{game}/{language}/mounts | List Mounts
-[**getMountsSearch**](MountsApi.md#getMountsSearch) | **GET** /{game}/{language}/mounts/search | Search Mounts
-[**getMountsSingle**](MountsApi.md#getMountsSingle) | **GET** /{game}/{language}/mounts/{ankama_id} | Single Mounts
+[**getAllMountsList**](MountsApi.md#getAllMountsList) | **GET** /{game}/v1/{language}/mounts/all | List All Mounts
+[**getMountsList**](MountsApi.md#getMountsList) | **GET** /{game}/v1/{language}/mounts | List Mounts
+[**getMountsSearch**](MountsApi.md#getMountsSearch) | **GET** /{game}/v1/{language}/mounts/search | Search Mounts
+[**getMountsSingle**](MountsApi.md#getMountsSingle) | **GET** /{game}/v1/{language}/mounts/{ankama_id} | Single Mounts
 
 
 
 ## getAllMountsList
 
-> MountsListPaged getAllMountsList(language, game, opts)
+> ListMounts getAllMountsList(language, game, opts)
 
 List All Mounts
 
@@ -26,10 +26,11 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let opts = {
   'filterFamilyName': "Dragoturkey", // String | only results with the translated family name
-  'acceptEncoding': "acceptEncoding_example" // String | optional compression for saving bandwidth
+  'acceptEncoding': "acceptEncoding_example", // String | optional compression for saving bandwidth
+  'filterFamilyId': 56 // Number | only results with the unique family id
 };
 apiInstance.getAllMountsList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -46,13 +47,14 @@ apiInstance.getAllMountsList(language, game, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **filterFamilyName** | **String**| only results with the translated family name | [optional] 
  **acceptEncoding** | **String**| optional compression for saving bandwidth | [optional] 
+ **filterFamilyId** | **Number**| only results with the unique family id | [optional] 
 
 ### Return type
 
-[**MountsListPaged**](MountsListPaged.md)
+[**ListMounts**](ListMounts.md)
 
 ### Authorization
 
@@ -66,7 +68,7 @@ No authorization required
 
 ## getMountsList
 
-> MountsListPaged getMountsList(language, game, opts)
+> ListMounts getMountsList(language, game, opts)
 
 List Mounts
 
@@ -79,12 +81,13 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let opts = {
   'filterFamilyName': "Dragoturkey", // String | only results with the translated family name
   'pageSize': 10, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
   'pageNumber': 1, // Number | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-  'fieldsMount': ["null"] // [String] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+  'fieldsMount': ["null"], // [String] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+  'filterFamilyId': 56 // Number | only results with the unique family id
 };
 apiInstance.getMountsList(language, game, opts, (error, data, response) => {
   if (error) {
@@ -101,15 +104,16 @@ apiInstance.getMountsList(language, game, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **filterFamilyName** | **String**| only results with the translated family name | [optional] 
  **pageSize** | **Number**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] 
  **pageNumber** | **Number**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] 
  **fieldsMount** | [**[String]**](String.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] 
+ **filterFamilyId** | **Number**| only results with the unique family id | [optional] 
 
 ### Return type
 
-[**MountsListPaged**](MountsListPaged.md)
+[**ListMounts**](ListMounts.md)
 
 ### Authorization
 
@@ -123,7 +127,7 @@ No authorization required
 
 ## getMountsSearch
 
-> [MountListEntry] getMountsSearch(language, game, query, opts)
+> [Mount] getMountsSearch(language, game, query, opts)
 
 Search Mounts
 
@@ -136,7 +140,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MountsApi();
 let language = "fr"; // String | a valid language code
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 let query = "Dorée"; // String | case sensitive search query
 let opts = {
   'filterFamilyName': "Dragodinde", // String | only results with the translated family name
@@ -157,14 +161,14 @@ apiInstance.getMountsSearch(language, game, query, opts, (error, data, response)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
  **query** | **String**| case sensitive search query | 
  **filterFamilyName** | **String**| only results with the translated family name | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
 
 ### Return type
 
-[**[MountListEntry]**](MountListEntry.md)
+[**[Mount]**](Mount.md)
 
 ### Authorization
 
@@ -192,7 +196,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 180; // Number | identifier
-let game = "dofus2"; // String | 
+let game = "dofus3"; // String | dofus3 | dofus3beta
 apiInstance.getMountsSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -209,7 +213,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
  **ankamaId** | **Number**| identifier | 
- **game** | **String**|  | 
+ **game** | **String**| dofus3 | dofus3beta | 
 
 ### Return type
 

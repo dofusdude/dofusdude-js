@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ankamaId** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
-**familyName** | **String** |  | [optional] 
-**imageUrls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 
-**effects** | [**[EffectsEntry]**](EffectsEntry.md) |  | [optional] 
+**family** | [**MountFamily**](MountFamily.md) |  | [optional] 
+**imageUrls** | [**Images**](Images.md) |  | [optional] 
+**effects** | [**[Effect]**](Effect.md) |  | [optional] 
 
 
