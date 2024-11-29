@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import Effect from './Effect';
 
 /**
- * The Set model module.
- * @module model/Set
+ * The EquipmentSet model module.
+ * @module model/EquipmentSet
  * @version 1.0.0-rc.2
  */
-class Set {
+class EquipmentSet {
     /**
-     * Constructs a new <code>Set</code>.
-     * @alias module:model/Set
+     * Constructs a new <code>EquipmentSet</code>.
+     * @alias module:model/EquipmentSet
      */
     constructor() { 
         
-        Set.initialize(this);
+        EquipmentSet.initialize(this);
     }
 
     /**
@@ -38,15 +38,15 @@ class Set {
     }
 
     /**
-     * Constructs a <code>Set</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EquipmentSet</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Set} obj Optional instance to populate.
-     * @return {module:model/Set} The populated <code>Set</code> instance.
+     * @param {module:model/EquipmentSet} obj Optional instance to populate.
+     * @return {module:model/EquipmentSet} The populated <code>EquipmentSet</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Set();
+            obj = obj || new EquipmentSet();
 
             if (data.hasOwnProperty('ankama_id')) {
                 obj['ankama_id'] = ApiClient.convertToType(data['ankama_id'], 'Number');
@@ -71,9 +71,9 @@ class Set {
     }
 
     /**
-     * Validates the JSON data with respect to <code>Set</code>.
+     * Validates the JSON data with respect to <code>EquipmentSet</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Set</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EquipmentSet</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
@@ -96,37 +96,37 @@ class Set {
 /**
  * @member {Number} ankama_id
  */
-Set.prototype['ankama_id'] = undefined;
+EquipmentSet.prototype['ankama_id'] = undefined;
 
 /**
  * @member {String} name
  */
-Set.prototype['name'] = undefined;
+EquipmentSet.prototype['name'] = undefined;
 
 /**
  * @member {Array.<Number>} equipment_ids
  */
-Set.prototype['equipment_ids'] = undefined;
+EquipmentSet.prototype['equipment_ids'] = undefined;
 
 /**
  * @member {Object.<String, Array.<module:model/Effect>>} effects
  */
-Set.prototype['effects'] = undefined;
+EquipmentSet.prototype['effects'] = undefined;
 
 /**
  * @member {Number} highest_equipment_level
  */
-Set.prototype['highest_equipment_level'] = undefined;
+EquipmentSet.prototype['highest_equipment_level'] = undefined;
 
 /**
  * @member {Boolean} is_cosmetic
  */
-Set.prototype['is_cosmetic'] = undefined;
+EquipmentSet.prototype['is_cosmetic'] = undefined;
 
 
 
 
 
 
-export default Set;
+export default EquipmentSet;
 

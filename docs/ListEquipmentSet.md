@@ -1,4 +1,4 @@
-# dofusdude.Set
+# dofusdude.ListEquipmentSet
 
 ## Properties
 
@@ -6,9 +6,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ankamaId** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
-**equipmentIds** | **[Number]** |  | [optional] 
+**items** | **Number** | amount | [optional] 
+**level** | **Number** |  | [optional] 
 **effects** | **{String: [Effect]}** |  | [optional] 
-**highestEquipmentLevel** | **Number** |  | [optional] 
+**equipmentIds** | **[Number]** |  | [optional] 
 **isCosmetic** | **Boolean** |  | [optional] 
 
 

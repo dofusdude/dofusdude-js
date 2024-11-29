@@ -12,22 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListSet from './ListSet';
-import PagedLinks from './PagedLinks';
+import Effect from './Effect';
 
 /**
- * The ListSets model module.
- * @module model/ListSets
+ * The ListEquipmentSet model module.
+ * @module model/ListEquipmentSet
  * @version 1.0.0-rc.2
  */
-class ListSets {
+class ListEquipmentSet {
     /**
-     * Constructs a new <code>ListSets</code>.
-     * @alias module:model/ListSets
+     * Constructs a new <code>ListEquipmentSet</code>.
+     * @alias module:model/ListEquipmentSet
      */
     constructor() { 
         
-        ListSets.initialize(this);
+        ListEquipmentSet.initialize(this);
     }
 
     /**
@@ -39,45 +38,54 @@ class ListSets {
     }
 
     /**
-     * Constructs a <code>ListSets</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ListEquipmentSet</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListSets} obj Optional instance to populate.
-     * @return {module:model/ListSets} The populated <code>ListSets</code> instance.
+     * @param {module:model/ListEquipmentSet} obj Optional instance to populate.
+     * @return {module:model/ListEquipmentSet} The populated <code>ListEquipmentSet</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListSets();
+            obj = obj || new ListEquipmentSet();
 
-            if (data.hasOwnProperty('_links')) {
-                obj['_links'] = PagedLinks.constructFromObject(data['_links']);
+            if (data.hasOwnProperty('ankama_id')) {
+                obj['ankama_id'] = ApiClient.convertToType(data['ankama_id'], 'Number');
             }
-            if (data.hasOwnProperty('sets')) {
-                obj['sets'] = ApiClient.convertToType(data['sets'], [ListSet]);
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('items')) {
+                obj['items'] = ApiClient.convertToType(data['items'], 'Number');
+            }
+            if (data.hasOwnProperty('level')) {
+                obj['level'] = ApiClient.convertToType(data['level'], 'Number');
+            }
+            if (data.hasOwnProperty('effects')) {
+                obj['effects'] = ApiClient.convertToType(data['effects'], {'String': [Effect]});
+            }
+            if (data.hasOwnProperty('equipment_ids')) {
+                obj['equipment_ids'] = ApiClient.convertToType(data['equipment_ids'], ['Number']);
+            }
+            if (data.hasOwnProperty('is_cosmetic')) {
+                obj['is_cosmetic'] = ApiClient.convertToType(data['is_cosmetic'], 'Boolean');
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>ListSets</code>.
+     * Validates the JSON data with respect to <code>ListEquipmentSet</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ListSets</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ListEquipmentSet</code>.
      */
     static validateJSON(data) {
-        // validate the optional field `_links`
-        if (data['_links']) { // data not null
-          PagedLinks.validateJSON(data['_links']);
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
-        if (data['sets']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['sets'])) {
-                throw new Error("Expected the field `sets` to be an array in the JSON data but got " + data['sets']);
-            }
-            // validate the optional field `sets` (array)
-            for (const item of data['sets']) {
-                ListSet.validateJSON(item);
-            };
+        // ensure the json data is an array
+        if (!Array.isArray(data['equipment_ids'])) {
+            throw new Error("Expected the field `equipment_ids` to be an array in the JSON data but got " + data['equipment_ids']);
         }
 
         return true;
@@ -89,19 +97,45 @@ class ListSets {
 
 
 /**
- * @member {module:model/PagedLinks} _links
+ * @member {Number} ankama_id
  */
-ListSets.prototype['_links'] = undefined;
+ListEquipmentSet.prototype['ankama_id'] = undefined;
 
 /**
- * @member {Array.<module:model/ListSet>} sets
+ * @member {String} name
  */
-ListSets.prototype['sets'] = undefined;
+ListEquipmentSet.prototype['name'] = undefined;
+
+/**
+ * amount
+ * @member {Number} items
+ */
+ListEquipmentSet.prototype['items'] = undefined;
+
+/**
+ * @member {Number} level
+ */
+ListEquipmentSet.prototype['level'] = undefined;
+
+/**
+ * @member {Object.<String, Array.<module:model/Effect>>} effects
+ */
+ListEquipmentSet.prototype['effects'] = undefined;
+
+/**
+ * @member {Array.<Number>} equipment_ids
+ */
+ListEquipmentSet.prototype['equipment_ids'] = undefined;
+
+/**
+ * @member {Boolean} is_cosmetic
+ */
+ListEquipmentSet.prototype['is_cosmetic'] = undefined;
 
 
 
 
 
 
-export default ListSets;
+export default ListEquipmentSet;
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## getAllSetsList
 
-> ListSets getAllSetsList(language, game, opts)
+> ListEquipmentSets getAllSetsList(language, game, opts)
 
 List All Sets
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListSets**](ListSets.md)
+[**ListEquipmentSets**](ListEquipmentSets.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ No authorization required
 
 ## getSetsList
 
-> ListSets getSetsList(language, game, opts)
+> ListEquipmentSet getSetsList(language, game, opts)
 
 List Sets
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListSets**](ListSets.md)
+[**ListEquipmentSet**](ListEquipmentSet.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ No authorization required
 
 ## getSetsSearch
 
-> [ListSet] getSetsSearch(language, game, query, opts)
+> [ListEquipmentSet] getSetsSearch(language, game, query, opts)
 
 Search Sets
 
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ListSet]**](ListSet.md)
+[**[ListEquipmentSet]**](ListEquipmentSet.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ No authorization required
 
 ## getSetsSingle
 
-> Set getSetsSingle(language, ankamaId, game)
+> EquipmentSet getSetsSingle(language, ankamaId, game)
 
 Single Sets
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Set**](Set.md)
+[**EquipmentSet**](EquipmentSet.md)
 
 ### Authorization
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new dofusdude.Set();
+    instance = new dofusdude.ListEquipmentSets();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,46 +47,22 @@
       object[property] = value;
   }
 
-  describe('Set', function() {
-    it('should create an instance of Set', function() {
-      // uncomment below and update the code to test Set
-      //var instance = new dofusdude.Set();
-      //expect(instance).to.be.a(dofusdude.Set);
+  describe('ListEquipmentSets', function() {
+    it('should create an instance of ListEquipmentSets', function() {
+      // uncomment below and update the code to test ListEquipmentSets
+      //var instance = new dofusdude.ListEquipmentSets();
+      //expect(instance).to.be.a(dofusdude.ListEquipmentSets);
     });
 
-    it('should have the property ankamaId (base name: "ankama_id")', function() {
-      // uncomment below and update the code to test the property ankamaId
-      //var instance = new dofusdude.Set();
+    it('should have the property links (base name: "_links")', function() {
+      // uncomment below and update the code to test the property links
+      //var instance = new dofusdude.ListEquipmentSets();
       //expect(instance).to.be();
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new dofusdude.Set();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property equipmentIds (base name: "equipment_ids")', function() {
-      // uncomment below and update the code to test the property equipmentIds
-      //var instance = new dofusdude.Set();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property effects (base name: "effects")', function() {
-      // uncomment below and update the code to test the property effects
-      //var instance = new dofusdude.Set();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property highestEquipmentLevel (base name: "highest_equipment_level")', function() {
-      // uncomment below and update the code to test the property highestEquipmentLevel
-      //var instance = new dofusdude.Set();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property isCosmetic (base name: "is_cosmetic")', function() {
-      // uncomment below and update the code to test the property isCosmetic
-      //var instance = new dofusdude.Set();
+    it('should have the property sets (base name: "sets")', function() {
+      // uncomment below and update the code to test the property sets
+      //var instance = new dofusdude.ListEquipmentSets();
       //expect(instance).to.be();
     });
 

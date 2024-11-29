@@ -25,6 +25,7 @@ docs/Effect.md
 docs/EffectType.md
 docs/Equipment.md
 docs/EquipmentApi.md
+docs/EquipmentSet.md
 docs/Error.md
 docs/GameApi.md
 docs/GameSearch.md
@@ -34,12 +35,12 @@ docs/GetMetaAlmanaxBonuses200ResponseInner.md
 docs/GetMetaWebhooksTwitter200Response.md
 docs/Images.md
 docs/ItemSubtype.md
+docs/ListEquipmentSet.md
+docs/ListEquipmentSets.md
 docs/ListItem.md
 docs/ListItemGeneral.md
 docs/ListItems.md
 docs/ListMounts.md
-docs/ListSet.md
-docs/ListSets.md
 docs/MetaApi.md
 docs/Mount.md
 docs/MountFamily.md
@@ -54,7 +55,6 @@ docs/Recipe.md
 docs/Resource.md
 docs/ResourcesApi.md
 docs/RssWebhook.md
-docs/Set.md
 docs/SetsApi.md
 docs/TranslatedId.md
 docs/TwitterWebhook.md
@@ -95,6 +95,7 @@ src/model/CreateTwitterWebhook.js
 src/model/Effect.js
 src/model/EffectType.js
 src/model/Equipment.js
+src/model/EquipmentSet.js
 src/model/Error.js
 src/model/GameSearch.js
 src/model/GameSearchItem.js
@@ -103,12 +104,12 @@ src/model/GetMetaAlmanaxBonuses200ResponseInner.js
 src/model/GetMetaWebhooksTwitter200Response.js
 src/model/Images.js
 src/model/ItemSubtype.js
+src/model/ListEquipmentSet.js
+src/model/ListEquipmentSets.js
 src/model/ListItem.js
 src/model/ListItemGeneral.js
 src/model/ListItems.js
 src/model/ListMounts.js
-src/model/ListSet.js
-src/model/ListSets.js
 src/model/Mount.js
 src/model/MountFamily.js
 src/model/PagedLinks.js
@@ -119,7 +120,6 @@ src/model/Range.js
 src/model/Recipe.js
 src/model/Resource.js
 src/model/RssWebhook.js
-src/model/Set.js
 src/model/TranslatedId.js
 src/model/TwitterWebhook.js
 src/model/Version.js
@@ -153,6 +153,7 @@ test/model/CreateTwitterWebhook.spec.js
 test/model/Effect.spec.js
 test/model/EffectType.spec.js
 test/model/Equipment.spec.js
+test/model/EquipmentSet.spec.js
 test/model/Error.spec.js
 test/model/GameSearch.spec.js
 test/model/GameSearchItem.spec.js
@@ -161,12 +162,12 @@ test/model/GetMetaAlmanaxBonuses200ResponseInner.spec.js
 test/model/GetMetaWebhooksTwitter200Response.spec.js
 test/model/Images.spec.js
 test/model/ItemSubtype.spec.js
+test/model/ListEquipmentSet.spec.js
+test/model/ListEquipmentSets.spec.js
 test/model/ListItem.spec.js
 test/model/ListItemGeneral.spec.js
 test/model/ListItems.spec.js
 test/model/ListMounts.spec.js
-test/model/ListSet.spec.js
-test/model/ListSets.spec.js
 test/model/Mount.spec.js
 test/model/MountFamily.spec.js
 test/model/PagedLinks.spec.js
@@ -177,7 +178,6 @@ test/model/Range.spec.js
 test/model/Recipe.spec.js
 test/model/Resource.spec.js
 test/model/RssWebhook.spec.js
-test/model/Set.spec.js
 test/model/TranslatedId.spec.js
 test/model/TwitterWebhook.spec.js
 test/model/Version.spec.js

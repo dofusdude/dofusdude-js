@@ -31,6 +31,7 @@ import CreateTwitterWebhook from './model/CreateTwitterWebhook';
 import Effect from './model/Effect';
 import EffectType from './model/EffectType';
 import Equipment from './model/Equipment';
+import EquipmentSet from './model/EquipmentSet';
 import Error from './model/Error';
 import GameSearch from './model/GameSearch';
 import GameSearchItem from './model/GameSearchItem';
@@ -39,12 +40,12 @@ import GetMetaAlmanaxBonuses200ResponseInner from './model/GetMetaAlmanaxBonuses
 import GetMetaWebhooksTwitter200Response from './model/GetMetaWebhooksTwitter200Response';
 import Images from './model/Images';
 import ItemSubtype from './model/ItemSubtype';
+import ListEquipmentSet from './model/ListEquipmentSet';
+import ListEquipmentSets from './model/ListEquipmentSets';
 import ListItem from './model/ListItem';
 import ListItemGeneral from './model/ListItemGeneral';
 import ListItems from './model/ListItems';
 import ListMounts from './model/ListMounts';
-import ListSet from './model/ListSet';
-import ListSets from './model/ListSets';
 import Mount from './model/Mount';
 import MountFamily from './model/MountFamily';
 import PagedLinks from './model/PagedLinks';
@@ -55,7 +56,6 @@ import Range from './model/Range';
 import Recipe from './model/Recipe';
 import Resource from './model/Resource';
 import RssWebhook from './model/RssWebhook';
-import Set from './model/Set';
 import TranslatedId from './model/TranslatedId';
 import TwitterWebhook from './model/TwitterWebhook';
 import Version from './model/Version';
@@ -220,6 +220,12 @@ export {
     Equipment,
 
     /**
+     * The EquipmentSet model constructor.
+     * @property {module:model/EquipmentSet}
+     */
+    EquipmentSet,
+
+    /**
      * The Error model constructor.
      * @property {module:model/Error}
      */
@@ -268,6 +274,18 @@ export {
     ItemSubtype,
 
     /**
+     * The ListEquipmentSet model constructor.
+     * @property {module:model/ListEquipmentSet}
+     */
+    ListEquipmentSet,
+
+    /**
+     * The ListEquipmentSets model constructor.
+     * @property {module:model/ListEquipmentSets}
+     */
+    ListEquipmentSets,
+
+    /**
      * The ListItem model constructor.
      * @property {module:model/ListItem}
      */
@@ -290,18 +308,6 @@ export {
      * @property {module:model/ListMounts}
      */
     ListMounts,
-
-    /**
-     * The ListSet model constructor.
-     * @property {module:model/ListSet}
-     */
-    ListSet,
-
-    /**
-     * The ListSets model constructor.
-     * @property {module:model/ListSets}
-     */
-    ListSets,
 
     /**
      * The Mount model constructor.
@@ -362,12 +368,6 @@ export {
      * @property {module:model/RssWebhook}
      */
     RssWebhook,
-
-    /**
-     * The Set model constructor.
-     * @property {module:model/Set}
-     */
-    Set,
 
     /**
      * The TranslatedId model constructor.

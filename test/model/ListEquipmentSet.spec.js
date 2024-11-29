@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new dofusdude.ListSet();
+    instance = new dofusdude.ListEquipmentSet();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,52 +47,52 @@
       object[property] = value;
   }
 
-  describe('ListSet', function() {
-    it('should create an instance of ListSet', function() {
-      // uncomment below and update the code to test ListSet
-      //var instance = new dofusdude.ListSet();
-      //expect(instance).to.be.a(dofusdude.ListSet);
+  describe('ListEquipmentSet', function() {
+    it('should create an instance of ListEquipmentSet', function() {
+      // uncomment below and update the code to test ListEquipmentSet
+      //var instance = new dofusdude.ListEquipmentSet();
+      //expect(instance).to.be.a(dofusdude.ListEquipmentSet);
     });
 
     it('should have the property ankamaId (base name: "ankama_id")', function() {
       // uncomment below and update the code to test the property ankamaId
-      //var instance = new dofusdude.ListSet();
+      //var instance = new dofusdude.ListEquipmentSet();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new dofusdude.ListSet();
+      //var instance = new dofusdude.ListEquipmentSet();
       //expect(instance).to.be();
     });
 
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
-      //var instance = new dofusdude.ListSet();
+      //var instance = new dofusdude.ListEquipmentSet();
       //expect(instance).to.be();
     });
 
     it('should have the property level (base name: "level")', function() {
       // uncomment below and update the code to test the property level
-      //var instance = new dofusdude.ListSet();
+      //var instance = new dofusdude.ListEquipmentSet();
       //expect(instance).to.be();
     });
 
     it('should have the property effects (base name: "effects")', function() {
       // uncomment below and update the code to test the property effects
-      //var instance = new dofusdude.ListSet();
+      //var instance = new dofusdude.ListEquipmentSet();
       //expect(instance).to.be();
     });
 
     it('should have the property equipmentIds (base name: "equipment_ids")', function() {
       // uncomment below and update the code to test the property equipmentIds
-      //var instance = new dofusdude.ListSet();
+      //var instance = new dofusdude.ListEquipmentSet();
       //expect(instance).to.be();
     });
 
     it('should have the property isCosmetic (base name: "is_cosmetic")', function() {
       // uncomment below and update the code to test the property isCosmetic
-      //var instance = new dofusdude.ListSet();
+      //var instance = new dofusdude.ListEquipmentSet();
       //expect(instance).to.be();
     });
 

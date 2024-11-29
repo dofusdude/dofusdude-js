@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import EquipmentSet from '../model/EquipmentSet';
 import Error from '../model/Error';
-import ListSet from '../model/ListSet';
-import ListSets from '../model/ListSets';
-import Set from '../model/Set';
+import ListEquipmentSet from '../model/ListEquipmentSet';
+import ListEquipmentSets from '../model/ListEquipmentSets';
 
 /**
 * Sets service.
@@ -41,7 +41,7 @@ export default class SetsApi {
      * Callback function to receive the result of the getAllSetsList operation.
      * @callback module:api/SetsApi~getAllSetsListCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListSets} data The data returned by the service call.
+     * @param {module:model/ListEquipmentSets} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -58,7 +58,7 @@ export default class SetsApi {
      * @param {Boolean} [filterContainsCosmeticsOnly] filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
      * @param {Boolean} [filterContainsCosmetics] filter sets based on if they got cosmetic items in it.
      * @param {module:api/SetsApi~getAllSetsListCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ListSets}
+     * data is of type: {@link module:model/ListEquipmentSets}
      */
     getAllSetsList(language, game, opts, callback) {
       opts = opts || {};
@@ -92,7 +92,7 @@ export default class SetsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ListSets;
+      let returnType = ListEquipmentSets;
       return this.apiClient.callApi(
         '/{game}/v1/{language}/sets/all', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -104,7 +104,7 @@ export default class SetsApi {
      * Callback function to receive the result of the getSetsList operation.
      * @callback module:api/SetsApi~getSetsListCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListSets} data The data returned by the service call.
+     * @param {module:model/ListEquipmentSet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -123,7 +123,7 @@ export default class SetsApi {
      * @param {Boolean} [filterContainsCosmeticsOnly] filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
      * @param {Boolean} [filterContainsCosmetics] filter sets based on if they got cosmetic items in it.
      * @param {module:api/SetsApi~getSetsListCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ListSets}
+     * data is of type: {@link module:model/ListEquipmentSet}
      */
     getSetsList(language, game, opts, callback) {
       opts = opts || {};
@@ -159,7 +159,7 @@ export default class SetsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ListSets;
+      let returnType = ListEquipmentSet;
       return this.apiClient.callApi(
         '/{game}/v1/{language}/sets', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -171,7 +171,7 @@ export default class SetsApi {
      * Callback function to receive the result of the getSetsSearch operation.
      * @callback module:api/SetsApi~getSetsSearchCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ListSet>} data The data returned by the service call.
+     * @param {Array.<module:model/ListEquipmentSet>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -187,7 +187,7 @@ export default class SetsApi {
      * @param {Number} [limit = 8)] maximum number of returned results
      * @param {Boolean} [filterIsCosmetic] filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
      * @param {module:api/SetsApi~getSetsSearchCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ListSet>}
+     * data is of type: {@link Array.<module:model/ListEquipmentSet>}
      */
     getSetsSearch(language, game, query, opts, callback) {
       opts = opts || {};
@@ -224,7 +224,7 @@ export default class SetsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [ListSet];
+      let returnType = [ListEquipmentSet];
       return this.apiClient.callApi(
         '/{game}/v1/{language}/sets/search', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -236,7 +236,7 @@ export default class SetsApi {
      * Callback function to receive the result of the getSetsSingle operation.
      * @callback module:api/SetsApi~getSetsSingleCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Set} data The data returned by the service call.
+     * @param {module:model/EquipmentSet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -247,7 +247,7 @@ export default class SetsApi {
      * @param {Number} ankamaId identifier
      * @param {module:model/String} game dofus3 | dofus3beta
      * @param {module:api/SetsApi~getSetsSingleCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Set}
+     * data is of type: {@link module:model/EquipmentSet}
      */
     getSetsSingle(language, ankamaId, game, callback) {
       let postBody = null;
@@ -279,7 +279,7 @@ export default class SetsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Set;
+      let returnType = EquipmentSet;
       return this.apiClient.callApi(
         '/{game}/v1/{language}/sets/{ankama_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
