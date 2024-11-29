@@ -49,7 +49,7 @@ export default class SetsApi {
      * List All Sets
      * Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
      * @param {module:model/String} language a valid language code
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {Object} opts Optional parameters
      * @param {module:model/String} [sortLevel] sort the resulting list by level, default unsorted
      * @param {Number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
@@ -112,7 +112,7 @@ export default class SetsApi {
      * List Sets
      * Retrieve a list of sets.
      * @param {module:model/String} language a valid language code
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {Object} opts Optional parameters
      * @param {module:model/String} [sortLevel] sort the resulting list by level, default unsorted
      * @param {Number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
@@ -179,7 +179,7 @@ export default class SetsApi {
      * Search Sets
      * Search in all names and descriptions of sets with a query.
      * @param {module:model/String} language a valid language code
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {String} query case sensitive search query
      * @param {Object} opts Optional parameters
      * @param {Number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
@@ -245,7 +245,7 @@ export default class SetsApi {
      * Retrieve a specific set with id.
      * @param {module:model/String} language a valid language code
      * @param {Number} ankamaId identifier
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {module:api/SetsApi~getSetsSingleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EquipmentSet}
      */

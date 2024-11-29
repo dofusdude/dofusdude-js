@@ -26,7 +26,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus3"; // String | dofus3 | dofus3beta
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let opts = {
   'filterFamilyName': "Dragoturkey", // String | only results with the translated family name
   'acceptEncoding': "acceptEncoding_example", // String | optional compression for saving bandwidth
@@ -47,7 +47,7 @@ apiInstance.getAllMountsList(language, game, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**| dofus3 | dofus3beta | 
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **filterFamilyName** | **String**| only results with the translated family name | [optional] 
  **acceptEncoding** | **String**| optional compression for saving bandwidth | [optional] 
  **filterFamilyId** | **Number**| only results with the unique family id | [optional] 
@@ -81,7 +81,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus3"; // String | dofus3 | dofus3beta
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let opts = {
   'filterFamilyName': "Dragoturkey", // String | only results with the translated family name
   'pageSize': 10, // Number | size of the results from the list. -1 disables pagination and gets all in one response.
@@ -104,7 +104,7 @@ apiInstance.getMountsList(language, game, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**| dofus3 | dofus3beta | 
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **filterFamilyName** | **String**| only results with the translated family name | [optional] 
  **pageSize** | **Number**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] 
  **pageNumber** | **Number**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] 
@@ -140,7 +140,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MountsApi();
 let language = "fr"; // String | a valid language code
-let game = "dofus3"; // String | dofus3 | dofus3beta
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let query = "Dorée"; // String | case sensitive search query
 let opts = {
   'filterFamilyName': "Dragodinde", // String | only results with the translated family name
@@ -161,7 +161,7 @@ apiInstance.getMountsSearch(language, game, query, opts, (error, data, response)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**| dofus3 | dofus3beta | 
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **query** | **String**| case sensitive search query | 
  **filterFamilyName** | **String**| only results with the translated family name | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
@@ -196,7 +196,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 180; // Number | identifier
-let game = "dofus3"; // String | dofus3 | dofus3beta
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 apiInstance.getMountsSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
  **ankamaId** | **Number**| identifier | 
- **game** | **String**| dofus3 | dofus3beta | 
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
 
 ### Return type
 

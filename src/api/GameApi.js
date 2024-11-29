@@ -48,7 +48,7 @@ export default class GameApi {
      * Game Search
      * Search in all names and descriptions of all supported types in the game. For the list of supported types see the endpoint /dofus3/meta/search/types.
      * @param {module:model/String} language a valid language code
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {String} query search query
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/String>} [filterSearchIndex] only results with all specific type
@@ -113,7 +113,7 @@ export default class GameApi {
      * Search All Items
      * Search in all names and descriptions of Dofus items (including all subtypes) with a query.
      * @param {module:model/String} language a valid language code
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {String} query case sensitive search query
      * @param {Object} opts Optional parameters
      * @param {Number} [filterMinLevel] only results which level is equal or above this value

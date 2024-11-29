@@ -49,7 +49,7 @@ export default class ResourcesApi {
      * List All Resources
      * Retrieve all resource items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
      * @param {module:model/String} language a valid language code
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {Object} opts Optional parameters
      * @param {module:model/String} [sortLevel] sort the resulting list by level, default unsorted
      * @param {Number} [filterMinLevel] only results which level is equal or above this value
@@ -110,7 +110,7 @@ export default class ResourcesApi {
      * Search Resources
      * Search in all names and descriptions of resource items with a query.
      * @param {module:model/String} language a valid language code
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {String} query case sensitive search query
      * @param {Object} opts Optional parameters
      * @param {Number} [filterMinLevel] only results which level is equal or above this value
@@ -175,7 +175,7 @@ export default class ResourcesApi {
      * List Resources
      * Retrieve a list of resource items.
      * @param {module:model/String} language a valid language code
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {Object} opts Optional parameters
      * @param {module:model/String} [sortLevel] sort the resulting list by level, default unsorted
      * @param {Number} [filterMinLevel] only results which level is equal or above this value
@@ -241,7 +241,7 @@ export default class ResourcesApi {
      * Retrieve a specific resource item with id.
      * @param {module:model/String} language a valid language code
      * @param {Number} ankamaId identifier
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {module:api/ResourcesApi~getItemsResourcesSingleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Resource}
      */

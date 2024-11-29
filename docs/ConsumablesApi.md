@@ -26,7 +26,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.ConsumablesApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus3"; // String | dofus3 | dofus3beta
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let opts = {
   'sortLevel': "asc", // String | sort the resulting list by level, default unsorted
   'filterMinLevel': 150, // Number | only results which level is equal or above this value
@@ -49,7 +49,7 @@ apiInstance.getAllItemsConsumablesList(language, game, opts, (error, data, respo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**| dofus3 | dofus3beta | 
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **sortLevel** | **String**| sort the resulting list by level, default unsorted | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
@@ -85,7 +85,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.ConsumablesApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus3"; // String | dofus3 | dofus3beta
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let opts = {
   'sortLevel': "asc", // String | sort the resulting list by level, default unsorted
   'filterMinLevel': 150, // Number | only results which level is equal or above this value
@@ -110,7 +110,7 @@ apiInstance.getItemsConsumablesList(language, game, opts, (error, data, response
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**| dofus3 | dofus3beta | 
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **sortLevel** | **String**| sort the resulting list by level, default unsorted | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
@@ -148,7 +148,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.ConsumablesApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus3"; // String | dofus3 | dofus3beta
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let query = "Wholewrite"; // String | case sensitive search query
 let opts = {
   'filterMinLevel': 1, // Number | only results which level is equal or above this value
@@ -171,7 +171,7 @@ apiInstance.getItemsConsumablesSearch(language, game, query, opts, (error, data,
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**| dofus3 | dofus3beta | 
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **query** | **String**| case sensitive search query | 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
@@ -208,7 +208,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.ConsumablesApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 17206; // Number | identifier
-let game = "dofus3"; // String | dofus3 | dofus3beta
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 apiInstance.getItemsConsumablesSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
  **ankamaId** | **Number**| identifier | 
- **game** | **String**| dofus3 | dofus3beta | 
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
 
 ### Return type
 

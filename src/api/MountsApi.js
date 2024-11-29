@@ -48,7 +48,7 @@ export default class MountsApi {
      * List All Mounts
      * Retrieve all mounts with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
      * @param {module:model/String} language a valid language code
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {Object} opts Optional parameters
      * @param {String} [filterFamilyName] only results with the translated family name
      * @param {module:model/String} [acceptEncoding] optional compression for saving bandwidth
@@ -105,7 +105,7 @@ export default class MountsApi {
      * List Mounts
      * Retrieve a list of mounts.
      * @param {module:model/String} language a valid language code
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {Object} opts Optional parameters
      * @param {String} [filterFamilyName] only results with the translated family name
      * @param {Number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
@@ -166,7 +166,7 @@ export default class MountsApi {
      * Search Mounts
      * Search in all names and descriptions of mounts with a query.
      * @param {module:model/String} language a valid language code
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {String} query case sensitive search query
      * @param {Object} opts Optional parameters
      * @param {String} [filterFamilyName] only results with the translated family name
@@ -228,7 +228,7 @@ export default class MountsApi {
      * Retrieve a specific mount with id.
      * @param {module:model/String} language a valid language code
      * @param {Number} ankamaId identifier
-     * @param {module:model/String} game dofus3 | dofus3beta
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {module:api/MountsApi~getMountsSingleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Mount}
      */

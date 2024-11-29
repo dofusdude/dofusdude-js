@@ -24,7 +24,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.GameApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus3"; // String | dofus3 | dofus3beta
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let query = "paztek"; // String | search query
 let opts = {
   'filterSearchIndex': ["null"], // [String] | only results with all specific type
@@ -47,7 +47,7 @@ apiInstance.getGameSearch(language, game, query, opts, (error, data, response) =
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**| dofus3 | dofus3beta | 
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **query** | **String**| search query | 
  **filterSearchIndex** | [**[String]**](String.md)| only results with all specific type | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
@@ -83,7 +83,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.GameApi();
 let language = "fr"; // String | a valid language code
-let game = "dofus3"; // String | dofus3 | dofus3beta
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let query = "atcham"; // String | case sensitive search query
 let opts = {
   'filterMinLevel': 190, // Number | only results which level is equal or above this value
@@ -106,7 +106,7 @@ apiInstance.getItemsAllSearch(language, game, query, opts, (error, data, respons
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| a valid language code | 
- **game** | **String**| dofus3 | dofus3beta | 
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **query** | **String**| case sensitive search query | 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
