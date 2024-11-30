@@ -24,7 +24,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.GameApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+let game = "dofus3beta"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let query = "paztek"; // String | search query
 let opts = {
   'filterSearchIndex': ["null"], // [String] | only results with all specific type
@@ -83,7 +83,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.GameApi();
 let language = "fr"; // String | a valid language code
-let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+let game = "dofus3beta"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let query = "atcham"; // String | case sensitive search query
 let opts = {
   'filterMinLevel': 190, // Number | only results which level is equal or above this value

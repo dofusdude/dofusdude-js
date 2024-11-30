@@ -26,7 +26,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+let game = "dofus3beta"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let opts = {
   'sortLevel': "asc", // String | sort the resulting list by level, default unsorted
   'filterMinHighestEquipmentLevel': 190, // Number | only results where the equipment with the highest level is above or equal to this value
@@ -87,7 +87,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+let game = "dofus3beta"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let opts = {
   'sortLevel': "asc", // String | sort the resulting list by level, default unsorted
   'filterMinHighestEquipmentLevel': 190, // Number | only results where the equipment with the highest level is above or equal to this value
@@ -152,7 +152,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
-let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+let game = "dofus3beta"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let query = "Des"; // String | case sensitive search query
 let opts = {
   'filterMinHighestEquipmentLevel': 195, // Number | only results where the equipment with the highest level is above or equal to this value
@@ -212,7 +212,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.SetsApi();
 let language = "language_example"; // String | a valid language code
 let ankamaId = 499; // Number | identifier
-let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+let game = "dofus3beta"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 apiInstance.getSetsSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
     console.error(error);

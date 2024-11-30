@@ -66,7 +66,7 @@ export default class MetaApi {
       let accepts = ['application/json'];
       let returnType = ['String'];
       return this.apiClient.callApi(
-        '/dofus3/meta/search/types', 'GET',
+        '/dofus3beta/v1/meta/search/types', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -103,7 +103,7 @@ export default class MetaApi {
       let accepts = ['application/json'];
       let returnType = ['String'];
       return this.apiClient.callApi(
-        '/dofus3/meta/items/types', 'GET',
+        '/dofus3beta/v1/meta/items/types', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -146,7 +146,7 @@ export default class MetaApi {
       let accepts = ['application/json'];
       let returnType = [GetMetaAlmanaxBonuses200ResponseInner];
       return this.apiClient.callApi(
-        '/dofus3/meta/{language}/almanax/bonuses', 'GET',
+        '/dofus2/meta/{language}/almanax/bonuses', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -199,7 +199,7 @@ export default class MetaApi {
       let accepts = ['application/json'];
       let returnType = [GetMetaAlmanaxBonuses200ResponseInner];
       return this.apiClient.callApi(
-        '/dofus3/meta/{language}/almanax/bonuses/search', 'GET',
+        '/dofus2/meta/{language}/almanax/bonuses/search', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -236,7 +236,7 @@ export default class MetaApi {
       let accepts = ['application/json'];
       let returnType = ['String'];
       return this.apiClient.callApi(
-        '/dofus3/meta/elements', 'GET',
+        '/dofus3beta/v1/meta/elements', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -273,7 +273,7 @@ export default class MetaApi {
       let accepts = ['application/json'];
       let returnType = Version;
       return this.apiClient.callApi(
-        '/dofus3/meta/version', 'GET',
+        '/dofus3beta/v1/meta/version', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

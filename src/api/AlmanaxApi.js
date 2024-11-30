@@ -77,7 +77,7 @@ export default class AlmanaxApi {
       let accepts = ['application/json'];
       let returnType = Almanax;
       return this.apiClient.callApi(
-        '/dofus3/{language}/almanax/{date}', 'GET',
+        '/dofus2/{language}/almanax/{date}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -132,7 +132,7 @@ export default class AlmanaxApi {
       let accepts = ['application/json'];
       let returnType = [Almanax];
       return this.apiClient.callApi(
-        '/dofus3/{language}/almanax', 'GET',
+        '/dofus2/{language}/almanax', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
