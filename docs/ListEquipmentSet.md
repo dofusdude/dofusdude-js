@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **level** | **Number** |  | [optional] 
 **effects** | **{String: [Effect]}** |  | [optional] 
 **equipmentIds** | **[Number]** |  | [optional] 
-**isCosmetic** | **Boolean** |  | [optional] 
+**containsCosmetics** | **Boolean** |  | [optional] 
+**containsCosmeticsOnly** | **Boolean** |  | [optional] 
 
 

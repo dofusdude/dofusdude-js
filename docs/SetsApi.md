@@ -158,7 +158,8 @@ let opts = {
   'filterMinHighestEquipmentLevel': 195, // Number | only results where the equipment with the highest level is above or equal to this value
   'filterMaxHighestEquipmentLevel': 200, // Number | only results where the equipment with the highest level is below or equal to this value
   'limit': 8, // Number | maximum number of returned results
-  'filterIsCosmetic': true // Boolean | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+  'filterContainsCosmeticsOnly': true, // Boolean | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+  'filterContainsCosmetics': true // Boolean | filter sets based on if they got any cosmetic items in it
 };
 apiInstance.getSetsSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -180,7 +181,8 @@ Name | Type | Description  | Notes
  **filterMinHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is above or equal to this value | [optional] 
  **filterMaxHighestEquipmentLevel** | **Number**| only results where the equipment with the highest level is below or equal to this value | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
- **filterIsCosmetic** | **Boolean**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
+ **filterContainsCosmeticsOnly** | **Boolean**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
+ **filterContainsCosmetics** | **Boolean**| filter sets based on if they got any cosmetic items in it | [optional] 
 
 ### Return type
 

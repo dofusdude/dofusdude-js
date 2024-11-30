@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **equipmentIds** | **[Number]** |  | [optional] 
 **effects** | **{String: [Effect]}** |  | [optional] 
 **highestEquipmentLevel** | **Number** |  | [optional] 
-**isCosmetic** | **Boolean** |  | [optional] 
+**containsCosmetics** | **Boolean** |  | [optional] 
+**containsCosmeticsOnly** | **Boolean** |  | [optional] 
 
 
