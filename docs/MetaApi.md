@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getMetaAlmanaxBonuses**](MetaApi.md#getMetaAlmanaxBonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses
 [**getMetaAlmanaxBonusesSearch**](MetaApi.md#getMetaAlmanaxBonusesSearch) | **GET** /dofus2/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses
 [**getMetaElements**](MetaApi.md#getMetaElements) | **GET** /dofus3beta/v1/meta/elements | Effects and Condition Elements
-[**getMetaVersion**](MetaApi.md#getMetaVersion) | **GET** /dofus3beta/v1/meta/version | Game Version
+[**getMetaVersion**](MetaApi.md#getMetaVersion) | **GET** /{game}/v1/meta/version | Game Version
 
 
 
@@ -234,7 +234,7 @@ No authorization required
 
 ## getMetaVersion
 
-> Version getMetaVersion()
+> Version getMetaVersion(game)
 
 Game Version
 
@@ -246,7 +246,8 @@ The current game version of the hosted data.
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
-apiInstance.getMetaVersion((error, data, response) => {
+let game = "dofus3beta"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+apiInstance.getMetaVersion(game, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -257,7 +258,10 @@ apiInstance.getMetaVersion((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
 
 ### Return type
 
