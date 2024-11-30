@@ -74,7 +74,7 @@ No authorization required
 
 ## getSetsList
 
-> ListEquipmentSet getSetsList(language, game, opts)
+> ListEquipmentSets getSetsList(language, game, opts)
 
 List Sets
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListEquipmentSet**](ListEquipmentSet.md)
+[**ListEquipmentSets**](ListEquipmentSets.md)
 
 ### Authorization
 
