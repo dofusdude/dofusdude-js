@@ -200,11 +200,10 @@ let language = "es"; // String | a valid language code
 let game = "dofus3beta"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 let query = "Ficha"; // String | case sensitive search query
 let opts = {
-  'filterTypeName': "Justicieros", // String | only results with the translated type name
   'filterMinLevel': 60, // Number | only results which level is equal or above this value
   'filterMaxLevel': 70, // Number | only results which level is equal or below this value
   'limit': 8, // Number | maximum number of returned results
-  'filterTypeEnum': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+  'filterTypeNameId': ["null"] // [String] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getItemsQuestSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -223,11 +222,10 @@ Name | Type | Description  | Notes
  **language** | **String**| a valid language code | 
  **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **query** | **String**| case sensitive search query | 
- **filterTypeName** | **String**| only results with the translated type name | [optional] 
  **filterMinLevel** | **Number**| only results which level is equal or above this value | [optional] 
  **filterMaxLevel** | **Number**| only results which level is equal or below this value | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
- **filterTypeEnum** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filterTypeNameId** | [**[String]**](String.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
