@@ -29,8 +29,8 @@ let query = "paztek"; // String | search query
 let opts = {
   'filterSearchIndex': ["null"], // [String] | only results with all specific type
   'limit': 8, // Number | maximum number of returned results
-  'fieldsItem': ["null"], // [String] | adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed.
-  'filterTypeNameId': ["null"] // [String] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[type]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+  'fieldsItem': ["null"], // [String] | adds fields from the item search to the list entries if the hit is an item. Multiple comma separated values allowed.
+  'filterTypeNameId': ["null"] // [String] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[search_index]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 };
 apiInstance.getGameSearch(language, game, query, opts, (error, data, response) => {
   if (error) {
@@ -51,8 +51,8 @@ Name | Type | Description  | Notes
  **query** | **String**| search query | 
  **filterSearchIndex** | [**[String]**](String.md)| only results with all specific type | [optional] 
  **limit** | **Number**| maximum number of returned results | [optional] [default to 8]
- **fieldsItem** | [**[String]**](String.md)| adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed. | [optional] 
- **filterTypeNameId** | [**[String]**](String.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[type]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **fieldsItem** | [**[String]**](String.md)| adds fields from the item search to the list entries if the hit is an item. Multiple comma separated values allowed. | [optional] 
+ **filterTypeNameId** | [**[String]**](String.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[search_index]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
