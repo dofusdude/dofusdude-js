@@ -99,7 +99,7 @@ export default class AlmanaxApi {
      * @param {String} [filterBonusType] ids from meta/{language}/almanax/bonuses
      * @param {Date} [rangeFrom] yyyy-mm-dd
      * @param {Date} [rangeTo] yyyy-mm-dd
-     * @param {Number} [rangeSize] size of the returned range
+     * @param {Number} [rangeSize] Size of the returned range. Disable to fully use the range by setting size to -1.
      * @param {String} [timezone = 'Europe/Paris')] determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
      * @param {module:api/AlmanaxApi~getAlmanaxRangeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Almanax>}

@@ -75,7 +75,7 @@ let opts = {
   'filterBonusType': "experience-points", // String | ids from meta/{language}/almanax/bonuses
   'rangeFrom': new Date("2013-10-20"), // Date | yyyy-mm-dd
   'rangeTo': new Date("2013-10-20"), // Date | yyyy-mm-dd
-  'rangeSize': -1, // Number | size of the returned range
+  'rangeSize': -1, // Number | Size of the returned range. Disable to fully use the range by setting size to -1.
   'timezone': "Europe/Paris" // String | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
 };
 apiInstance.getAlmanaxRange(language, opts, (error, data, response) => {
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
  **filterBonusType** | **String**| ids from meta/{language}/almanax/bonuses | [optional] 
  **rangeFrom** | **Date**| yyyy-mm-dd | [optional] 
  **rangeTo** | **Date**| yyyy-mm-dd | [optional] 
- **rangeSize** | **Number**| size of the returned range | [optional] 
+ **rangeSize** | **Number**| Size of the returned range. Disable to fully use the range by setting size to -1. | [optional] 
  **timezone** | **String**| determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location. | [optional] [default to &#39;Europe/Paris&#39;]
 
 ### Return type
