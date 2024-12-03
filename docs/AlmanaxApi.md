@@ -73,8 +73,8 @@ let apiInstance = new dofusdude.AlmanaxApi();
 let language = "fr"; // String | code
 let opts = {
   'filterBonusType': "experience-points", // String | ids from meta/{language}/almanax/bonuses
-  'rangeFrom': new Date("Thu Sep 15 00:00:00 UTC 2016"), // Date | yyyy-mm-dd
-  'rangeTo': new Date("Wed Sep 28 00:00:00 UTC 2016"), // Date | yyyy-mm-dd
+  'rangeFrom': new Date("2013-10-20"), // Date | yyyy-mm-dd
+  'rangeTo': new Date("2013-10-20"), // Date | yyyy-mm-dd
   'rangeSize': -1, // Number | size of the returned range
   'timezone': "Europe/Paris" // String | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
 };
