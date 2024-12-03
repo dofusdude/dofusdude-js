@@ -4,18 +4,18 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getGameSearchTypes**](MetaApi.md#getGameSearchTypes) | **GET** /dofus3beta/v1/meta/search/types | Available Game Search Types
-[**getItemTypes**](MetaApi.md#getItemTypes) | **GET** /dofus3beta/v1/meta/items/types | Available Item Types
-[**getMetaAlmanaxBonuses**](MetaApi.md#getMetaAlmanaxBonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses
-[**getMetaAlmanaxBonusesSearch**](MetaApi.md#getMetaAlmanaxBonusesSearch) | **GET** /dofus2/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses
-[**getMetaElements**](MetaApi.md#getMetaElements) | **GET** /dofus3beta/v1/meta/elements | Effects and Condition Elements
+[**getGameSearchTypes**](MetaApi.md#getGameSearchTypes) | **GET** /{game}/v1/meta/search/types | Available Game Search Types
+[**getItemTypes**](MetaApi.md#getItemTypes) | **GET** /{game}/v1/meta/items/types | Available Item Types
+[**getMetaAlmanaxBonuses**](MetaApi.md#getMetaAlmanaxBonuses) | **GET** /dofus3/v1/meta/{language}/almanax/bonuses | Available Almanax Bonuses
+[**getMetaAlmanaxBonusesSearch**](MetaApi.md#getMetaAlmanaxBonusesSearch) | **GET** /dofus3/v1/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses
+[**getMetaElements**](MetaApi.md#getMetaElements) | **GET** /{game}/v1/meta/elements | Effects and Condition Elements
 [**getMetaVersion**](MetaApi.md#getMetaVersion) | **GET** /{game}/v1/meta/version | Game Version
 
 
 
 ## getGameSearchTypes
 
-> [String] getGameSearchTypes()
+> [String] getGameSearchTypes(game)
 
 Available Game Search Types
 
@@ -27,7 +27,8 @@ Get all types for /{game}/v1/{lang}/search available for filtering. All names ar
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
-apiInstance.getGameSearchTypes((error, data, response) => {
+let game = "game_example"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+apiInstance.getGameSearchTypes(game, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -38,7 +39,10 @@ apiInstance.getGameSearchTypes((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
 
 ### Return type
 
@@ -56,7 +60,7 @@ No authorization required
 
 ## getItemTypes
 
-> [String] getItemTypes()
+> [String] getItemTypes(game)
 
 Available Item Types
 
@@ -68,7 +72,8 @@ Get all types of all items. Primarily used for filtering more detailed types in 
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
-apiInstance.getItemTypes((error, data, response) => {
+let game = "game_example"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+apiInstance.getItemTypes(game, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -79,7 +84,10 @@ apiInstance.getItemTypes((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
 
 ### Return type
 
@@ -193,7 +201,7 @@ No authorization required
 
 ## getMetaElements
 
-> [String] getMetaElements()
+> [String] getMetaElements(game)
 
 Effects and Condition Elements
 
@@ -205,7 +213,8 @@ Get the mappings for all specific elements that are linked in the dataset. All n
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
-apiInstance.getMetaElements((error, data, response) => {
+let game = "game_example"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+apiInstance.getMetaElements(game, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -216,7 +225,10 @@ apiInstance.getMetaElements((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **game** | **String**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
 
 ### Return type
 
