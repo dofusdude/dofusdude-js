@@ -27,7 +27,7 @@ Get all types for /{game}/v1/{lang}/search available for filtering. All names ar
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
-let game = "game_example"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 apiInstance.getGameSearchTypes(game, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -72,7 +72,7 @@ Get all types of all items. Primarily used for filtering more detailed types in 
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
-let game = "game_example"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 apiInstance.getItemTypes(game, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -213,7 +213,7 @@ Get the mappings for all specific elements that are linked in the dataset. All n
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
-let game = "game_example"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 apiInstance.getMetaElements(game, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -258,7 +258,7 @@ The current game version of the hosted data.
 import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
-let game = "dofus3beta"; // String | game main 'dofus3' or beta channel 'dofus3beta'
+let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 apiInstance.getMetaVersion(game, (error, data, response) => {
   if (error) {
     console.error(error);

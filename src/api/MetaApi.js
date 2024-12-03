@@ -46,7 +46,7 @@ export default class MetaApi {
     /**
      * Available Game Search Types
      * Get all types for /{game}/v1/{lang}/search available for filtering. All names are english for comparing them inside applications. Order is fixed so you can compare indices instead of strings.
-     * @param {String} game game main 'dofus3' or beta channel 'dofus3beta'
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {module:api/MetaApi~getGameSearchTypesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<String>}
      */
@@ -89,7 +89,7 @@ export default class MetaApi {
     /**
      * Available Item Types
      * Get all types of all items. Primarily used for filtering more detailed types in listings or search endpoints. All names are english for comparing them inside applications. Ordering is not guaranteed to persist with game updates.
-     * @param {String} game game main 'dofus3' or beta channel 'dofus3beta'
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {module:api/MetaApi~getItemTypesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<String>}
      */
@@ -228,7 +228,7 @@ export default class MetaApi {
     /**
      * Effects and Condition Elements
      * Get the mappings for all specific elements that are linked in the dataset. All names are english. Translations are not needed because of a global unique id which is the index inside the array. Future elements will get a higher id.
-     * @param {String} game game main 'dofus3' or beta channel 'dofus3beta'
+     * @param {module:model/String} game game main 'dofus3' or beta channel 'dofus3beta'
      * @param {module:api/MetaApi~getMetaElementsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<String>}
      */
