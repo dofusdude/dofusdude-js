@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getAlmanaxDate
 
-> Almanax getAlmanaxDate(language, date)
+> Almanax getAlmanaxDate(language, date, opts)
 
 Single Almanax Date
 
@@ -25,7 +25,10 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.AlmanaxApi();
 let language = "fr"; // String | code
 let date = new Date("Tue Jul 14 00:00:00 UTC 2020"); // Date | yyyy-mm-dd
-apiInstance.getAlmanaxDate(language, date, (error, data, response) => {
+let opts = {
+  'level': 56 // Number | character level for the reward_xp field
+};
+apiInstance.getAlmanaxDate(language, date, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -41,6 +44,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| code | 
  **date** | **Date**| yyyy-mm-dd | 
+ **level** | **Number**| character level for the reward_xp field | [optional] 
 
 ### Return type
 
@@ -76,7 +80,8 @@ let opts = {
   'rangeFrom': new Date("2013-10-20"), // Date | yyyy-mm-dd
   'rangeTo': new Date("2013-10-20"), // Date | yyyy-mm-dd
   'rangeSize': -1, // Number | Size of the returned range. Disable to fully use the range by setting size to -1.
-  'timezone': "Europe/Paris" // String | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
+  'timezone': "Europe/Paris", // String | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
+  'level': 56 // Number | character level for the reward_xp field
 };
 apiInstance.getAlmanaxRange(language, opts, (error, data, response) => {
   if (error) {
@@ -98,6 +103,7 @@ Name | Type | Description  | Notes
  **rangeTo** | **Date**| yyyy-mm-dd | [optional] 
  **rangeSize** | **Number**| Size of the returned range. Disable to fully use the range by setting size to -1. | [optional] 
  **timezone** | **String**| determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location. | [optional] [default to &#39;Europe/Paris&#39;]
+ **level** | **Number**| character level for the reward_xp field | [optional] 
 
 ### Return type
 
