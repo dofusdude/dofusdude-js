@@ -24,7 +24,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.AlmanaxApi();
 let language = "fr"; // String | code
-let date = new Date("Tue Jul 14 00:00:00 UTC 2020"); // Date | yyyy-mm-dd
+let date = new Date("Sat Jan 25 00:00:00 UTC 2025"); // Date | yyyy-mm-dd
 let opts = {
   'level': 56 // Number | character level for the reward_xp field
 };
