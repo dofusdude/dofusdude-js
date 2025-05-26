@@ -207,7 +207,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.EquipmentApi();
 let language = "language_example"; // String | a valid language code
-let ankamaId = 26009; // Number | identifier
+let ankamaId = 13971; // Number | identifier
 let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 apiInstance.getItemsEquipmentSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
