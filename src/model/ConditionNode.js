@@ -35,7 +35,7 @@ class ConditionNode {
         var match = 0;
         var errorMessages = [];
         try {
-            if (typeof instance === "ConditionRelation") {
+            if (instance instanceof ConditionRelation) {
                 this.actualInstance = instance;
             } else {
                 // plain JS object
@@ -51,7 +51,7 @@ class ConditionNode {
         }
 
         try {
-            if (typeof instance === "ConditionLeaf") {
+            if (instance instanceof ConditionLeaf) {
                 this.actualInstance = instance;
             } else {
                 // plain JS object

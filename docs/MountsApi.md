@@ -197,7 +197,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MountsApi();
 let language = "language_example"; // String | a valid language code
-let ankamaId = 180; // Number | identifier
+let ankamaId = 33216; // Number | identifier
 let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
 apiInstance.getMountsSingle(language, ankamaId, game, (error, data, response) => {
   if (error) {
