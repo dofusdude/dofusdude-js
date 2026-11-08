@@ -1,6 +1,6 @@
 # dofusdude.ResourcesApi
 
-All URIs are relative to *https://api.dofusdu.de*
+All URIs are relative to *https://beta.api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
