@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **conditions** | [**ConditionNode**](ConditionNode.md) |  | [optional] 
 **recipe** | [**[Recipe]**](Recipe.md) |  | [optional] 
 **parentSet** | [**TranslatedId**](TranslatedId.md) |  | [optional] 
+**combat** | [**WeaponCombat**](WeaponCombat.md) |  | [optional] 
 
 

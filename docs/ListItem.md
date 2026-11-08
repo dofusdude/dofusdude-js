@@ -21,5 +21,6 @@ Name | Type | Description | Notes
 **maxCastPerTurn** | **Number** |  | [optional] 
 **apCost** | **Number** |  | [optional] 
 **range** | [**Range**](Range.md) |  | [optional] 
+**combat** | [**WeaponCombat**](WeaponCombat.md) |  | [optional] 
 
 

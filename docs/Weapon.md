@@ -21,5 +21,6 @@ Name | Type | Description | Notes
 **range** | [**Range**](Range.md) |  | [optional] 
 **recipe** | [**[Recipe]**](Recipe.md) |  | [optional] 
 **parentSet** | [**TranslatedId**](TranslatedId.md) |  | [optional] 
+**combat** | [**WeaponCombat**](WeaponCombat.md) |  | [optional] 
 
 

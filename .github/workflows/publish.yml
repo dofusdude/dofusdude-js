@@ -1,12 +1,13 @@
 name: Node.js Package
 on:
   release:
-    types: [created]
+    types:
+      - published
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -16,12 +17,19 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish
+      - name: Check release channel
+        env:
+          RELEASE_PRERELEASE: ${{ github.event.release.prerelease }}
+        run: node -e 'const beta = require("./package.json").version.includes("-"); if
+          (beta !== (process.env.RELEASE_PRERELEASE === "true")) throw
+          Error("Package version and GitHub release channel disagree")'
+      - run: npm publish --tag "${{ github.event.release.prerelease && 'beta' ||
+          'latest' }}"
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
