@@ -25,6 +25,7 @@ import SpellScriptUsage from './SpellScriptUsage';
 class Spell {
     /**
      * Constructs a new <code>Spell</code>.
+     * A spell with its available grades, effects and casting rules.
      * @alias module:model/Spell
      * @extends Object
      * @param ankamaId {Number} 

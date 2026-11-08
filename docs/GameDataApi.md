@@ -136,7 +136,7 @@ let apiInstance = new dofusdude.GameDataApi();
 let game = "game_example"; // String | 
 let language = "language_example"; // String | 
 let opts = {
-  'include': "include_example" // String | Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+  'include': "include_example" // String | Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
 };
 apiInstance.getAllMonsters(game, language, opts, (error, data, response) => {
   if (error) {
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **game** | **String**|  | 
  **language** | **String**|  | 
- **include** | **String**| Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade. | [optional] 
+ **include** | **String**| Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell. | [optional] 
 
 ### Return type
 
@@ -319,7 +319,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.GameDataApi();
 let game = "game_example"; // String | 
 let language = "language_example"; // String | 
-let ankamaId = 56; // Number | 
+let ankamaId = 0; // Number | 
 apiInstance.getAreaById(game, language, ankamaId, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -419,7 +419,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.GameDataApi();
 let game = "game_example"; // String | 
 let language = "language_example"; // String | 
-let ankamaId = 56; // Number | 
+let ankamaId = 1; // Number | 
 apiInstance.getClassById(game, language, ankamaId, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -519,9 +519,9 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.GameDataApi();
 let game = "game_example"; // String | 
 let language = "language_example"; // String | 
-let ankamaId = 56; // Number | 
+let ankamaId = 31; // Number | 
 let opts = {
-  'include': "include_example" // String | Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+  'include': "include_example" // String | Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
 };
 apiInstance.getMonsterById(game, language, ankamaId, opts, (error, data, response) => {
   if (error) {
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
  **game** | **String**|  | 
  **language** | **String**|  | 
  **ankamaId** | **Number**|  | 
- **include** | **String**| Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade. | [optional] 
+ **include** | **String**| Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell. | [optional] 
 
 ### Return type
 
@@ -574,7 +574,7 @@ let opts = {
   'pageNumber': 1, // Number | 
   'pageSize': 20, // Number | 
   'fieldsMonsters': "fieldsMonsters_example", // String | 
-  'include': "include_example" // String | Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+  'include': "include_example" // String | Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
 };
 apiInstance.getMonsters(game, language, opts, (error, data, response) => {
   if (error) {
@@ -595,7 +595,7 @@ Name | Type | Description  | Notes
  **pageNumber** | **Number**|  | [optional] [default to 1]
  **pageSize** | **Number**|  | [optional] [default to 20]
  **fieldsMonsters** | **String**|  | [optional] 
- **include** | **String**| Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade. | [optional] 
+ **include** | **String**| Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell. | [optional] 
 
 ### Return type
 
@@ -625,7 +625,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.GameDataApi();
 let game = "game_example"; // String | 
 let language = "language_example"; // String | 
-let ankamaId = 56; // Number | 
+let ankamaId = 201; // Number | 
 let opts = {
   'grade': 56 // Number | Return only the requested mapped spell grade in `levels`.
 };
@@ -729,7 +729,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.GameDataApi();
 let game = "game_example"; // String | 
 let language = "language_example"; // String | 
-let ankamaId = 56; // Number | 
+let ankamaId = 1; // Number | 
 apiInstance.getSubareaById(game, language, ankamaId, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -829,7 +829,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.GameDataApi();
 let game = "game_example"; // String | 
 let language = "language_example"; // String | 
-let ankamaId = 56; // Number | 
+let ankamaId = 0; // Number | 
 apiInstance.getSuperAreaById(game, language, ankamaId, (error, data, response) => {
   if (error) {
     console.error(error);

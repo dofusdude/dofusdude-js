@@ -142,7 +142,7 @@ var dofusdude = require('dofusdude-js');
 
 var api = new dofusdude.AlmanaxApi()
 var language = "fr"; // {String} code
-var date = new Date("Sat Jan 25 00:00:00 UTC 2025"); // {Date} yyyy-mm-dd
+var date = new Date("Sun Nov 08 00:00:00 UTC 2026"); // {Date} yyyy-mm-dd
 var opts = {
   'level': 56 // {Number} character level for the reward_xp field
 };

@@ -142,7 +142,7 @@ MonsterGradeSpellsInner.prototype['name'] = undefined;
 MonsterGradeSpellsInner.prototype['grade'] = undefined;
 
 /**
- * Grade-specific spell URL; already includes the `grade` query parameter.
+ * URL for the assigned spell grade. Includes the `grade` query parameter.
  * @member {String} url
  */
 MonsterGradeSpellsInner.prototype['url'] = undefined;

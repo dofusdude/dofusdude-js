@@ -163,7 +163,7 @@ import dofusdude from 'dofusdude-js';
 
 let apiInstance = new dofusdude.MetaApi();
 let language = "fr"; // String | a valid language code
-let query = "abond"; // String | case sensitive search query
+let query = "experience"; // String | case sensitive search query
 let opts = {
   'limit': 56 // Number | maximum number of returned results
 };

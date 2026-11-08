@@ -26,7 +26,7 @@ class MonsterSpellRelationship {
      * @param ankamaId {Number} 
      * @param name {String} 
      * @param grade {Number} The spell grade assigned to this monster grade.
-     * @param url {String} Grade-specific spell URL; already includes the `grade` query parameter.
+     * @param url {String} URL for the assigned spell grade. Includes the `grade` query parameter.
      */
     constructor(ankamaId, name, grade, url) { 
         
@@ -125,7 +125,7 @@ MonsterSpellRelationship.prototype['name'] = undefined;
 MonsterSpellRelationship.prototype['grade'] = undefined;
 
 /**
- * Grade-specific spell URL; already includes the `grade` query parameter.
+ * URL for the assigned spell grade. Includes the `grade` query parameter.
  * @member {String} url
  */
 MonsterSpellRelationship.prototype['url'] = undefined;

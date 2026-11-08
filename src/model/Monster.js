@@ -29,6 +29,7 @@ import MonsterSpawnLocation from './MonsterSpawnLocation';
 class Monster {
     /**
      * Constructs a new <code>Monster</code>.
+     * A monster with its grades, family, spawn locations and drops. Spell expansion is optional.
      * @alias module:model/Monster
      * @extends Object
      * @param ankamaId {Number} 

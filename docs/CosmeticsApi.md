@@ -149,7 +149,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.CosmeticsApi();
 let language = "language_example"; // String | a valid language code
 let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
-let query = "nedora"; // String | case sensitive search query
+let query = "astrowig"; // String | case sensitive search query
 let opts = {
   'filterMinLevel': 1, // Number | only results which level is equal or above this value
   'filterMaxLevel': 2, // Number | only results which level is equal or below this value

@@ -25,6 +25,7 @@ import Spell from './Spell';
 class Class {
     /**
      * Constructs a new <code>Class</code>.
+     * A playable class with its characteristics, appearance and class spell assignments.
      * @alias module:model/Class
      * @extends Object
      * @param ankamaId {Number} 

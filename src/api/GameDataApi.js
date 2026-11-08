@@ -149,7 +149,7 @@ export default class GameDataApi {
      * @param {module:model/String} game 
      * @param {module:model/String} language 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+     * @param {module:model/String} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
      * @param {module:api/GameDataApi~getAllMonstersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/MappedEntityCollection}
      */
@@ -566,7 +566,7 @@ export default class GameDataApi {
      * @param {module:model/String} language 
      * @param {Number} ankamaId 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+     * @param {module:model/String} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
      * @param {module:api/GameDataApi~getMonsterByIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Monster}
      */
@@ -626,7 +626,7 @@ export default class GameDataApi {
      * @param {Number} [pageNumber = 1)] 
      * @param {Number} [pageSize = 20)] 
      * @param {module:model/String} [fieldsMonsters] 
-     * @param {module:model/String} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+     * @param {module:model/String} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
      * @param {module:api/GameDataApi~getMonstersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/MappedEntityCollection}
      */

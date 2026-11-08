@@ -134,7 +134,7 @@ EffectZone.prototype['raw'] = undefined;
 EffectZone.prototype['shape'] = undefined;
 
 /**
- * Effective outer size of the area. A point has size 0; whole-map and custom-cell shapes omit it.
+ * Effective outer size of the area. A point has size 0. Whole-map and custom-cell shapes omit it.
  * @member {Number} size
  */
 EffectZone.prototype['size'] = undefined;

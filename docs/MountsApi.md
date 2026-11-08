@@ -141,9 +141,9 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.MountsApi();
 let language = "fr"; // String | a valid language code
 let game = "dofus3"; // String | game main 'dofus3' or beta channel 'dofus3beta'
-let query = "Dorée"; // String | case sensitive search query
+let query = "almond"; // String | case sensitive search query
 let opts = {
-  'filterFamilyName': "Dragodinde", // String | only results with the translated family name
+  'filterFamilyName': "Dragoturkey", // String | only results with the translated family name
   'limit': 8, // Number | maximum number of returned results
   'filterFamilyId': 56 // Number | only results with the unique family id
 };
