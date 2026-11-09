@@ -114,6 +114,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property basePreviewZone (base name: "base_preview_zone")', function() {
+      // uncomment below and update the code to test the property basePreviewZone
+      //var instance = new dofusdude.MonsterGradeSpellsInner();
+      //expect(instance).to.be();
+    });
+
     it('should have the property classes (base name: "classes")', function() {
       // uncomment below and update the code to test the property classes
       //var instance = new dofusdude.MonsterGradeSpellsInner();

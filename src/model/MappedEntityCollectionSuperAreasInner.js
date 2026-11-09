@@ -16,6 +16,7 @@ import CombatReference from './CombatReference';
 import Images from './Images';
 import MappedEntityListEntry from './MappedEntityListEntry';
 import WorldArea from './WorldArea';
+import WorldMapReference from './WorldMapReference';
 
 /**
  * The MappedEntityCollectionSuperAreasInner model module.
@@ -137,6 +138,36 @@ MappedEntityCollectionSuperAreasInner.prototype['name'] = undefined;
  * @member {module:model/Images} image_urls
  */
 MappedEntityCollectionSuperAreasInner.prototype['image_urls'] = undefined;
+
+/**
+ * World-map context supplied on super-area records.
+ * @member {Number} world_map_id
+ */
+MappedEntityCollectionSuperAreasInner.prototype['world_map_id'] = undefined;
+
+/**
+ * Child area references supplied on super-area records.
+ * @member {Array.<module:model/CombatReference>} areas
+ */
+MappedEntityCollectionSuperAreasInner.prototype['areas'] = undefined;
+
+/**
+ * Suggested geographic difficulty level supplied on subarea records. Not a monster grade or the level of every monster there.
+ * @member {Number} level
+ */
+MappedEntityCollectionSuperAreasInner.prototype['level'] = undefined;
+
+/**
+ * Dungeon association when supplied by the subarea data.
+ * @member {Number} dungeon_id
+ */
+MappedEntityCollectionSuperAreasInner.prototype['dungeon_id'] = undefined;
+
+/**
+ * Map membership supplied on subarea records. Does not imply a spawn on every map.
+ * @member {Array.<module:model/WorldMapReference>} maps
+ */
+MappedEntityCollectionSuperAreasInner.prototype['maps'] = undefined;
 
 /**
  * @member {module:model/CombatReference} super_area

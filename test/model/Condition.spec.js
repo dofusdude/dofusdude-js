@@ -72,6 +72,48 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property kind (base name: "kind")', function() {
+      // uncomment below and update the code to test the property kind
+      //var instance = new dofusdude.Condition();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property unit (base name: "unit")', function() {
+      // uncomment below and update the code to test the property unit
+      //var instance = new dofusdude.Condition();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property quantity (base name: "quantity")', function() {
+      // uncomment below and update the code to test the property quantity
+      //var instance = new dofusdude.Condition();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property stringValue (base name: "string_value")', function() {
+      // uncomment below and update the code to test the property stringValue
+      //var instance = new dofusdude.Condition();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property valueLabel (base name: "value_label")', function() {
+      // uncomment below and update the code to test the property valueLabel
+      //var instance = new dofusdude.Condition();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property reference (base name: "reference")', function() {
+      // uncomment below and update the code to test the property reference
+      //var instance = new dofusdude.Condition();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property secondaryReference (base name: "secondary_reference")', function() {
+      // uncomment below and update the code to test the property secondaryReference
+      //var instance = new dofusdude.Condition();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

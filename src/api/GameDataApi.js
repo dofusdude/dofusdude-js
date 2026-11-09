@@ -682,7 +682,7 @@ export default class GameDataApi {
      * @param {module:model/String} language 
      * @param {Number} ankamaId 
      * @param {Object} opts Optional parameters
-     * @param {Number} [grade] Return only the requested mapped spell grade in `levels`.
+     * @param {Number} [grade] Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.
      * @param {module:api/GameDataApi~getSpellByIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Spell}
      */

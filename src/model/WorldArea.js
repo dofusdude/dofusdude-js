@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import CombatReference from './CombatReference';
+import WorldMapReference from './WorldMapReference';
 
 /**
  * The WorldArea model module.
@@ -22,6 +23,7 @@ import CombatReference from './CombatReference';
 class WorldArea {
     /**
      * Constructs a new <code>WorldArea</code>.
+     * Geographic data from a super-area, area or subarea endpoint. The hierarchy is super-area to area to subarea to map. Field availability depends on the selected geographic resource. Unrelated to combat-cell effect zones.
      * @alias module:model/WorldArea
      * @extends Object
      * @param ankamaId {Number} 
@@ -62,6 +64,21 @@ class WorldArea {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('world_map_id')) {
+                obj['world_map_id'] = ApiClient.convertToType(data['world_map_id'], 'Number');
+            }
+            if (data.hasOwnProperty('areas')) {
+                obj['areas'] = ApiClient.convertToType(data['areas'], [CombatReference]);
+            }
+            if (data.hasOwnProperty('level')) {
+                obj['level'] = ApiClient.convertToType(data['level'], 'Number');
+            }
+            if (data.hasOwnProperty('dungeon_id')) {
+                obj['dungeon_id'] = ApiClient.convertToType(data['dungeon_id'], 'Number');
+            }
+            if (data.hasOwnProperty('maps')) {
+                obj['maps'] = ApiClient.convertToType(data['maps'], [WorldMapReference]);
+            }
             if (data.hasOwnProperty('super_area')) {
                 obj['super_area'] = CombatReference.constructFromObject(data['super_area']);
             }
@@ -95,6 +112,20 @@ class WorldArea {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
         // ensure the json data is an array
+        if (!Array.isArray(data['areas'])) {
+            throw new Error("Expected the field `areas` to be an array in the JSON data but got " + data['areas']);
+        }
+        if (data['maps']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['maps'])) {
+                throw new Error("Expected the field `maps` to be an array in the JSON data but got " + data['maps']);
+            }
+            // validate the optional field `maps` (array)
+            for (const item of data['maps']) {
+                WorldMapReference.validateJSON(item);
+            };
+        }
+        // ensure the json data is an array
         if (!Array.isArray(data['subareas'])) {
             throw new Error("Expected the field `subareas` to be an array in the JSON data but got " + data['subareas']);
         }
@@ -120,6 +151,36 @@ WorldArea.prototype['ankama_id'] = undefined;
  * @member {String} name
  */
 WorldArea.prototype['name'] = undefined;
+
+/**
+ * World-map context supplied on super-area records.
+ * @member {Number} world_map_id
+ */
+WorldArea.prototype['world_map_id'] = undefined;
+
+/**
+ * Child area references supplied on super-area records.
+ * @member {Array.<module:model/CombatReference>} areas
+ */
+WorldArea.prototype['areas'] = undefined;
+
+/**
+ * Suggested geographic difficulty level supplied on subarea records. Not a monster grade or the level of every monster there.
+ * @member {Number} level
+ */
+WorldArea.prototype['level'] = undefined;
+
+/**
+ * Dungeon association when supplied by the subarea data.
+ * @member {Number} dungeon_id
+ */
+WorldArea.prototype['dungeon_id'] = undefined;
+
+/**
+ * Map membership supplied on subarea records. Does not imply a spawn on every map.
+ * @member {Array.<module:model/WorldMapReference>} maps
+ */
+WorldArea.prototype['maps'] = undefined;
 
 /**
  * @member {module:model/CombatReference} super_area

@@ -182,7 +182,7 @@ MappedEntityCollectionClassesInner.prototype['characteristic_costs'] = undefined
 MappedEntityCollectionClassesInner.prototype['looks'] = undefined;
 
 /**
- * Fully mapped class spells, including levels, effects, targeting, and zones.
+ * Full spell definitions assigned to this playable class, including their own grades, effects and targeting. A class has no monster-grade dimension. The same spells are independently available from the spells endpoint.
  * @member {Array.<module:model/Spell>} spells
  */
 MappedEntityCollectionClassesInner.prototype['spells'] = undefined;

@@ -23,6 +23,7 @@ import TargetSelector from './TargetSelector';
 class TargetMask {
     /**
      * Constructs a new <code>TargetMask</code>.
+     * Determines who an effect may affect. Combine the resolved selectors and conditions using logic. This is distinct from the zone geometry and from the event that triggers the effect.
      * @alias module:model/TargetMask
      * @param raw {String} Original game mask retained for lossless debugging.
      * @param selectors {Array.<module:model/TargetSelector>} 

@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **imageUrls** | [**Images**](Images.md) |  | [optional] 
 **race** | [**MonsterRace**](MonsterRace.md) |  | 
-**grades** | [**[MonsterGrade]**](MonsterGrade.md) | Monster statistics and spells grouped by the monster grade that uses them. | 
-**spawnLocations** | [**[MonsterSpawnLocation]**](MonsterSpawnLocation.md) | Spawn subareas taken from the monster&#39;s authoritative subarea list. | 
+**grades** | [**[MonsterGrade]**](MonsterGrade.md) | Variants of this monster. Each has its own combat level, statistics and assigned spells. The monster grade number is not a spell grade number or combat level. | 
+**spawnLocations** | [**[MonsterSpawnLocation]**](MonsterSpawnLocation.md) | Known spawn subareas and their geographic parents. This is not live population data or a per-map spawn probability. Maps listed within a subarea are not guaranteed individual spawn points. | 
 **drops** | [**[MonsterDrop]**](MonsterDrop.md) |  | 
 **globalDrops** | [**[MonsterGlobalDrop]**](MonsterGlobalDrop.md) |  | [optional] 
 **appearance** | [**ClassAppearance**](ClassAppearance.md) |  | [optional] 

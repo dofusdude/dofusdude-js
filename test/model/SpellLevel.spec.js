@@ -72,6 +72,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property criticalHitProbability (base name: "critical_hit_probability")', function() {
+      // uncomment below and update the code to test the property criticalHitProbability
+      //var instance = new dofusdude.SpellLevel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property minPlayerLevel (base name: "min_player_level")', function() {
+      // uncomment below and update the code to test the property minPlayerLevel
+      //var instance = new dofusdude.SpellLevel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property minRange (base name: "min_range")', function() {
       // uncomment below and update the code to test the property minRange
       //var instance = new dofusdude.SpellLevel();
@@ -134,6 +146,18 @@
 
     it('should have the property spellBreed (base name: "spell_breed")', function() {
       // uncomment below and update the code to test the property spellBreed
+      //var instance = new dofusdude.SpellLevel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property statesCriterion (base name: "states_criterion")', function() {
+      // uncomment below and update the code to test the property statesCriterion
+      //var instance = new dofusdude.SpellLevel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property previewZones (base name: "preview_zones")', function() {
+      // uncomment below and update the code to test the property previewZones
       //var instance = new dofusdude.SpellLevel();
       //expect(instance).to.be();
     });

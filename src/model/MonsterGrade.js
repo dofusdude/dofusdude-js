@@ -22,10 +22,11 @@ import MonsterGradeSpellsInner from './MonsterGradeSpellsInner';
 class MonsterGrade {
     /**
      * Constructs a new <code>MonsterGrade</code>.
+     * One variant of this monster, combining combat level, statistics and spell assignments. Match grade-specific drop rates using its grade value. Do not use it to infer a spell grade.
      * @alias module:model/MonsterGrade
      * @extends Object
-     * @param grade {Number} 
-     * @param level {Number} 
+     * @param grade {Number} Number identifying this variant within the monster. Not the combat level, array position or grade of an assigned spell.
+     * @param level {Number} Combat level of this monster variant. Distinct from its grade number.
      * @param spells {Array.<module:model/MonsterGradeSpellsInner>} Spells assigned to this exact monster grade.
      */
     constructor(grade, level, spells) { 
@@ -160,11 +161,13 @@ class MonsterGrade {
 MonsterGrade.RequiredProperties = ["grade", "level", "spells"];
 
 /**
+ * Number identifying this variant within the monster. Not the combat level, array position or grade of an assigned spell.
  * @member {Number} grade
  */
 MonsterGrade.prototype['grade'] = undefined;
 
 /**
+ * Combat level of this monster variant. Distinct from its grade number.
  * @member {Number} level
  */
 MonsterGrade.prototype['level'] = undefined;

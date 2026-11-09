@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import CombatReference from './CombatReference';
 import EffectZone from './EffectZone';
 import SpellTriggers from './SpellTriggers';
 import TargetMask from './TargetMask';
@@ -25,6 +24,7 @@ import TargetMask from './TargetMask';
 class SpellEffect {
     /**
      * Constructs a new <code>SpellEffect</code>.
+     * One normal or critical effect of a particular spell grade. Its zone defines where it applies, target_mask defines eligible targets and triggers defines activation events. Templated text is for display, not a formula to parse.
      * @alias module:model/SpellEffect
      * @extends Object
      */
@@ -56,7 +56,7 @@ class SpellEffect {
             
 
             if (data.hasOwnProperty('type')) {
-                obj['type'] = CombatReference.constructFromObject(data['type']);
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
             if (data.hasOwnProperty('min')) {
                 obj['min'] = ApiClient.convertToType(data['min'], 'Number');
@@ -104,7 +104,7 @@ class SpellEffect {
                 obj['triggers'] = SpellTriggers.constructFromObject(data['triggers']);
             }
             if (data.hasOwnProperty('templated')) {
-                obj['templated'] = ApiClient.convertToType(data['templated'], {'String': Object});
+                obj['templated'] = ApiClient.convertToType(data['templated'], 'String');
             }
         }
         return obj;
@@ -116,6 +116,10 @@ class SpellEffect {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SpellEffect</code>.
      */
     static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['type'] && !(typeof data['type'] === 'string' || data['type'] instanceof String)) {
+            throw new Error("Expected the field `type` to be a primitive type in the JSON string but got " + data['type']);
+        }
         // validate the optional field `zone`
         if (data['zone']) { // data not null
           EffectZone.validateJSON(data['zone']);
@@ -128,6 +132,10 @@ class SpellEffect {
         if (data['triggers']) { // data not null
           SpellTriggers.validateJSON(data['triggers']);
         }
+        // ensure the json data is a string
+        if (data['templated'] && !(typeof data['templated'] === 'string' || data['templated'] instanceof String)) {
+            throw new Error("Expected the field `templated` to be a primitive type in the JSON string but got " + data['templated']);
+        }
 
         return true;
     }
@@ -138,7 +146,8 @@ class SpellEffect {
 
 
 /**
- * @member {module:model/CombatReference} type
+ * Localized effect category, such as Air damage. This is not a spell ID or a structured game reference.
+ * @member {String} type
  */
 SpellEffect.prototype['type'] = undefined;
 
@@ -153,16 +162,19 @@ SpellEffect.prototype['min'] = undefined;
 SpellEffect.prototype['max'] = undefined;
 
 /**
+ * Effect duration in fight turns as represented by the source. Not a real-time duration in seconds.
  * @member {Number} duration
  */
 SpellEffect.prototype['duration'] = undefined;
 
 /**
+ * Delay before the effect in fight turns as represented by the source.
  * @member {Number} delay
  */
 SpellEffect.prototype['delay'] = undefined;
 
 /**
+ * Source random-selection value. Do not interpret it as a percentage without the effect's selection rules.
  * @member {Number} random
  */
 SpellEffect.prototype['random'] = undefined;
@@ -219,7 +231,8 @@ SpellEffect.prototype['target_mask'] = undefined;
 SpellEffect.prototype['triggers'] = undefined;
 
 /**
- * @member {Object.<String, Object>} templated
+ * Localized effect text suitable for display. Numeric effect properties remain available separately.
+ * @member {String} templated
  */
 SpellEffect.prototype['templated'] = undefined;
 

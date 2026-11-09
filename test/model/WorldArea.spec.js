@@ -66,6 +66,36 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property worldMapId (base name: "world_map_id")', function() {
+      // uncomment below and update the code to test the property worldMapId
+      //var instance = new dofusdude.WorldArea();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property areas (base name: "areas")', function() {
+      // uncomment below and update the code to test the property areas
+      //var instance = new dofusdude.WorldArea();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property level (base name: "level")', function() {
+      // uncomment below and update the code to test the property level
+      //var instance = new dofusdude.WorldArea();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property dungeonId (base name: "dungeon_id")', function() {
+      // uncomment below and update the code to test the property dungeonId
+      //var instance = new dofusdude.WorldArea();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property maps (base name: "maps")', function() {
+      // uncomment below and update the code to test the property maps
+      //var instance = new dofusdude.WorldArea();
+      //expect(instance).to.be();
+    });
+
     it('should have the property superArea (base name: "super_area")', function() {
       // uncomment below and update the code to test the property superArea
       //var instance = new dofusdude.WorldArea();

@@ -22,6 +22,7 @@ import EffectZone from './EffectZone';
 class WeaponCombat {
     /**
      * Constructs a new <code>WeaponCombat</code>.
+     * Weapon attack targeting and area geometry. Available for weapon equipment. This is separate from spell effect zones.
      * @alias module:model/WeaponCombat
      * @param zone {module:model/EffectZone} 
      * @param castInLine {Boolean} 

@@ -13,11 +13,13 @@
 
 import ApiClient from '../ApiClient';
 import CombatReference from './CombatReference';
+import EffectZone from './EffectZone';
 import Images from './Images';
 import MonsterSpellRelationship from './MonsterSpellRelationship';
 import Spell from './Spell';
 import SpellLevel from './SpellLevel';
 import SpellScriptUsage from './SpellScriptUsage';
+import SpellType from './SpellType';
 
 /**
  * The MonsterGradeSpellsInner model module.
@@ -136,7 +138,7 @@ MonsterGradeSpellsInner.prototype['ankama_id'] = undefined;
 MonsterGradeSpellsInner.prototype['name'] = undefined;
 
 /**
- * The spell grade assigned to this monster grade.
+ * Grade of the assigned spell. It does not need to equal the enclosing MonsterGrade.grade.
  * @member {Number} grade
  */
 MonsterGradeSpellsInner.prototype['grade'] = undefined;
@@ -173,21 +175,29 @@ MonsterGradeSpellsInner.prototype['admin_name'] = undefined;
 MonsterGradeSpellsInner.prototype['order'] = undefined;
 
 /**
- * @member {module:model/CombatReference} type
+ * @member {module:model/SpellType} type
  */
 MonsterGradeSpellsInner.prototype['type'] = undefined;
 
 /**
+ * @member {module:model/EffectZone} base_preview_zone
+ */
+MonsterGradeSpellsInner.prototype['base_preview_zone'] = undefined;
+
+/**
+ * Reverse references to playable classes associated with this spell. These are compact references, not complete class documents.
  * @member {Array.<module:model/CombatReference>} classes
  */
 MonsterGradeSpellsInner.prototype['classes'] = undefined;
 
 /**
+ * Reverse references to monsters associated with this spell. Use a monster's grade-specific assignments to determine which spell grade it uses.
  * @member {Array.<module:model/CombatReference>} monsters
  */
 MonsterGradeSpellsInner.prototype['monsters'] = undefined;
 
 /**
+ * Available spell grades. Despite the field name, entries are not player levels. A grade-filtered detail response contains only the requested entry while retaining the parent spell object.
  * @member {Array.<module:model/SpellLevel>} levels
  */
 MonsterGradeSpellsInner.prototype['levels'] = undefined;

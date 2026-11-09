@@ -76,7 +76,7 @@ import dofusdude from 'dofusdude-js';
 let apiInstance = new dofusdude.AlmanaxApi();
 let language = "fr"; // String | code
 let opts = {
-  'filterBonusType': "experience-points", // String | ids from meta/{language}/almanax/bonuses
+  'filterBonusType': "filterBonusType_example", // String | Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range.
   'rangeFrom': new Date("2013-10-20"), // Date | yyyy-mm-dd
   'rangeTo': new Date("2013-10-20"), // Date | yyyy-mm-dd
   'rangeSize': -1, // Number | Size of the returned range. Disable to fully use the range by setting size to -1.
@@ -98,7 +98,7 @@ apiInstance.getAlmanaxRange(language, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **String**| code | 
- **filterBonusType** | **String**| ids from meta/{language}/almanax/bonuses | [optional] 
+ **filterBonusType** | **String**| Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range. | [optional] 
  **rangeFrom** | **Date**| yyyy-mm-dd | [optional] 
  **rangeTo** | **Date**| yyyy-mm-dd | [optional] 
  **rangeSize** | **Number**| Size of the returned range. Disable to fully use the range by setting size to -1. | [optional] 

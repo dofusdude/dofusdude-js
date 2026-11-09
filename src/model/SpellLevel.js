@@ -12,7 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import EligibilityNode from './EligibilityNode';
 import SpellEffect from './SpellEffect';
+import SpellPreviewZone from './SpellPreviewZone';
 
 /**
  * The SpellLevel model module.
@@ -22,6 +24,7 @@ import SpellEffect from './SpellEffect';
 class SpellLevel {
     /**
      * Constructs a new <code>SpellLevel</code>.
+     * One grade of a spell. The levels array contains these spell variants, not player levels. Grade numbers are local to the containing spell and are independent of monster grades.
      * @alias module:model/SpellLevel
      * @extends Object
      */
@@ -61,6 +64,12 @@ class SpellLevel {
             if (data.hasOwnProperty('ap_cost')) {
                 obj['ap_cost'] = ApiClient.convertToType(data['ap_cost'], 'Number');
             }
+            if (data.hasOwnProperty('critical_hit_probability')) {
+                obj['critical_hit_probability'] = ApiClient.convertToType(data['critical_hit_probability'], 'Number');
+            }
+            if (data.hasOwnProperty('min_player_level')) {
+                obj['min_player_level'] = ApiClient.convertToType(data['min_player_level'], 'Number');
+            }
             if (data.hasOwnProperty('min_range')) {
                 obj['min_range'] = ApiClient.convertToType(data['min_range'], 'Number');
             }
@@ -94,6 +103,12 @@ class SpellLevel {
             if (data.hasOwnProperty('spell_breed')) {
                 obj['spell_breed'] = ApiClient.convertToType(data['spell_breed'], 'Number');
             }
+            if (data.hasOwnProperty('states_criterion')) {
+                obj['states_criterion'] = ApiClient.convertToType(data['states_criterion'], EligibilityNode);
+            }
+            if (data.hasOwnProperty('preview_zones')) {
+                obj['preview_zones'] = ApiClient.convertToType(data['preview_zones'], [SpellPreviewZone]);
+            }
             if (data.hasOwnProperty('effects')) {
                 obj['effects'] = ApiClient.convertToType(data['effects'], [SpellEffect]);
             }
@@ -110,6 +125,20 @@ class SpellLevel {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SpellLevel</code>.
      */
     static validateJSON(data) {
+        // validate the optional field `states_criterion`
+        if (data['states_criterion']) { // data not null
+          EligibilityNode.validateJSON(data['states_criterion']);
+        }
+        if (data['preview_zones']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['preview_zones'])) {
+                throw new Error("Expected the field `preview_zones` to be an array in the JSON data but got " + data['preview_zones']);
+            }
+            // validate the optional field `preview_zones` (array)
+            for (const item of data['preview_zones']) {
+                SpellPreviewZone.validateJSON(item);
+            };
+        }
         // ensure the json data is an array
         if (!Array.isArray(data['effects'])) {
             throw new Error("Expected the field `effects` to be an array in the JSON data but got " + data['effects']);
@@ -128,31 +157,49 @@ class SpellLevel {
 
 
 /**
+ * ID of the spell-level definition. Different from the parent spell ID and from the grade number. Used by explicit spell-level references such as script spell_level_ids.
  * @member {Number} ankama_id
  */
 SpellLevel.prototype['ankama_id'] = undefined;
 
 /**
+ * Number identifying this variant within its spell. Select by this value, not by the array position. Used by the spell detail endpoint's grade parameter.
  * @member {Number} grade
  */
 SpellLevel.prototype['grade'] = undefined;
 
 /**
+ * Action points required to cast this spell grade.
  * @member {Number} ap_cost
  */
 SpellLevel.prototype['ap_cost'] = undefined;
 
 /**
+ * Base critical-hit percentage recorded for this spell grade, before fighter-specific modifiers.
+ * @member {Number} critical_hit_probability
+ */
+SpellLevel.prototype['critical_hit_probability'] = undefined;
+
+/**
+ * Player-level requirement recorded for this spell grade. This is not its grade number or a monster combat level.
+ * @member {Number} min_player_level
+ */
+SpellLevel.prototype['min_player_level'] = undefined;
+
+/**
+ * Minimum casting range in combat cells.
  * @member {Number} min_range
  */
 SpellLevel.prototype['min_range'] = undefined;
 
 /**
+ * Maximum casting range in combat cells as defined by this grade.
  * @member {Number} max_range
  */
 SpellLevel.prototype['max_range'] = undefined;
 
 /**
+ * Per-caster cast limit within a turn as recorded by the source.
  * @member {Number} max_cast_per_turn
  */
 SpellLevel.prototype['max_cast_per_turn'] = undefined;
@@ -173,11 +220,13 @@ SpellLevel.prototype['max_global_cast_per_turn'] = undefined;
 SpellLevel.prototype['max_global_cast_per_target'] = undefined;
 
 /**
+ * Minimum interval between casts, measured in fight turns.
  * @member {Number} min_cast_interval
  */
 SpellLevel.prototype['min_cast_interval'] = undefined;
 
 /**
+ * Initial wait before casting, measured in fight turns.
  * @member {Number} initial_cooldown
  */
 SpellLevel.prototype['initial_cooldown'] = undefined;
@@ -198,11 +247,25 @@ SpellLevel.prototype['ignore_prison_glyph'] = undefined;
 SpellLevel.prototype['spell_breed'] = undefined;
 
 /**
+ * Available client-side state requirements for this spell grade. Null does not assert that the server imposes no restriction.
+ * @member {module:model/EligibilityNode} states_criterion
+ */
+SpellLevel.prototype['states_criterion'] = undefined;
+
+/**
+ * Client preview and activation geometry for this grade. Use each effect's zone for its actual effect-area definition.
+ * @member {Array.<module:model/SpellPreviewZone>} preview_zones
+ */
+SpellLevel.prototype['preview_zones'] = undefined;
+
+/**
+ * Normal-cast effects for this grade. Each entry has independent targeting and area geometry.
  * @member {Array.<module:model/SpellEffect>} effects
  */
 SpellLevel.prototype['effects'] = undefined;
 
 /**
+ * Critical-cast effects for this grade. Keep separate from normal effects rather than applying both arrays to every cast.
  * @member {Array.<module:model/SpellEffect>} critical_effects
  */
 SpellLevel.prototype['critical_effects'] = undefined;

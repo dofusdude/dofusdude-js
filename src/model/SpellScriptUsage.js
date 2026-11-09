@@ -209,6 +209,7 @@ SpellScriptUsage.prototype['targets_affected_concurrently'] = undefined;
 SpellScriptUsage.prototype['target_treated_as_caster'] = undefined;
 
 /**
+ * Spell-level definition IDs to which this script binding applies. Match SpellLevel.ankama_id, not Spell.ankama_id or SpellLevel.grade.
  * @member {Array.<Number>} spell_level_ids
  */
 SpellScriptUsage.prototype['spell_level_ids'] = undefined;

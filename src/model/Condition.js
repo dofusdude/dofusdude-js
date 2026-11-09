@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import CombatReference from './CombatReference';
 import TranslatedId from './TranslatedId';
 
 /**
@@ -57,6 +58,27 @@ class Condition {
             if (data.hasOwnProperty('element')) {
                 obj['element'] = TranslatedId.constructFromObject(data['element']);
             }
+            if (data.hasOwnProperty('kind')) {
+                obj['kind'] = ApiClient.convertToType(data['kind'], 'String');
+            }
+            if (data.hasOwnProperty('unit')) {
+                obj['unit'] = ApiClient.convertToType(data['unit'], 'String');
+            }
+            if (data.hasOwnProperty('quantity')) {
+                obj['quantity'] = ApiClient.convertToType(data['quantity'], 'Number');
+            }
+            if (data.hasOwnProperty('string_value')) {
+                obj['string_value'] = ApiClient.convertToType(data['string_value'], 'String');
+            }
+            if (data.hasOwnProperty('value_label')) {
+                obj['value_label'] = ApiClient.convertToType(data['value_label'], 'String');
+            }
+            if (data.hasOwnProperty('reference')) {
+                obj['reference'] = CombatReference.constructFromObject(data['reference']);
+            }
+            if (data.hasOwnProperty('secondary_reference')) {
+                obj['secondary_reference'] = CombatReference.constructFromObject(data['secondary_reference']);
+            }
         }
         return obj;
     }
@@ -75,6 +97,22 @@ class Condition {
         if (data['element']) { // data not null
           TranslatedId.validateJSON(data['element']);
         }
+        // ensure the json data is a string
+        if (data['kind'] && !(typeof data['kind'] === 'string' || data['kind'] instanceof String)) {
+            throw new Error("Expected the field `kind` to be a primitive type in the JSON string but got " + data['kind']);
+        }
+        // ensure the json data is a string
+        if (data['unit'] && !(typeof data['unit'] === 'string' || data['unit'] instanceof String)) {
+            throw new Error("Expected the field `unit` to be a primitive type in the JSON string but got " + data['unit']);
+        }
+        // ensure the json data is a string
+        if (data['string_value'] && !(typeof data['string_value'] === 'string' || data['string_value'] instanceof String)) {
+            throw new Error("Expected the field `string_value` to be a primitive type in the JSON string but got " + data['string_value']);
+        }
+        // ensure the json data is a string
+        if (data['value_label'] && !(typeof data['value_label'] === 'string' || data['value_label'] instanceof String)) {
+            throw new Error("Expected the field `value_label` to be a primitive type in the JSON string but got " + data['value_label']);
+        }
 
         return true;
     }
@@ -85,6 +123,7 @@ class Condition {
 
 
 /**
+ * Comparison to apply to the interpreted requirement value.
  * @member {String} operator
  */
 Condition.prototype['operator'] = undefined;
@@ -98,6 +137,43 @@ Condition.prototype['int_value'] = undefined;
  * @member {module:model/TranslatedId} element
  */
 Condition.prototype['element'] = undefined;
+
+/**
+ * Interpreted requirement category, such as profession_level or item_received_age. Use this with the operator, values and references rather than decoding original condition tokens.
+ * @member {String} kind
+ */
+Condition.prototype['kind'] = undefined;
+
+/**
+ * Unit associated with the requirement value when the interpreted condition supplies one.
+ * @member {String} unit
+ */
+Condition.prototype['unit'] = undefined;
+
+/**
+ * @member {Number} quantity
+ */
+Condition.prototype['quantity'] = undefined;
+
+/**
+ * @member {String} string_value
+ */
+Condition.prototype['string_value'] = undefined;
+
+/**
+ * @member {String} value_label
+ */
+Condition.prototype['value_label'] = undefined;
+
+/**
+ * @member {module:model/CombatReference} reference
+ */
+Condition.prototype['reference'] = undefined;
+
+/**
+ * @member {module:model/CombatReference} secondary_reference
+ */
+Condition.prototype['secondary_reference'] = undefined;
 
 
 

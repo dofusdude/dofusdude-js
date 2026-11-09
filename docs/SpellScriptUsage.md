@@ -18,6 +18,6 @@ Name | Type | Description | Notes
 **condition** | **{String: Object}** |  | [optional] 
 **targetsAffectedConcurrently** | **Boolean** |  | [optional] 
 **targetTreatedAsCaster** | **Boolean** |  | [optional] 
-**spellLevelIds** | **[Number]** |  | [optional] 
+**spellLevelIds** | **[Number]** | Spell-level definition IDs to which this script binding applies. Match SpellLevel.ankama_id, not Spell.ankama_id or SpellLevel.grade. | [optional] 
 
 

@@ -150,13 +150,13 @@ MappedEntityCollectionMonstersInner.prototype['image_urls'] = undefined;
 MappedEntityCollectionMonstersInner.prototype['race'] = undefined;
 
 /**
- * Monster statistics and spells grouped by the monster grade that uses them.
+ * Variants of this monster. Each has its own combat level, statistics and assigned spells. The monster grade number is not a spell grade number or combat level.
  * @member {Array.<module:model/MonsterGrade>} grades
  */
 MappedEntityCollectionMonstersInner.prototype['grades'] = undefined;
 
 /**
- * Spawn subareas taken from the monster's authoritative subarea list.
+ * Known spawn subareas and their geographic parents. This is not live population data or a per-map spawn probability. Maps listed within a subarea are not guaranteed individual spawn points.
  * @member {Array.<module:model/MonsterSpawnLocation>} spawn_locations
  */
 MappedEntityCollectionMonstersInner.prototype['spawn_locations'] = undefined;

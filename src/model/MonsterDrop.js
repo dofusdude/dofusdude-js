@@ -23,10 +23,11 @@ import MonsterDropRatesPercentInner from './MonsterDropRatesPercentInner';
 class MonsterDrop {
     /**
      * Constructs a new <code>MonsterDrop</code>.
+     * A possible item drop with base rates indexed by monster grade. Final player-specific chances also depend on conditions and game modifiers.
      * @alias module:model/MonsterDrop
      * @param item {module:model/CombatReference} 
-     * @param ratesPercent {Array.<module:model/MonsterDropRatesPercentInner>} Base drop percentage for each monster grade.
-     * @param hasConditions {Boolean} 
+     * @param ratesPercent {Array.<module:model/MonsterDropRatesPercentInner>} Base drop percentages indexed by MonsterGrade.grade, not spell grade or array position. A value of 5 means 5 percent, not 0.05 percent. These are not spawn percentages.
+     * @param hasConditions {Boolean} The source reports restrictions. Can be true without a complete client-side condition tree because server-only predicates are not exposed.
      */
     constructor(item, ratesPercent, hasConditions) { 
         
@@ -127,12 +128,13 @@ MonsterDrop.RequiredProperties = ["item", "rates_percent", "has_conditions"];
 MonsterDrop.prototype['item'] = undefined;
 
 /**
- * Base drop percentage for each monster grade.
+ * Base drop percentages indexed by MonsterGrade.grade, not spell grade or array position. A value of 5 means 5 percent, not 0.05 percent. These are not spawn percentages.
  * @member {Array.<module:model/MonsterDropRatesPercentInner>} rates_percent
  */
 MonsterDrop.prototype['rates_percent'] = undefined;
 
 /**
+ * The source reports restrictions. Can be true without a complete client-side condition tree because server-only predicates are not exposed.
  * @member {Boolean} has_conditions
  */
 MonsterDrop.prototype['has_conditions'] = undefined;

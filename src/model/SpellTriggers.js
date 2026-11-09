@@ -22,6 +22,7 @@ import SpellTrigger from './SpellTrigger';
 class SpellTriggers {
     /**
      * Constructs a new <code>SpellTriggers</code>.
+     * Determines when an effect activates. Events are not additional effects to apply unconditionally. Use logic with the resolved event names and descriptions instead of parsing raw tokens.
      * @alias module:model/SpellTriggers
      * @param raw {String} Original trigger tokens retained for lossless debugging.
      * @param events {Array.<module:model/SpellTrigger>} 

@@ -22,6 +22,7 @@ import ClassAppearanceScalePercent from './ClassAppearanceScalePercent';
 class ClassAppearance {
     /**
      * Constructs a new <code>ClassAppearance</code>.
+     * Structured client appearance data for an asset renderer. Bone and skin IDs are not image URLs. Use the parent record&#39;s image_urls for ready-to-display artwork.
      * @alias module:model/ClassAppearance
      * @param bonesId {Number} 
      * @param skinIds {Array.<Number>} 

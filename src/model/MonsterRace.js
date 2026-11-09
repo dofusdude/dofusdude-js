@@ -22,6 +22,7 @@ import CombatReference from './CombatReference';
 class MonsterRace {
     /**
      * Constructs a new <code>MonsterRace</code>.
+     * Monster taxonomy. Race is the monster&#39;s family and super_race is the broader grouping. Neither is a playable class or a monster grade.
      * @alias module:model/MonsterRace
      * @param ankamaId {Number} 
      * @param name {String} 

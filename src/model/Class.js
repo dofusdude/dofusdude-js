@@ -31,7 +31,7 @@ class Class {
      * @param ankamaId {Number} 
      * @param name {String} 
      * @param looks {module:model/ClassLooks} 
-     * @param spells {Array.<module:model/Spell>} Fully mapped class spells, including levels, effects, targeting, and zones.
+     * @param spells {Array.<module:model/Spell>} Full spell definitions assigned to this playable class, including their own grades, effects and targeting. A class has no monster-grade dimension. The same spells are independently available from the spells endpoint.
      */
     constructor(ankamaId, name, looks, spells) { 
         
@@ -210,7 +210,7 @@ Class.prototype['image_urls'] = undefined;
 Class.prototype['looks'] = undefined;
 
 /**
- * Fully mapped class spells, including levels, effects, targeting, and zones.
+ * Full spell definitions assigned to this playable class, including their own grades, effects and targeting. A class has no monster-grade dimension. The same spells are independently available from the spells endpoint.
  * @member {Array.<module:model/Spell>} spells
  */
 Class.prototype['spells'] = undefined;

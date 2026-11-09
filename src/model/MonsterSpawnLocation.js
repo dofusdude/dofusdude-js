@@ -23,12 +23,13 @@ import MonsterSpawnLocationSubareaMapsInner from './MonsterSpawnLocationSubareaM
 class MonsterSpawnLocation {
     /**
      * Constructs a new <code>MonsterSpawnLocation</code>.
+     * Known spawn subarea with its parent area, super-area and map membership. Does not assert a spawn on each listed map and does not include spawn probabilities.
      * @alias module:model/MonsterSpawnLocation
      * @param subarea {module:model/CombatReference} 
      * @param area {module:model/CombatReference} 
      * @param superArea {module:model/CombatReference} 
-     * @param subareaMaps {Array.<module:model/MonsterSpawnLocationSubareaMapsInner>} 
-     * @param preferred {Boolean} Whether the game marks this as the monster's preferred subarea.
+     * @param subareaMaps {Array.<module:model/MonsterSpawnLocationSubareaMapsInner>} Maps belonging to the referenced subarea. Map membership alone is not proof that the monster spawns on a particular map.
+     * @param preferred {Boolean} Whether the source marks this as a preferred subarea. A preference flag, not a spawn percentage or guarantee of presence.
      */
     constructor(subarea, area, superArea, subareaMaps, preferred) { 
         
@@ -125,12 +126,13 @@ MonsterSpawnLocation.prototype['area'] = undefined;
 MonsterSpawnLocation.prototype['super_area'] = undefined;
 
 /**
+ * Maps belonging to the referenced subarea. Map membership alone is not proof that the monster spawns on a particular map.
  * @member {Array.<module:model/MonsterSpawnLocationSubareaMapsInner>} subarea_maps
  */
 MonsterSpawnLocation.prototype['subarea_maps'] = undefined;
 
 /**
- * Whether the game marks this as the monster's preferred subarea.
+ * Whether the source marks this as a preferred subarea. A preference flag, not a spawn percentage or guarantee of presence.
  * @member {Boolean} preferred
  */
 MonsterSpawnLocation.prototype['preferred'] = undefined;

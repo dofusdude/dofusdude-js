@@ -13,9 +13,11 @@
 
 import ApiClient from '../ApiClient';
 import CombatReference from './CombatReference';
+import EffectZone from './EffectZone';
 import Images from './Images';
 import SpellLevel from './SpellLevel';
 import SpellScriptUsage from './SpellScriptUsage';
+import SpellType from './SpellType';
 
 /**
  * The Spell model module.
@@ -30,7 +32,7 @@ class Spell {
      * @extends Object
      * @param ankamaId {Number} 
      * @param name {String} 
-     * @param levels {Array.<module:model/SpellLevel>} 
+     * @param levels {Array.<module:model/SpellLevel>} Available spell grades. Despite the field name, entries are not player levels. A grade-filtered detail response contains only the requested entry while retaining the parent spell object.
      */
     constructor(ankamaId, name, levels) { 
         
@@ -84,7 +86,10 @@ class Spell {
                 obj['image_urls'] = Images.constructFromObject(data['image_urls']);
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = CombatReference.constructFromObject(data['type']);
+                obj['type'] = SpellType.constructFromObject(data['type']);
+            }
+            if (data.hasOwnProperty('base_preview_zone')) {
+                obj['base_preview_zone'] = EffectZone.constructFromObject(data['base_preview_zone']);
             }
             if (data.hasOwnProperty('classes')) {
                 obj['classes'] = ApiClient.convertToType(data['classes'], [CombatReference]);
@@ -132,6 +137,14 @@ class Spell {
         // validate the optional field `image_urls`
         if (data['image_urls']) { // data not null
           Images.validateJSON(data['image_urls']);
+        }
+        // validate the optional field `type`
+        if (data['type']) { // data not null
+          SpellType.validateJSON(data['type']);
+        }
+        // validate the optional field `base_preview_zone`
+        if (data['base_preview_zone']) { // data not null
+          EffectZone.validateJSON(data['base_preview_zone']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['classes'])) {
@@ -210,21 +223,29 @@ Spell.prototype['order'] = undefined;
 Spell.prototype['image_urls'] = undefined;
 
 /**
- * @member {module:model/CombatReference} type
+ * @member {module:model/SpellType} type
  */
 Spell.prototype['type'] = undefined;
 
 /**
+ * @member {module:model/EffectZone} base_preview_zone
+ */
+Spell.prototype['base_preview_zone'] = undefined;
+
+/**
+ * Reverse references to playable classes associated with this spell. These are compact references, not complete class documents.
  * @member {Array.<module:model/CombatReference>} classes
  */
 Spell.prototype['classes'] = undefined;
 
 /**
+ * Reverse references to monsters associated with this spell. Use a monster's grade-specific assignments to determine which spell grade it uses.
  * @member {Array.<module:model/CombatReference>} monsters
  */
 Spell.prototype['monsters'] = undefined;
 
 /**
+ * Available spell grades. Despite the field name, entries are not player levels. A grade-filtered detail response contains only the requested entry while retaining the parent spell object.
  * @member {Array.<module:model/SpellLevel>} levels
  */
 Spell.prototype['levels'] = undefined;

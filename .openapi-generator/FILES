@@ -87,9 +87,11 @@ docs/SetsApi.md
 docs/Spell.md
 docs/SpellEffect.md
 docs/SpellLevel.md
+docs/SpellPreviewZone.md
 docs/SpellScriptUsage.md
 docs/SpellTrigger.md
 docs/SpellTriggers.md
+docs/SpellType.md
 docs/TargetMask.md
 docs/TargetSelector.md
 docs/TranslatedId.md
@@ -99,6 +101,7 @@ docs/Weapon.md
 docs/WeaponCombat.md
 docs/WebhooksApi.md
 docs/WorldArea.md
+docs/WorldMapReference.md
 docs/ZoneShape.md
 git_push.sh
 mocha.opts
@@ -190,9 +193,11 @@ src/model/RssWebhook.js
 src/model/Spell.js
 src/model/SpellEffect.js
 src/model/SpellLevel.js
+src/model/SpellPreviewZone.js
 src/model/SpellScriptUsage.js
 src/model/SpellTrigger.js
 src/model/SpellTriggers.js
+src/model/SpellType.js
 src/model/TargetMask.js
 src/model/TargetSelector.js
 src/model/TranslatedId.js
@@ -201,6 +206,7 @@ src/model/Version.js
 src/model/Weapon.js
 src/model/WeaponCombat.js
 src/model/WorldArea.js
+src/model/WorldMapReference.js
 src/model/ZoneShape.js
 test/api/AlmanaxApi.spec.js
 test/api/ConsumablesApi.spec.js
@@ -287,9 +293,11 @@ test/model/RssWebhook.spec.js
 test/model/Spell.spec.js
 test/model/SpellEffect.spec.js
 test/model/SpellLevel.spec.js
+test/model/SpellPreviewZone.spec.js
 test/model/SpellScriptUsage.spec.js
 test/model/SpellTrigger.spec.js
 test/model/SpellTriggers.spec.js
+test/model/SpellType.spec.js
 test/model/TargetMask.spec.js
 test/model/TargetSelector.spec.js
 test/model/TranslatedId.spec.js
@@ -298,4 +306,5 @@ test/model/Version.spec.js
 test/model/Weapon.spec.js
 test/model/WeaponCombat.spec.js
 test/model/WorldArea.spec.js
+test/model/WorldMapReference.spec.js
 test/model/ZoneShape.spec.js

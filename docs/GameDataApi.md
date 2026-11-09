@@ -627,7 +627,7 @@ let game = "game_example"; // String |
 let language = "language_example"; // String | 
 let ankamaId = 201; // Number | 
 let opts = {
-  'grade': 56 // Number | Return only the requested mapped spell grade in `levels`.
+  'grade': 56 // Number | Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.
 };
 apiInstance.getSpellById(game, language, ankamaId, opts, (error, data, response) => {
   if (error) {
@@ -646,7 +646,7 @@ Name | Type | Description  | Notes
  **game** | **String**|  | 
  **language** | **String**|  | 
  **ankamaId** | **Number**|  | 
- **grade** | **Number**| Return only the requested mapped spell grade in &#x60;levels&#x60;. | [optional] 
+ **grade** | **Number**| Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404. | [optional] 
 
 ### Return type
 

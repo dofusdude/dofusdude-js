@@ -25,7 +25,7 @@ class MonsterSpawnLocationSubareaMapsInner {
      * @param ankamaId {Number} 
      * @param positionX {Number} 
      * @param positionY {Number} 
-     * @param worldMapId {Number} 
+     * @param worldMapId {Number} World-map context for these coordinates. Coordinates alone are not a globally unique map identifier.
      */
     constructor(ankamaId, positionX, positionY, worldMapId) { 
         
@@ -108,6 +108,7 @@ MonsterSpawnLocationSubareaMapsInner.prototype['position_x'] = undefined;
 MonsterSpawnLocationSubareaMapsInner.prototype['position_y'] = undefined;
 
 /**
+ * World-map context for these coordinates. Coordinates alone are not a globally unique map identifier.
  * @member {Number} world_map_id
  */
 MonsterSpawnLocationSubareaMapsInner.prototype['world_map_id'] = undefined;

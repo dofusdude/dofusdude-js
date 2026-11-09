@@ -86,9 +86,11 @@ import RssWebhook from './model/RssWebhook';
 import Spell from './model/Spell';
 import SpellEffect from './model/SpellEffect';
 import SpellLevel from './model/SpellLevel';
+import SpellPreviewZone from './model/SpellPreviewZone';
 import SpellScriptUsage from './model/SpellScriptUsage';
 import SpellTrigger from './model/SpellTrigger';
 import SpellTriggers from './model/SpellTriggers';
+import SpellType from './model/SpellType';
 import TargetMask from './model/TargetMask';
 import TargetSelector from './model/TargetSelector';
 import TranslatedId from './model/TranslatedId';
@@ -97,6 +99,7 @@ import Version from './model/Version';
 import Weapon from './model/Weapon';
 import WeaponCombat from './model/WeaponCombat';
 import WorldArea from './model/WorldArea';
+import WorldMapReference from './model/WorldMapReference';
 import ZoneShape from './model/ZoneShape';
 import AlmanaxApi from './api/AlmanaxApi';
 import ConsumablesApi from './api/ConsumablesApi';
@@ -589,6 +592,12 @@ export {
     SpellLevel,
 
     /**
+     * The SpellPreviewZone model constructor.
+     * @property {module:model/SpellPreviewZone}
+     */
+    SpellPreviewZone,
+
+    /**
      * The SpellScriptUsage model constructor.
      * @property {module:model/SpellScriptUsage}
      */
@@ -605,6 +614,12 @@ export {
      * @property {module:model/SpellTriggers}
      */
     SpellTriggers,
+
+    /**
+     * The SpellType model constructor.
+     * @property {module:model/SpellType}
+     */
+    SpellType,
 
     /**
      * The TargetMask model constructor.
@@ -653,6 +668,12 @@ export {
      * @property {module:model/WorldArea}
      */
     WorldArea,
+
+    /**
+     * The WorldMapReference model constructor.
+     * @property {module:model/WorldMapReference}
+     */
+    WorldMapReference,
 
     /**
      * The ZoneShape model constructor.

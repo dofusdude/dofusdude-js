@@ -22,9 +22,10 @@ import ZoneShape from './ZoneShape';
 class EffectZone {
     /**
      * Constructs a new <code>EffectZone</code>.
+     * Combat-cell area for this effect or activation context, not a geographic world area. Shape, size and inner size describe geometry. Actual affected cells can depend on position, direction and fight state. Each spell effect can have a different zone.
      * @alias module:model/EffectZone
      * @param shape {module:model/ZoneShape} 
-     * @param cellIds {Array.<Number>} 
+     * @param cellIds {Array.<Number>} Explicit cells for a custom-cell shape. An empty array is normal for geometric shapes such as circles and does not mean the zone affects no cells.
      */
     constructor(shape, cellIds) { 
         
@@ -146,6 +147,7 @@ EffectZone.prototype['size'] = undefined;
 EffectZone.prototype['min_size'] = undefined;
 
 /**
+ * Explicit cells for a custom-cell shape. An empty array is normal for geometric shapes such as circles and does not mean the zone affects no cells.
  * @member {Array.<Number>} cell_ids
  */
 EffectZone.prototype['cell_ids'] = undefined;

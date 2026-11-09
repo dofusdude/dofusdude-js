@@ -22,10 +22,11 @@ import Images from './Images';
 class MonsterSpellRelationship {
     /**
      * Constructs a new <code>MonsterSpellRelationship</code>.
+     * Compact spell assignment inside one monster grade. The assignment&#39;s grade identifies the spell variant, not the enclosing monster variant. Follow url unchanged to retrieve it or use an include option to embed it.
      * @alias module:model/MonsterSpellRelationship
      * @param ankamaId {Number} 
      * @param name {String} 
-     * @param grade {Number} The spell grade assigned to this monster grade.
+     * @param grade {Number} Grade of the assigned spell. It does not need to equal the enclosing MonsterGrade.grade.
      * @param url {String} URL for the assigned spell grade. Includes the `grade` query parameter.
      */
     constructor(ankamaId, name, grade, url) { 
@@ -119,7 +120,7 @@ MonsterSpellRelationship.prototype['ankama_id'] = undefined;
 MonsterSpellRelationship.prototype['name'] = undefined;
 
 /**
- * The spell grade assigned to this monster grade.
+ * Grade of the assigned spell. It does not need to equal the enclosing MonsterGrade.grade.
  * @member {Number} grade
  */
 MonsterSpellRelationship.prototype['grade'] = undefined;

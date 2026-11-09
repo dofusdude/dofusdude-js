@@ -317,9 +317,11 @@ Class | Method | HTTP request | Description
  - [dofusdude.Spell](docs/Spell.md)
  - [dofusdude.SpellEffect](docs/SpellEffect.md)
  - [dofusdude.SpellLevel](docs/SpellLevel.md)
+ - [dofusdude.SpellPreviewZone](docs/SpellPreviewZone.md)
  - [dofusdude.SpellScriptUsage](docs/SpellScriptUsage.md)
  - [dofusdude.SpellTrigger](docs/SpellTrigger.md)
  - [dofusdude.SpellTriggers](docs/SpellTriggers.md)
+ - [dofusdude.SpellType](docs/SpellType.md)
  - [dofusdude.TargetMask](docs/TargetMask.md)
  - [dofusdude.TargetSelector](docs/TargetSelector.md)
  - [dofusdude.TranslatedId](docs/TranslatedId.md)
@@ -328,6 +330,7 @@ Class | Method | HTTP request | Description
  - [dofusdude.Weapon](docs/Weapon.md)
  - [dofusdude.WeaponCombat](docs/WeaponCombat.md)
  - [dofusdude.WorldArea](docs/WorldArea.md)
+ - [dofusdude.WorldMapReference](docs/WorldMapReference.md)
  - [dofusdude.ZoneShape](docs/ZoneShape.md)
 
 

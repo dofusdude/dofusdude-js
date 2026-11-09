@@ -22,6 +22,7 @@ import Images from './Images';
 class MappedEntityListEntry {
     /**
      * Constructs a new <code>MappedEntityListEntry</code>.
+     * Compact collection summary. A missing detail field here does not mean the resource lacks that data. Request the single-record endpoint or the collection&#39;s full fields to obtain details.
      * @alias module:model/MappedEntityListEntry
      * @param ankamaId {Number} 
      * @param name {String} 

@@ -24,6 +24,7 @@ import ConditionRelation from './ConditionRelation';
 class ConditionNode {
     /**
      * Constructs a new <code>ConditionNode</code>.
+     * Client-side requirement tree. Leaf nodes contain one condition and relation nodes combine children with and or or. Preserves grouping. Not an authoritative server eligibility decision.
      * @alias module:model/ConditionNode
      * @param {(module:model/ConditionLeaf|module:model/ConditionRelation)} instance The actual instance to initialize ConditionNode.
      */
